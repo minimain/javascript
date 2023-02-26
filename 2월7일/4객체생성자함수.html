@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체생성자 함수_es6는 아님</title>
+  <script>
+    // 생성자 함수는 대문자 시작 | 생성되는 객체 this | 객체.속성
+
+    // 객체 생성자 함구 (object constructor function)
+    // 붕어빵 틀 같은 존재 (찍어내는)
+    function Info(a,b){
+      this.subject = a;
+      this.credit = b; //속성
+      // this.printOut = function(){
+      //   return this.subject + ',' + this.credit + '학점';
+      // }; //메소드
+    };
+
+    //prototype (메소드를 밖에 따로 만듦)
+    Info.prototype.printOut = function(){
+      return this.subject + ',' + this.credit + '학점';
+    }
+
+  // 밑에 있는 것들을 위로 전달해서 생성 | 속성값은 다 다른데 객체를 만들때 마다 메소드 값은 항상 같음 그래서 메모리 낭비 (똑같은게 반복)
+  // 메소드를 만들지 않음 - 프로토타입으로 따로 만들어라 
+  // 객체가 메소드가 필요할때 따로 만든 메소드를 참조 하는것
+    var sub1 = new Info('html',1);
+    console.log(sub1.subject);
+    console.log(sub1.credit);
+    console.log(sub1.printOut());
+    console.log(sub1);
+
+    var sub2 = new Info('css',2);
+    console.log(sub2.subject);
+    console.log(sub2.credit);
+    console.log(sub2.printOut());
+    console.log(sub2);
+
+    var sub3 = new Info('js',3);
+    console.log(sub3.subject);
+    console.log(sub3.credit);
+    console.log(sub3.printOut());
+    console.log(sub3);
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

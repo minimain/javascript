@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습</title>
+  <!-- 배경 | 귀2개 | 얼굴 동그란 border | 눈썹 2개 | 눈 2개 | 코 | 입 2개 합쳐서 위에 얹기  -->
+  <style>
+    body{padding:0;margin: 0;}
+    /* 배경 */
+    .ryan{position: relative;background:#313654;margin: 0 auto;
+    width:467px;height: 426px;}
+
+    /* 귀 */
+    .ryan .ear{position: absolute;left: calc(50% - 44.5px);
+      background:#d5972a;transform: translate(-80px,20px);
+     width: 89px;height: 89px;border-radius: 50%;border: 8px solid black;box-sizing: border-box;}
+
+    .ryan .ear::after{content:"";position: absolute;display:block;
+    width: 100%;height:100%;transform: translate(150px,-8px);
+    background: #d5972a;border: 8px solid black;border-radius: 50%;}
+    
+
+    /* 얼굴 */
+    .ryan .face{position: absolute;
+      margin: 40px 34px 16px 30px;
+      width: 403px;height: 371px;background: #d5972a;
+      border-radius: 50%;border: 8px solid black;
+    box-sizing: border-box;} 
+
+    /* 눈썹 */
+    .face .eyebrows{position:absolute;left:calc(50% - 35px);
+     top: 27%;width: 70px;height: 15px;background: blue;
+    box-shadow: 70px 0 0 0 black,-70px 0 0 0 black;}
+
+    .face .eyebrows::after,.face .eyebrows::before{
+      
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="ryan">
+    <div class="ear"></div>
+      <div class="face">
+        <div class="eyebrows"></div>
+        <div class="eyes"></div>
+        <div class="nose"></div>
+        <div class="mouth"></div>
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체</title>
+  <script>
+    //블록안에 키:벨류 | 변수라는것은 키벨류로 이루어진것을 객체라고 함
+    // propsName을 하면 coffee가 나온다능것 | .하고 나오는게 속성 밑에 위에 같은것 | 프로퍼티(속성 | 키) : 값  | 메서드는 함수
+
+    /*
+    객체: 변수는 데이터 값을 하나 밖에 저장하지 못하지만 , 객체는 데이터 값을 필요한 대로 만들어서 사용할수있다.
+    var 변수 = {name: '홍길동', age:20, nationality: '한국'};
+    props객체 ={propsName: "coffee",propsName2:true,propsName3: Array(6)}
+    props.propsName
+
+    객체의 속성(properties)은 객체의 속성값을 저장하는 프로퍼티와 객체의 함수 메서드로 구성된다.
+
+    object.name
+    object.printOut()
+    var object={
+      //프로퍼티: 값,
+      name: '홍길동',
+      age:20,
+      nationality:'한국',
+      //메서드:function(){
+
+      //},
+      prontOut:function(){
+        메서드
+      }
+    }
+    */
+  //  사용자 정의 객체, 객체 리터럴 (Object literal)
+// 위에와 똑같이 만드는것 | 키벨류 쉼표 속성값속성값 |info라는 하나의 객체
+var info = {
+  subject:'css',
+  credit: 1,
+  printOut:function(){
+    return info.subject + ',' + info.credit + '학점';
+  }
+}
+console.log(info.subject);
+console.log(info.credit);
+console.log(info.printOut());
+
+info.days = 20; //객체 속성 추가
+console.log(info);
+console.log(info.days);
+
+delete info.credit; //속성삭제
+console.log(info);
+console.log(info.credit);
+
+info.printOut = function(){ //속성변경
+  return info.subject + ',' + info.days + '일';
+}
+console.log(info.printOut());
+
+// 객체속성: 값
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

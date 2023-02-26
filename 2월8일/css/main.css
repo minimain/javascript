@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* main.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+/* 초가화 */
+  *{margin: 0;padding: 0;}
+  ol,ul{list-style-type: none;}
+  a{text-decoration: none;color: #bbb;}
+  .blind{position: absolute;left: 0;top: 0;width: 0;height: 0;font-size: 0;line-height: 0;overflow: hidden;text-indent: -999999px;}
+
+  /* 스크롤 안생기게하는것 position: fixed; |기로세로값 스크린 기준| */
+  body{position: fixed;width: 100%;height: 100%;background: #111;font-family: 'Orbitron',sans-serif;}
+
+/* wrap */
+   /* min-width: 1024px;min-height: 768px; 최소값 유지하고 더이상 안줄어들고 내용이 잘리는것 | 가로세로 값body기준 |  */
+   #wrap{perspective: 900px;position: fixed;width: 100%;height: 100%;min-width: 1024px;min-height: 768px;}
+   /*부모에 perspective: 900px; 를 해줘서 햄버거 버튼을 눌렀을때 메뉴가 나옴*/
+
+
+/* 햄버거 버튼 */
+   /* 스크린을 기준으로 left,top 값 설정 |  alternate 이거 뭔지 다시 보기 두번째 시간 앞부분 |  */
+   .btnMenu{z-index: 50;opacity: 1;position: fixed;left: 40px;top: 50px;font-size: 40px;color: #fff;
+   animation:ani 0.5s linear 0s infinite alternate;}
+   .btnMenu.on{opacity: 0;animation: none;}
+   @keyframes ani {
+     0%{transform: scale(1);opacity:1;color: #888;}
+     100%{transform: scale(1.5);opacity:0.8;color:#888}
+   }
+   
+/* header */
+   header{opacity: 0;position: fixed;width: 150px;height: 100%;background: #eee;transform-origin:left center;transform: rotateY(120deg);transition: all 0.8s ease 0s;}
+   header.on{opacity: 1;transform: rotateY(15deg);}
+   
+   header h1{position: absolute;top:80px;left: 50%;margin-left:-50px;width: 100px;}
+   header h1 img{width: 100%;} /*header크기에 맞춰서 로고 크기를 줄이는것 */
+   
+   header nav ul{position: absolute;left: 0;top: 35%;width: 100%;}
+   nav li a{display: block;font-size: 18px;line-height: 4;color: #000;text-align: center;}
+   nav li a:hover{color: #fff;background: #000;} /*지금은 kids부분만 hover되고 있음 | 선택 안되는 이유는 video가 덮고 있어서 안되는중인것 f12 찍어보면 다 나옴*/
+   
+/* content */
+   #content{position: fixed;width: 100%;height: 100%;background: #555;transform-origin:right center;transform:rotateY(0);transition: all 0.5s ease 0s;}
+   #content.on{transform: rotateY(-10deg);} /*앞에서 뒤로 */
+   
+   /*section 3개가 겹쳐 있는것 그래서 position: absolute; | 선택이 되었을때 section이 각각 보이는것*/
+   #content>section{opacity:0;position: absolute;left: 0;top: 0;width: 100%;height: 100%;perspective: 700px;}
+   #content>section.on{opacity: 1;z-index: 35;} 
+   /*클래스 on이 붙은것만 일단보이게 한 상태*/
+
+   #content>section>article{position: relative;text-align: center;transition: all 1.5s ease 0s;transform: rotateY(180deg);}
+   #content>section.on>article{transform: rotateY(0deg);}
+
+   #content>section>article>strong{width: 100%;
+    position: absolute;left:0;top: 50%;margin-top: -25px;font-size: 50px;color: #fff;}
+  /* 인라인요소에 float나 position이 붙으면 블록레벨 요소처럼 됨 | 그래서 가로 100%로해서 가운데 맞춰줌 인라인 요소는 가로값 적용 안됨 */
+   #content>section>article>span{position: absolute;width: 100%;left: 0;top: 50%;margin-top: -10px;color: #eee;font-size: 20px;}
+
+   #content>section>article>ul{position: absolute;left: 50%;margin-left: -90px;width: 180px;
+    top: 50%;margin-top: -15px;height: 300px;}
+    #content>section>article>ul>li{float: left;margin:0 15px;}
+    #content>section>article>ul>li>a{display: inline-block;font-size: 30px;color: #eee;opacity: 0.5;transition: all 0.5s ease 0s;}
+    #content>section>article>ul>li>a:hover{transform: scale(1.2);opacity: 1;}
+
+/* Homme */
+   /* 총 4줄이 있어서 세로 100%/4= 25% | */
+   .box1 > article{float: left;height: 25%;}
+   .box1 > article:nth-of-type(1){width: 50%;background: #333;}
+   .box1 > article:nth-of-type(2){width: 25%;background: url(../img/m1.jpg) no-repeat 100% 50%;background-size:100%;}
+   .box1 > article:nth-of-type(3){width: 25%;background:#444;}
+   .box1 > article:nth-of-type(4){float: right;width: 50%;height: 50%;background: url(../img/m2.jpg)no-repeat 0 50%;background-size:cover;}
+   .box1 > article:nth-of-type(5){float: right;width: 25%;background: #fff url(../img/m3.jpg) no-repeat 0 50%;background-size: contain;}
+   .box1 > article:nth-of-type(6){float: right;width: 25%;background: #888;}
+   .box1 > article:nth-of-type(7){float: right;width: 25%;background: #444;}
+   .box1 > article:nth-of-type(7) video{width: 100%;}
+   .box1 > article:nth-of-type(8){float: right;width: 25%;background: url(../img/m4.jpg)no-repeat 50% 50%;background-size: 100%;}
+   .box1 > article:nth-of-type(9){width: 25%;background: #444;}
+   .box1 > article:nth-of-type(10){width: 25%;background:url(../img/m5.jpg)no-repeat 100% 50%;background-size:cover;}
+   .box1 > article:nth-of-type(11){width: 25%;background: #222;}
+
+
+/* Girl */
+   .box2 > article{float: left;height: 25%;}
+   .box2 > article:nth-of-type(1){width: 25%;background: #444;}
+   .box2 > article:nth-of-type(2){width: 25%;background: url(../img/w1.jpg) no-repeat 100% 50%;background-size:100%;}
+   .box2 > article:nth-of-type(3){width: 50%;background:#222;}
+   .box2 > article:nth-of-type(4){float: left;width: 25%;height: 50%;background: url(../img/w2.jpg)no-repeat 0 0;background-size:cover;}
+   .box2 > article:nth-of-type(5){float: left;width: 50%;height: 50%;background: #fff url(../img/w3.jpg) no-repeat 0 50%;background-size: cover;}
+   .box2 > article:nth-of-type(6){float: right;width: 25%;background:#fff url(../img/w4.jpg) no-repeat 50% 50%;background-size: 200px;}
+   .box2 > article:nth-of-type(7){float: right;width: 25%;background: #555;}
+   .box2 > article:nth-of-type(8){float: left;width:25%;background: url(../img/w5.jpg) no-repeat 0 50%;background-size: cover;}
+   .box2 > article:nth-of-type(9){width: 25%;background: #444;}
+   .box2 > article:nth-of-type(10){width: 25%;background:url(../img/w6.jpg)no-repeat 0 0;background-size:cover;}
+   .box2 > article:nth-of-type(11){width: 25%;background:url(../img/w7.jpg) no-repeat 0 40%;background-size: cover;}
+
+/* Kids */
+   .box3 > article{float: left;height: 25%;}
+   .box3 > article:nth-of-type(1){width: 50%; height: 100%;background: url(../img/k1.jpg) no-repeat 0 0;background-size: cover;}
+   .box3 > article:nth-of-type(2){width: 25%;background: #444}
+   .box3 > article:nth-of-type(3){width: 25%;background:url(../img/k2.jpg)no-repeat 0 50%;background-size: cover;}
+   .box3 > article:nth-of-type(4){width: 50%;height: 25%;background:#222;}
+   .box3 > article:nth-of-type(5){width: 25%;height: 50%;background:url(../img/k3.jpg) no-repeat 0 0;background-size:cover;}
+   .box3 > article:nth-of-type(6){float: right;width: 25%;background: #888;}
+   .box3 > article:nth-of-type(7){float: right;width: 25%;background: url(../img/k4.jpg) no-repeat 0 45%;background-size: cover;}

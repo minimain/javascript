@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript 연산자</title>
+  <script>
+    document.write("재미있는 자바스크립트"+"<br />") 
+    // 객체.매서드(); -객체기반언어
+    // object.method();
+    // 하나의 단위체(복사기 같은것) | 기능(전화는 전화를 하는 기능이 있죠)
+
+
+    var 변수명;
+    // 변수 : 어떤 값을 담기위한 것 | 데이터를 담는것 | 
+
+    var num = 10;
+    // num에다가 10을 대입을 해라 | 대입 연산자 | num이라는 변수
+    // num이라는 변수에 10을 저장해라 라는 뜻
+
+    var num =num/2;
+    document.write(num + "<br />");
+    // num 변수에 얼마가 있는지 화면에 찍어봐라 
+    // 나누기 2 
+
+    // 변수명 작성시 주의사항
+    // 변수명 앞에 숫자가 올수 없다 | 뒤에 붙일수 있음
+    // 대소문자 구분
+    // 변수명 앞에 영문, _ , $
+    // 변수명에는 영문 , 숫자 , _ ,$
+   
+    
+
+
+    // 변수에 저장 가능한 데이터 타입
+    //문자형 string
+    var txt1="자바스크립트"; //문자형 string
+    var txt2="10";
+     
+    var num = 10; //숫자형 Number
+    var result = true; //논리형 bool
+    var result = null; //널형 null , 비어있음
+    // "10" 따옴표를 하고 저장하면 문자형이되고 
+    // 참 거짓이라는 논리형 | bool 이나 블리언? 이라고 부름 | 논리값 저장 가능
+    // nul은 없는상태
+
+
+    // 연산자
+    //연산자- 산술연산자,이항연산자 +,-,*,/,%(나머지)
+    var A=10;
+    var B=3;
+    var result;
+    // ? 이건 그냥 이런 변수가 있다고 적는건가.. 근데 없어도 상관은 없던데 
+
+    result=A+B;
+    document.write(result + "<br/>");
+// 더하기
+    result=A-B;
+    document.write(result + "<br/>");
+// 뻬기
+    result=A*B;
+    document.write(result + "<br/>");
+// 곱하기
+    result=A/B;
+    document.write(result + "<br/>");
+// 나누기
+    result=A%B;
+    document.write(result + "<br/>");
+// 나머지
+    // % 나머지를 나타낸다. 10을 3으로 나눈 나머지 값을 저장
+
+    // 비교연산자는 비교를 한다음에 트루아니면 false가 저장
+    // ==두개가 붙으면 같다 | != 같지 않다. | ===데이터타입까지 같아야함 (숫자형 논리현 숫자형) 
+
+    // 비교연산자 - 값:true 참, false 거짓
+    // A > B
+    // A>=B, A<B , A<=B, A==B 데이터타입일치x , A!=B,
+    // A===B 데이터 타입 일치 0, A!==B
+
+    var A=10; //숫자형
+    var B=3; //숫자형
+    var C="10"; //문자형 10
+    var result;
+
+    result = A>B;
+    document.write(result + "<br/>");
+
+    result = A<B;
+    document.write(result + "<br/>");
+
+    result = A==B;
+    document.write(result + "<br/>");
+
+    result = A!=B;
+    document.write(result + "<br/>");
+    // A와 B값이 같지 않지 ? 어 같지 않네 true;
+
+    result = A==C;
+    document.write(result + "<br/>");
+  // 문자 10이던 숫자10이던 10이같아서 true가 나옴 == | 
+    result = A!=C;
+    document.write(result + "<br/>");
+
+    result = A===C;
+    document.write(result + "<br/>");
+// 타입까지 같아야해서 false가 나옴
+    result = A!==C;
+    document.write(result + "<br/>");
+    // 
+    // !==는 타입까지 같지 않지? 라서 true나옴
+
+
+
+    //대입연산자
+    //=,+=,-=,*=,/=,%=
+   // = 하나있는거 대입연산자 (저장)| += 는 대입을 하고 더해라 
+    var numA = 10;
+    var numB = 20;
+
+    //numA에 대입된 10에 5를 대입하라
+    numA += 5; //numA = numA + 5;
+    document.write(numA + "<br/>");
+
+    numA -= 5; //numA = numA - 5;
+    document.write(numA + "<br/>");
+
+    numA *= 5; //numA = numA * 5;
+    document.write(numA + "<br/>");
+
+    numA /= 5; //numA = numA / 5;
+    document.write(numA + "<br/>");
+
+// 지금 순서대로 결과값에 더하고 빼고 곱하고 나누고 다함 각자 결과가 아니라 각은 변수이름이라고 더한값에서 빼고 뺀값에서 곱하고 곱한값에서 나누고 함
+    numB %= 3; //numA = numA % 3;
+    document.write(numB + "<br/>");
+
+    //numB에 대입한 20을 3으로 나눠서 나머지를 구해라?대입하라?
+
+
+    // 증감 연산자 ++ 1씩 증가, --1씩 감소
+// 앞뒤에위치에 따라 값이 달라짐(전치 후치)
+    var numA = 10;
+    var numB = 20;
+  
+    numA++;  //++numA;
+    document.write(numA + "<br/>");
+  
+    numB--;  //--numB;
+    document.write(numB + "<br/>");
+
+
+    // 논리연산자 
+    // or 또는 A or B 또는 둘중에 하나만 있어도 참(true) |논리합
+    // and 둘다 참이어야 참  | 논리곱
+    // 이진 1,0으로 따짐 (전기가 나가고 들어오고) | 값이 업는 상태 0 (전기가 없는상태) 무조건 false 0 |
+    //값이 있는 상태 (전기가 들어오는 상태) 참 true 1
+    // 1+1은 2 참 | 1*0은 0 false
+    // ! 부정 (반대)
+
+    // 논리연산자 ||논리합(or) , &&논리곱(and) , !논리부정 - true참 1 , false거짓 0
+
+    // true || true - true
+    // true || false - true
+    // false || false - false
+
+    // true && true - true
+    // true && false - false
+    // false && false - false
+
+    var A = 10;
+    var B = 20;
+    var C = 30;
+    var D = 40;
+
+    var num1 = A>B;
+    var num2 = C<=D;
+
+    var a = num1 || num2;
+    document.write( a + "<br/>");
+
+    var b = num1 && num2;
+    document.write( b + "<br/>");
+
+    var c = !num1;
+    document.write( c + "<br/>");
+
+    var num1 = A>=B;
+    var num2 = C<=D;
+
+    var d = num1 || num2;
+    document.write( d + "<br/>");
+
+    var e = num1 && num2;
+    document.write( e + "<br/>");
+
+    var f = !num1;
+    document.write( f + "<br/>");
+
+    var num1 = A<=B;
+    var num2 = C<D;
+
+    var g = num1 || num2;
+    document.write( g + "<br/>");
+
+    var h = num1 && num2;
+    document.write( h + "<br/>");
+
+    var i = !num1;
+    document.write( i + "<br/>");
+  
+    // prompt 창이 뜸 | , 쉼표 다음은 기본 예시 
+    // 결과는 f12를 누르면 console을 누르면 결과가 나옴 
+
+  //  문제 - 20대이고 여성이면 true
+  // prompt메서드
+  // prompt("질문내용","기본답변제시"); - 당신의 성별은?, 여성
+  // prompt("질문내용","기본답변제시"); - 당신의 나이는?, 20
+
+  var gender = prompt("당신의 성별은?","여성");
+  console.log(gender);
+
+  var age = prompt("당신의 나이는?","20");
+  console.log(age);
+
+  var result = gender=="여성" && age>=20 && age<30;
+  document.write("결과:" + result + "<br/>");
+
+  // 문제2
+  // 국어, 영어, 수학 점수 입력받고
+  // 평균이 70이상 이고 각 과목 점수가 60이상이면 true
+// prompt는 문자열로 인식spring
+// Number(prompt("문자열","")); -  Number() 내장형 함수임
+//로 감싸면 prompt를 숫자열로 바꿔준다.
+
+  var korea = prompt("국어 점수를 입력하세요","80");
+  console.log(korea);
+  var english = prompt("영어점수를 입력하세요","80");
+  console.log(english);
+  var math = prompt("수학점수를 입력하세요","80");
+  console.log(math);
+
+// var korNum = Number(prompt("국어점수는?","0"));
+//var engNum = Number(prompt("영어점수는?","0"));
+//var matNum = Number(prompt("수학점수는?","0"));
+  // var aver =(korea+english+math) /3;
+  //  aver>=70
+  
+  var result = (korea+english+math)/3>=70 && korea>=60 && english>=60 && math>=60;
+  document.write("결과:" + result + "<br/>");
+
+  // 이고 또는 주의 이고(&&)전부 true해야 true |또는(||)
+
+  
+// 문자결합 연산자
+// "문자"+"문자" , "문자"+숫자 , String(숫자) + 숫자
+// 나열해서 나오는것
+// string(숫자)를 숫자를 문자열로 바꿔준다.
+
+var txt1 = "아름다운";
+var txt2 = "우리강산";
+document.write(txt1 + txt2 + "<br/>");
+
+// write 써줄때 띄어쓰기 해줄것.. 안하면 안먹힘 ㅜ
+
+var txt3 = "은하철도";
+var txt4 = 999;
+document.write(txt3 + txt4 + "<br/>");
+
+var num1 = 200;
+var num2 = 300;
+var txt5 = String(num1); //"200"
+document.write(num1 + num2 + txt5 + "<br/>");
+// string은 String
+
+var addText = "2002월드컵"
+addText += " 대한민국 "
+addText += " 짝짝 ~ 짝짝짝~!!"
+document.write(addText + "<br/>");
+
+
+// 조건연산자,삼향연산자,조건식? 실행문1 :실행문2
+// alert (알림창) 조건식? 참 : 거짓
+
+var num1=30;
+var num2=20;
+
+num1 >= num2 ? alert("참이다") : alert("거짓이다");
+
+// confirm("내용"), 확인-true값반환, 취소- false값반환
+var result = confirm("Do you like Javascript?");
+var theText = result ? "good" : "No-good";
+
+document.write(theText);
+// 확인을 누르면 true값이 저장 | 취소를 누르면 false값이 저장
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

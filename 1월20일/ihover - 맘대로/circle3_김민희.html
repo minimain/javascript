@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+/* circle */
+.circle,.circle *{box-sizing: border-box;}
+.circle a{text-decoration: none;}
+.circle img{width:100%;height:100%;}
+
+/* 위치 */
+.row{width: 600px;height: 300px;}
+
+/*  이미지 */
+.circle{position: relative;width: 220px;height: 220px;border-radius: 50%;
+  margin: 0 60px 60px 0;float: left;}
+
+.circle .img{position: relative;width: 220px;height: 220px;z-index: 11;
+transition: all 0.35s ease-out;}
+
+.circle .img::before{content: "";display: block;position: absolute;
+width: 100%;height: 100%;border-radius: 50%;
+ box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);}
+
+.circle .img img{border-radius: 50%;}
+
+/* 글씨 */
+.circle .info{position: absolute;text-align: center;top: 0;left: 0;right: 0;bottom: 0;background: #333333;border-radius: 50%;opacity:0;
+transition: all 0.35s ease-out;}
+
+.circle .info h3{text-transform: uppercase; color: #fff;
+  letter-spacing: 2px;font-size: 22px; margin: 0 30px;padding: 55px 0 0 0;
+  height: 110px;text-shadow: 0 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.3);}
+
+.circle .info p{ color: #bbb; padding: 10px 5px;font-style: italic;
+  margin: 0 30px;font-size: 12px; border-top: 1px solid rgba(255, 255, 255, 0.5);}
+
+/* colored */
+.circle.colored .info{background: #1a4a72;}
+
+
+/* hover */
+/* left_to_right */
+.left_to_right .img{transform: translateX(0);}
+.left_to_right .info{transform: translateX(-100%);}
+.left_to_right a:hover .img{transform: scale(0.5) translateX(100%);}
+.left_to_right a:hover .info{transform: translate(0);opacity: 1;}
+
+/*  Right to left */
+.right_to_left .img{transform: translateX(0);}
+.right_to_left .info{transform: translateX(100%);}
+.right_to_left a:hover .img{transform: scale(0.5) translateX(-100%);}
+.right_to_left a:hover .info{transform: translateX(0);opacity: 1;}
+
+/*  Bottom to top */
+.bottom_to_top .img{transform: translateY(0);}
+.bottom_to_top .info{transform: translateY(100%);}
+.bottom_to_top a:hover .img{transform: scale(0.5) translateY(-100%);}
+.bottom_to_top a:hover .info{transform: translateY(0);opacity: 1;}
+
+/* Top to bottom */
+.top_to_bottom .img{transform: translateY(0);}
+.top_to_bottom .info{transform: translateY(-100%);}
+.top_to_bottom a:hover .img{transform: scale(0.5) translateY(100%);}
+.top_to_bottom a:hover .info{transform: translateY(0);opacity: 1;}
+
+
+  </style>
+</head>
+<body>
+<div class="total">
+  <div class="row">
+   <!-- left_to_right-->
+    <!-- normal -->
+    <div class="circle left_to_right"><a href="#">
+        <div class="img"><img src="images/assets/4.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div>
+      </a>
+    </div>
+    <!-- end normal -->
+    <!-- colored -->
+    <div class="circle colored left_to_right"><a href="#">
+      <div class="img"><img src="images/assets/5.jpg" alt="img"></div>
+      <div class="info">
+        <h3>Heading here</h3>
+        <p>Description goes here</p>
+      </div></a></div>
+  </div>
+  <!-- end colored -->
+<!-- end left_to_right-->
+
+
+<!-- Right to left-->
+  <!-- normal -->
+  <div class="row">
+   <div class="circle right_to_left"><a href="#">
+       <div class="img"><img src="images/assets/6.jpg" alt="img"></div>
+       <div class="info">
+         <h3>Heading here</h3>
+         <p>Description goes here</p>
+       </div></a></div>
+   <!-- end normal -->
+   <!-- colored -->
+   <div class="circle colored right_to_left"><a href="#">
+       <div class="img"><img src="images/assets/7.jpg" alt="img"></div>
+       <div class="info">
+         <h3>Heading here</h3>
+         <p>Description goes here</p>
+       </div></a></div>
+  </div>
+  <!-- end colored -->
+<!-- end Right to left-->
+
+
+<!-- Bottom to top-->
+  <!-- normal -->
+  <div class="row">
+    <div class="circle bottom_to_top"><a href="#">
+        <div class="img"><img src="images/assets/3.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+    <!-- end normal -->
+    <!-- colored -->
+    <div class="circle colored bottom_to_top"><a href="#">
+        <div class="img"><img src="images/assets/4.jpg" alt="img"></div>
+        <div class="info">
+         <h3>Heading here</h3>
+         <p>Description goes here</p>
+        </div></a></div>
+  </div>
+  <!-- end colored -->
+<!-- end Bottom to top-->
+
+
+<!-- Top to bottom-->
+  <!-- normal -->
+  <div class="row">
+    <div class="circle top_to_bottom"><a href="#">
+        <div class="img"><img src="images/assets/1.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+    <!-- end normal -->
+    <!-- colored -->
+    <div class="circle colored top_to_bottom"><a href="#">
+        <div class="img"><img src="images/assets/2.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+  </div>      
+</div>
+  <!-- end colored -->
+<!-- end Top to bottom-->
+</body>
+</html>

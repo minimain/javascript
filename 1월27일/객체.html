@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체</title>
+  <script>
+    /*
+    자바스크립트는 객체기반 언어다. 
+    객체- 특정 기능을 수행하는 단위체
+    메서드 - 객체가 지닌 각각의 기능
+    입력값을 받아 무언가 한 다음 결과를 도출해내는 함수 자료형인 속성
+
+    object.method();
+    휴대폰.통화하기(); - 메서드
+    휴대폰.색상; - 속성
+
+    새로운 객체를 생성할때 - new 연산자 , new 내장 객체함수명
+    var todayObj = new Date();
+    todayObj.getFullYear();
+---------------
+    객체가 하나의 단위체(object)
+    휴대폰이라는 단위체 통화라는 기능  메소드
+    .색상은 속성 (크기 등)
+    자바스크립트 내장된것들은 대문자가 앞에 나옴 new라는 것을 앞에 붙이면 새로운
+    객체는 내장 되어있는것과 우리가 만드는게 있다.
+    */
+
+    /*
+    내장 되어있는 객체함수에 new를 붙여
+    현재의 시분초 | 특정한 날짜의 시분초
+    Date에서 제공하는 메서드
+    현재날짜 객체에서 연도만 뽑아내는것
+    달을 뽑아내는것
+    몇일이다 일자
+    요일을 뽑아내는것 (일욜이 0이고 토요일이 6) 숫자로 반환이된다. 
+    현재 시간
+    현재 분
+    현재 초
+    현재 밀리초 (1000/1초)
+    1970년 1월 1일 부터 경과된 밀리초제공
+
+    객체에서 날짜 메서드 추출
+    get은 가지고 오는것 set은 저장하는것
+    특정한 연도를 저장
+    내가 만든 날짜에 특정한 날짜를 저장해주는것
+    */
+
+
+
+    
+   /*
+   Date 객체
+   var 변수 =new Date();
+   var 변수 =new Date(년, 월, 일, 시, 분, 초);
+
+   날짜 제공 메서드 (현재)
+   getFullYear()  : 현재 날짜에서 연도만 뽑아낸것
+   getMonth() 0~11 : 달
+   getDate() : 일자
+   getDay() 요일 0 일요일 ~ 6 토요일
+   getHours()  시간 0~23
+   getMinutes() 분 0~59
+   getSeconds() 초 0~59
+   getMilliseconds() 1/1000초
+   getTime() 1970년 1월1일 이후부터 경과된 밀리초 제공
+
+   날짜 지정 메서드(특정지정)
+   
+   setFullYear()
+   setMonth() 0~11
+   setDate()
+   setDay() 요일 0 일요일 ~ 6 토요일
+   setHours()  시간 0~23
+   setMinutes() 분 0~59
+   setSeconds() 초 0~59
+   setMilliseconds() 1/1000초
+   setTime() 현재까지경과된 밀리초 새로지정
+   toGMTString() 날짜를 그리니치천문대 표준시로 표시
+   toString() 날짜를 문자형식으로 표시
+   */
+
+   document.write("<h1>현재날짜/시간정보</h1>");
+
+   var today = new Date();
+   console.log(today);
+
+   var nowYear = today.getFullYear();
+   document.write("년:" + nowYear + "<br/>");
+
+   var nowMonth = today.getMonth()+1;
+   document.write("월:" + nowMonth + "<br/>");
+
+   var nowDate = today.getDate();
+   document.write("일:" + nowDate + "<br/>");
+
+   var nowDay = today.getDay();
+   document.write("요일:" + nowDay + "<br/>");
+
+ 
+
+  switch(nowDay){
+    case 0:
+    nowDay="일요일";
+    break;
+    case 1 :
+    nowDay="월요일";
+    break;
+    case 2 :
+    nowDay="화요일";
+    break;
+    case 3 :
+    nowDay="수요일";
+    break;
+    case 4 :
+    nowDay="목요일";
+    break;
+    case 5 :
+    nowDay="금요일";
+    break;
+    case 6 :
+    nowDay="토요일";
+    break;
+  }
+  document.write("요일:" + nowDay +"<br/>");
+// 위에 변수이름 그대로 사용하고 요일은 문자열이니 "" 로 감싼다. 
+  //  consol 창에 무슨 변수가 있는지 뜬다 () today가 객체
+  // 달은 0이 1월이라 +1을 붙여서 1월로 만들어줌
+
+// 현재 시분초 경과시간
+  var nowHours = today.getHours();
+  var nowMinutes = today.getMinutes();
+  var nowSeconds = today.getSeconds();
+
+  document.write("시 :" + nowHours + "<br/>");
+  document.write("분 :" + nowMinutes + "<br/>");
+  document.write("초 :" + nowSeconds + "<br/>");
+
+  var nowTime = today.getTime();
+  document.write("경과시간 :" + nowTime + "<br/>");
+
+  // today객체
+
+  today.setMonth(11);//12월
+  today.setDate(25);//25일
+
+  var nowMonth = today.getMonth()+1;
+  document.write("월 :" + nowMonth + "<br/>");
+
+  var nowDate= today.getDate();
+  document.write("일 :" + nowDate + "<br/>");
+
+  // D-day 계산
+
+  // 특정한 날짜의 객체 생성 | 
+//다시확인 | 오타 조심하자.....
+  var today = new Date();
+  var afterDay = new Date(2023,11,25); 
+  //2023년 12월25일 //Month 0~11
+  var diffDay = afterDay.getTime() - today.getTime();
+  console.log(diffDay);
+
+  var DDay = Math.ceil(diffDay / 1000 / 60 / 60 / 24);
+  console.log(DDay + "일");
+
+  // -----------------------
+
+  // 일요일 img-22.jpg ~ 토요일 img7-22.jpg
+  // <img src="imges/img1-22.jpg" alt=""/>
+  // new Date - 요일을 추출을
+
+// 요일을 추출하는 메서드
+// var today = new Date();
+// 변수 이름은 바꿔도 상관없고 
+// var nowDate = today.getDate()+1; //1~7
+// document.write
+// ('<img src="images/img'+ nowDay +'-22.jpg" alt=''/>');
+
+var today = new Date();
+var nowDate = today.getDay()+1;
+ document.write('<img src="images/img'+nowDate+'-22.jpg" alt="" />'+"<br />");
+
+// 진 짜 중요한건데,,, 위에 하나 틀리면 밑에는 결과 값이 일도 안나옴 ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ
+// 겟 추출 |
+
+
+/*
+Math 객체 - new 연산자를 사용하지 않는다.
+
+메서드
+max(,,); 최대값
+min(,,); 최소값
+round(); 소수전 첫째자리 반올림
+ceil(); 소수점 무저건 올림
+floor(); 소수점 무조건 절삭
+abs(); 절대값
+random(); 0~1사이 난수 발생
+
+*/
+
+var maxNum = Math.max(30,70,5);
+document.write("최대값 : " + maxNum + "<br/>");
+
+var minNum = Math.min(8,10,15);
+document.write("최소값 : " + minNum + "<br/>");
+
+var roundNum = Math.round(3.457);
+document.write("반올림 : " + roundNum + "<br/>");
+
+var ceilNum = Math.ceil(5.1);
+document.write("소숫점올림 : " + ceilNum + "<br/>");
+
+var floorNum = Math.floor(10.9);
+document.write("소숫점내림 : " + floorNum + "<br/>");
+
+var absNum = Math.abs(-10);
+document.write("절대값 : " + absNum + "<br/>");
+
+var ranNum = Math.random(30,70,5);
+document.write("0~1난수 : " + ranNum + "<br/>");
+
+
+// 랜덤수 구하는공식 | +1 더하기 시작수
+// img1-24.jpg ~ img3-24.jpg 랜덤 이미지 출력
+// math.random()*(갯수) + 시작수 .....
+// 0.00001*3 + 1 = 1.00003
+// 0.99999*3 + 1 = 3.99997
+
+var imgNum = Math.floor(Math.random()*3+1);
+document.write('<img src="images/img' + imgNum + '-24.jpg" alt="랜덤이미지" />' + "<br/>");
+
+// 1~45 , 6개 for문 이용 반복적
+for(var r=1;r<=6;r++){
+var rNum = Math.floor(Math.random()*45+1);
+document.write("번호" + r + ":"  + rNum + "<br/>");
+}
+// 위에 r에서 하나 출력하고 밑으로 내려가 밑에 출력하고 위로 다시 올라가 출력하고 6개까지 출력 끝
+ 
+
+/*String 객체 - 문자형 변수도 String 객체다.
+var 변수(인스턴스 네임) = new String("자바스크립트");
+var 변수 = "자바스크립트";
+--------------------
+위에 처럼 저장하면 문자형 객체가 되는것이다. 
+.하고 괄호는
+.하고 괄호하면 속성
+
+-----------------
+메서드
+.bold()  : 글자를 굵게
+.link("URL")  : 글자에 링크 걸기
+.lenght - 텍스트의 개수 반환
+.toLowerCase()
+.toUpperCase() : 대문자 
+.indexOf("i") - i를 찾아서 최초로 일치하는 인덱스번호 반환, 없으면 -1반환
+.lastIndexOf("i") : 마지막 위치에 있는 i를 반환해라
+.charAt(5) - 5번 인덱스에 저장된 문자 데이터를 반환
+.substring(4,6) - 인덱스 4부터 6직전 문자 반환
+.substr(10,3) - 10번 인덱스부터 3글자 반환
+.replace("web","bye") -텍스트 교체
+.slice(7,9) - 인덱스7~9직전 문자 반환
+.concat("good") - 끝에 good 단어를 결합해서 반환
+.split("") - "" 공백을 기준으로 데이터 분리 (콤마로 분리)
+
+---------------
+indexOf 이거 컴활 그거네 글자에 번호 매기는거
+*/
+
+var theText = "web js hi css"; //공백도 문자, 인덱스 번호 0~12
+document.write(theText + "<br/>");
+document.write(theText.bold() + "<br/>");
+document.write(theText.link("http://www.naver.com") + "<br/>");
+document.write(theText.length + "<br/>");
+document.write(theText.toUpperCase() + "<br/>");
+document.write(theText.toLowerCase() + "<br/>");
+document.write(theText.indexOf("s") + "<br/>");
+document.write(theText.lastIndexOf("s") + "<br/>");
+document.write(theText.charAt(7) + "<br/>");
+document.write(theText.substring(4,6) + "<br/>");
+document.write(theText.slice(7,9) + "<br/>");
+document.write(theText.replace("web","bye") + "<br/>");
+document.write(theText.concat(" good") + "<br/>");
+document.write(theText.split(" ") + "<br/>");
+
+
+/*
+var theText = "web js hi css"; //공백도 문자, 인덱스 번호 0~12
+: theText변수에 문자열 저장 | 문자열 객체
+
+document.write(theText + "<br/>");
+document.write(theText.bold() + "<br/>");
+document.write(theText.link("http://www.naver.com") + "<br/>");
+document.write(theText.length + "<br/>");
+:글자수
+
+document.write(theText.toUpperCase() + "<br/>");
+document.write(theText.toLowerCase() + "<br/>");
+document.write(theText.indexOf("s") + "<br/>");
+: s 글자가 있는 위치의 번호 | 0~부터 시작 | 최초
+
+document.write(theText.lastIndexOf("s") + "<br/>");
+: 텍스트에서 s가 가장 마지막에 위치해있는 번호
+
+document.write(theText.charAt(7) + "<br/>");
+: 7번째에 있는 글자
+
+document.write(theText.substring(4,6) + "<br/>");
+: 4부터 6번직전의 글자 4번 5번
+
+document.write(theText.slice(7,9) + "<br/>");
+document.write(theText.replace("web","bye") + "<br/>");
+document.write(theText.concat(" good") + "<br/>");
+document.write(theText.split(" ") + "<br/>");
+
+스트링 객체가 되었다는것은 메소드를 사용할수있다는 의미
+*/
+
+// replace하고 다시 저장 해야함 아니면 안바뀜
+// 끝나는 지점이 없으면 쭉 감 substring
+// perseInt : Int는 정수를 나타냄 | 정수만 추출해냄 | 10만 정수라서 10만 추출함
+// /를 기준으로 나뉘어 인덱스 0,1 로 나뉨
+
+document.write("<h3>문자치환</h3>");
+
+var theText1="img2_out.jpg";
+theText1=theText1.replace("out.jpg","over.jpg");
+document.write(theText1 + "<br/>");
+// replace 다시 저장
+
+document.write("<h3>문자추출</h3>")
+
+var theText2="images/img10.jpg";
+theText2=theText2.split("/")[1];
+theText2=theText2.substring(3);
+theText2=parseInt(theText2);
+document.write(theText2 + "<br/>");
+// substring은 끝나는 지점이 없으면 끝까지 간다.
+
+document.write("<h3>마지막 문자 추출</h3>");
+
+var theText3="hello javascript";
+var lastIndex=theText3.length-1;
+theText3=theText3.charAt(lastIndex);
+document.write(theText3 + "<br/>")
+
+// prompt로 주민번호를 입력받고 생년월일만 출력
+// 001115-*****
+
+var Num = prompt("주민번호를 입력해주세요");
+document.write( Num.substring(0,6) + "- *******" + "<br/>");
+
+/*prompt로 이메일 주소를 입력, 이메일 주소가 맞는지 확인 
+abc@abc.com
+입력받은 문자에 만약에 @ 또는 . 이 없으면 '다시입력해주세요' 알림창 띄워야함
+그렇지 않으면 제대로 입력했으면 '당신의 이메일 주소 000입니다' 출력
+
+만약에 ~라면 (조건) if문 if else | indexOf 글자 찾기*/
+
+// 트루 하나만 있어도 트루인데 -1트루 -1트루 그리고 첫번째 입력해주세요는 참인 결과에서 나타나는 결과 그래서 합으로 했을때 트루가 나오면 다시 입력 | 폴스가 두개가 나오면 모두 작성한것이니 이메일은 이게 나오는것
+var email = prompt("이메일을 입력해주세요");
+if(email.indexOf("@")<0 || email.indexOf(".")<0){
+  document.write("다시입력해주세요" + "<br/>");
+}else{
+  document.write("당신의 이메일 주소는" + email + "입니다" + "<br/>");
+}
+    // 논리연산자 ||논리합(or) , &&논리곱(and) , !논리부정 - true참 1 , false거짓 0
+
+    // true || true - true
+    // true || false - true
+    // false || false - false
+
+    // true && true - true
+    // true && false - false
+    // false && false - false
+
+// @ 가 안들어가면 -1이야 그럼 0보다 작으니 트루지 그리고 
+
+// 없으면 indexOf() , 0보다 작은게 -1 , 또는 논리합 , false 더하기 false , 다시 보자....
+
+// prompt로 아이디를 입력, 아이디가 재대로 입력됐는지 확인,
+// 글자 입력 안함.(글자 갯수 0) 또는 첫글자가 공백문자()
+
+// 글자수가 0개로 내면 트루 그리고 첫번째 글자가 공백이면 트루
+// 두개가 트루면 참의 값인 다시 입력 창이 뜬다
+// 그리고 둘다 폴스가 되면 아이디 입력 완료
+var idd = prompt("아이디를 입력해주세요");
+if(idd.length==0 || idd.charAt(0)==" "){
+  alert("아이디를 다시 입력해주세요");
+}else{
+  document.write("당신의 아이디는" + idd + "입니다.");
+}
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

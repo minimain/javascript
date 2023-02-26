@@ -1,0 +1,89 @@
+/* style.css */
+
+.size{font-size: 30px;}
+.basic{font-size: 16px;}
+/* body 기본글씨크기 :16px, 100%, 1em */
+/* 12px 이면75%, 0.75em 이면 위에와 같은 크기 */
+
+.family{font-family: Dotum,"돋움",sans-serif;}
+/* 인식을 못하는경우도 있어서 영어와 한국 다 써줌 
+기본글꼴:굴림 , serif명조(웹은 번져서 사용 노), sans-serif 고딕(웹에서는 이것을 쓴다) */
+
+.weight{font-weight: bold;}
+strong{font-weight: normal;}
+/* normal은 원상태로 돌려서 안굵게 만듬 */
+
+strong,h3{font-weight: normal;}
+/* , : 그룹선택자 */
+
+.style{font-style: italic;}
+/* 글자가 기울어지게 만들어준다 */
+
+em,address{font-style: normal;}
+/* 원상태인 상태로 만들어 기울어지지 않게 함 */
+
+.variant{font-variant: small-caps;}
+/* 영문자에서 작은 대문자로 만들어준다. */
+
+.line{line-height: 300%;}
+/* 글자를 중심으로 줄간격의 위아래 여백이 생긴다. 글자 크기가 기준이다 300%라는 것이*/
+
+.font{font:font: bord italic small-caps 20px /1.5 Dotum,"돋음",sans-serif;}
+/*font만 저런 위에꺼를 안좋아하고 다른것들은 좋아함
+ font 순서가 중요함 :
+font-weight font-style font-variant font-size line-height font-family */
+
+.font2{font:20px Dotum,"돋움",sans-serif;}
+/* font속성은 폰트 사이즈와 폰트 종류(family)가 들어가야지만 쓸수있다. */
+
+.indent{text-indent: 50px;}
+.indent{text-indent: -50px;}
+/* 문단의 첫줄만 들여쓰기
+-50 내어쓰기 */
+
+.underline{text-decoration: underline;}
+/* 밑줄이 생긴다. */
+/* underline 밑줄, overline 윗줄 line-through 취소선
+css는 의미와 상관없으니 정확한 element를 써야함 */
+
+a{text-decoration: none;color: black;}
+/* 링크가 걸려있지만 밑줄을 없애준다.  */
+
+.aline{text-align: right;}
+/* 가로정렬 :right(오른쪽) , left(왼쪽), center(중간), justify(양쪽정렬)
+justify를 쓰면 양끝에서 깔끔하게 정돈된다. 오른쪽 왼쪽 중간은 양옆이나 한쪽이 지저분함*/
+
+.letter{letter-spacing: 30px;}
+/* 글자와 글자사이의 간격
+-를 붙이면 글자가 서로 붙이게 한다. */
+
+.word{word-spacing: 30px;}
+/* 단어와 단어 사이의 간격을 벌려주는것 */
+/* 이미지아래쪽에서 이미지가 있는데 그것이 세로정렬 */
+/* class를 이미지에 잡았음 */
+
+.top{vertical-align: top;}
+/* 세로정렬 :top, middle, bottom */
+
+.middle{vertical-align: middle;}
+.bottom{vertical-align: bottom;}
+/* bottom 이 기본값이다 */
+
+.upper{text-transform: uppercase;}
+/* 대문자로 바뀜 */
+
+.lower{text-transform: lowercase;}
+/* 소문자 바꿈 */
+
+.capital{text-transform: capitalize;}
+/* 첫글자를 대문자로 바꿔줌 */
+
+.pre{white-space: pre;}
+/* 공백을 처리해준다. */
+
+.nowrap{white-space: nowrap;}
+/* 자동줄바꿈이 안되는고 한줄로 됨 */
+
+
+
+

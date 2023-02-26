@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cosmo</title>
+  <!--  wrap-header-main-footer
+    id도 저이름 그대로 사용가능
+    ex)<header id="header"></header> - #header
+    전체에 body에 background에 색과 이미지를 넣고 ; 이것좀 넣지말고.. 해당 머리가 끝나면 ;를 쓰고 넘어가
+    100% 100%는 여기서 오른쪽 하단 모서리 위치
+    font-family로 폰트 선택
+    #header h1에 backgroun컬러만 넣고 ; 폰트 color넣고; text-align으로 글의 위치를 중앙정렬 로 center위치 (글 문단만 가능)
+    margin:0 auto; 0은 위아래 여백이 0이라는것이고 auto는 박스를 양옆이 정리가 되어 가운데에 위치하게 한다.(블록레벨요소는 마진용 오토로 해주기)
+    --->
+  <style>
+    *{padding:0;margin: 0;}
+   body{background:#ffffcd url(images/dream.jpg) no-repeat 100% 100% fixed;
+  font-family: "Times New Roman",serif;}
+  #wrap{width:908px; margin:20px auto;}
+  #header h1{background-color: green; color: white; text-align: center;
+  border-top:3px solid red;
+  border-bottom: 3px solid red;
+  padding: 10px;}
+#container h2{background-color: orange;
+border-bottom: 3px solid red;
+margin: 10px 0;}
+#container p{text-align: justify; margin: 10px 0;}
+/* 마진은 p태그에닥 마진을 위아래 10을 넣었는데 위아래 맞물리게 되면 20이 아닌 10으로만 인식이 된다. 
+h2마진 바텀 30, p태그에 마진 탑 10을 주면 간격은 총 30이 된다. 마진의 특성이다. 둘 중에 큰값이 먹어버린다. */
+#footer{border-top: 3px solid red; padding-top: 10px;}
+/* footer address{font-style: normal} */
+  </style>
+</head>
+<!--  -->
+<body>
+<div id="wrap">
+<header id="header"> 
+<h1>CosmoFarmer.com’s Fall Fashion Lineup</h1>
+</header>
+
+<main id="container">
+  <h2>Ralph Lauren Coveralls</h2>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure.</p>
+
+<h2>Yves Saint Laurent Garden Shears</h2>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure. </p>
+
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure. </p>
+
+<h2>Isaac Mizrahi Sunhats</h2>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure. </p>
+
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure. </p>
+</main>
+<footer id="footer">
+<p>Copyright 2006, CosmoFarmer.com</p>
+<!-- <address>Copyright 2006, CosmoFarmer.com </address>-->
+</footer>
+</div>
+</body>
+</html>

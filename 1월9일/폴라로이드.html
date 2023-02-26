@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폴라로이드 사진</title>
+  <style>
+    @font-face {
+      font-family: nanum;
+      src: url(Nanum_Pen_Script/NanumPenScript-Regular.ttf);
+    }
+
+    figure{width: 300px;padding: 10px 10px 20px 10px;
+      border:1px solid #bfbfbf;background: #fff;
+      box-shadow: 2px 2px 3px rgba(135, 139, 133,0.4);}
+
+    figcaption{font-family: "nanum",cursive;padding-top:10px;
+  font-size: 20px;color: #060;text-align: center;font-weight: bold;}
+
+  .t1{position:relative; z-index: 2;
+    transform: rotate(9deg) translate(30px,50px);}
+  .t2{position:relative; z-index: 3;
+    transform: scale(0.5) rotate(-45deg) translateX(200px);}
+  .t3{position:relative; z-index: 1;
+    transform: rotate(-18deg) skewX(15deg) translate(100px, -300px);}
+  /* 순서를 바꾸는 것 z-index */
+
+  
+
+/* 
+    body{font-size: 30px;font-family: nanum;font-weight: bold;}
+    figure{background: red;text-align: center;padding:20px;
+      width: 300px;}
+    figure.t1{transition: rotate(0) ;}
+    .t1:hover{rotate: 25deg;} */
+/* body{position:relative;font-size: 30px;font-weight: bold;font-family: "nanum";}
+figure{width: 350px;height: 270px;background-color: white;
+  box-shadow: 1px 2px 2px black;}
+figure img{position: relative;left: 25px;top: 10px;}
+figcaption{position: relative;top: 20px;
+text-align: center; text-shadow: 1px 0 2px black;}
+
+figure.t1{transform: rotate(20deg);transition: ;}
+figure.t2{transform: rotate(-50deg);}
+figure.t3{transform: rotate(-10deg);}
+
+transition: opacity 1s linear 0s;}
+
+    .green:hover{opacity: 0.3;} */
+
+  </style>
+</head>
+<body>
+  <figure class="t1">
+    <img src="d7.jpg" alt=""/>
+    <figcaption>여름이 깊어가고 있었다</figcaption>
+  </figure>
+  <figure class="t2">
+    <img src="d7.jpg" alt=""/>
+    <figcaption>여름이 깊어가고 있었다</figcaption>
+  </figure>
+  <figure class="t3">
+    <img src="d7.jpg" alt=""/>
+    <figcaption>여름이 깊어가고 있었다</figcaption>
+  </figure>
+</body>
+</html>

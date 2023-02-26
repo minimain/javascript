@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>클래스</title>
+  <script>
+    // 클래스class - 기존에 사용했던 객체 생성과 상속 구문을 체계적인 객체지향 구문으로 보완
+
+    // class하고 대문자로 시작 | constructor 로 속성들만 묶어둠 | 속성과 분리해서 메소드(함수) prototype도 넣을 수 있음 하나로 묶어버림 
+    // get(가져오는것) set(지정하는것) 이 추가됨 
+ 
+    // class 기본구성
+    class Info{
+      constructor(a,b) {
+        this.subject=a;
+        this.credit =b;
+        this.days=[80,120,140];
+        this.day=this.days[0]; //배열안의 인덱스 0번
+      }
+      printOut(){
+        return this.subject + ',' + this.credit + '학점';
+      }
+      get lessontime(){ //가져오는것
+        return this.day;
+      }
+      set lessontime(num){ //지정하는것
+        this.day = this.days[num]; 
+      }
+    }
+
+    //class를 만든 이유 객체생성 |new객체 가아닌 class를 이용하여 객체 생성
+
+    var sub1 = new Info('html',1);
+    console.log(sub1);
+    console.log(sub1.subject);
+    console.log(sub1.credit);
+    console.log(sub1.days);
+    console.log(sub1.day);
+    console.log(sub1.printOut());
+    console.log(sub1.lessontime); //속성
+    sub1.lessontime=1; //인덱스 번호가 1이됨
+    console.log(sub1.lessontime); 
+
+    var sub2 = new Info('css',2);
+    console.log(sub2);
+    console.log(sub2.subject);
+    console.log(sub2.credit);
+    console.log(sub2.days);
+    console.log(sub2.day);
+    console.log(sub2.printOut());
+    console.log(sub2.lessontime); //속성
+    sub2.lessontime=2; //인덱스 번호가 2이됨
+    console.log(sub2.lessontime); 
+
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

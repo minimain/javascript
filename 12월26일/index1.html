@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웹 접근성 연구소</title>
+</head>
+<body>
+<!-- index.html이 첫페이지라고 지정 -->
+<!-- 본문바로가기 -->
+<div id="skipNavi"><a href="#container">본문바로가기</a></div>
+<!-- //본문바로가기 -->
+
+<div id="wrap">
+
+  <!-- header 시작 -->
+<div id="header">
+  <!-- header의 띠는 끝과 끝이 되어있지만 중간에 실질적인 내용은 작게 들어가서 header_inner로 다시 잡아줌 -->
+  <!-- header_inner 시작 -->
+  <div class="header_inner">
+    <h1><a href="#"><img src="images/logo(1).gif" alt="웹접근성연구소 WEB ACCESSIBIIUTY LABORATORY" /></a></h1>
+    <form action="/" method="post">
+      <fieldset>
+        <legend>검색창</legend>
+        <label for="srch">검색어</label>
+        <input type="search" id="srch" title="검색어입력" />
+        <input type="image" src="images/btn_search(1).gif" alt="검색 이동"/>
+      </fieldset>
+    </form>
+    <!-- 로그인 부분은 dl로 해준다 -->
+    <dl>
+      <dt>탑메뉴</dt>
+      <dd><a href="#">로그인</a></dd>
+      <dd><a href="#">회원가입</a></dd>
+      <dd><a href="#">사이트맵</a></dd>
+    </dl>
+    <h2>주메뉴</h2>
+    <ul>
+      <li><a href="#">웹접근성이란</a>
+        <ul>
+          <li><a href="#">웹접근성개요</a></li>
+          <li><a href="#">법&middot;제도</a></li>
+          <li><a href="#">장애인의 웹사이트 이용 이해</a></li>
+          <li><a href="#">웹 접근성 품질인증</a></li>
+          <li><a href="#">관련사이트</a></li>
+        </ul>
+      </li>
+      <li><a href="#">무인정보단말기 접근성</a>
+        <ul>
+          <li><a href="#">무인정보단말기 접근성 지침</a></li>
+          <li><a href="#">지능정보제품 우선구매 제도</a></li>
+        </ul>
+      </li>
+      <li><a href="#">교육마당</a>
+        <ul>
+          <li><a href="#">정보 접근성 전문 교육</a></li>
+          <li><a href="#">세미나</a></li>
+        </ul>
+      </li>
+      <li><a href="#">지식마당</a>
+        <ul>
+          <li><a href="#">개발자아카이브</a></li>
+        </ul>
+      </li>
+      <li><a href="#">정보마당</a>
+        <ul>
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">자료실</a></li>
+        </ul>
+      </li>
+      <li><a href="#">기관소개</a>
+        <ul>
+          <li><a href="#">기관장 인사말</a></li>
+          <li><a href="#">한국지능정보사회진흥원 소개</a></li>
+          <li><a href="#">정보접근성 주요 사업</a></li>
+          <li><a href="#">찾아오시는길</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <!-- //header_inner 끝 -->
+</div>
+<!-- //header 끝 -->
+<hr />
+
+<!-- container 시작 -->
+<div id="container">
+  <!-- banner_box 시작 -->
+  <div class="banner_box">
+    <!-- list_box1 시작 -->
+    <!-- 여기서 이미지는 이미지를 모르면 글내용을 모르는것이 아니기에 나중에 백그라운드로 CSS로 넣어도됨 -->
+    <div class="list_box1">
+      <div>
+        <img src="images/m_box_bg01(1).gif" alt="아이콘 이미지1" />
+        <h2><a href="#">한국형 웹 콘텐츠 접근성 지침 2.1 (KWCAG2.1)</a></h2>
+        <p><a href="#">2015년 3월 31일 지침2.1 개정</a></p>
+      </div>
+      <div>
+        <img src="images/m_box_bg02(1).gif" alt="아이콘 이미지2"/>
+        <h2><a href="#">웹 콘텐츠 제작기법</a></h2>
+        <p><a href="#">웹접근성 제작기법에 대한 정보 제공</a></p>
+      </div>
+      <div>
+        <img src="images/m_box_bg03(1).gif" alt="아이콘 이미지3"/>
+        <h2><a href="#">웹 콘텐츠 신기술 제작기법</a></h2>
+        <p><a href="#">웹 콘텐츠 신기술 제작기법 가이드라인들 제공</a></p>
+      </div>
+      <div>
+        <img src="images/m_box_bg04(1).gif" alt="아이콘 이미지4" />
+        <h2><a href="#">W3C 접근성 문서 번역</a></h2>
+        <p><a href="#">웹 접근성 관련 문서를 한국어로 번역할 것을 제공</a></p>
+      </div>
+    </div>
+    <!-- //list_box1 끝 -->
+    <!-- mail_banner 시작 -->
+    <div class="main_banner">
+      <h2>메인 배너</h2>
+      <!-- 배너가 여러개라면 ul로 해서 열어주면 된다. -->
+      <ul>
+        <li><a href="#" target="_blank" title="새창"><img src="images/20221121main_banner_v1.jpg" alt="2022 제4회 정보접근성 오픈아카데미 유튜브 라이브 방송안내 실무자(디자이너, 기획자, 퍼블리셔, 개발자) 중심 정보접근성 기술교육 2022.12.01(목)20:00~22:00"/></a></li>
+        <li><a href="#" target="_blank" title="새창"><img src="images/aoa_banner(1).jpg" alt="AOA-YouTube 접근성 오픈 아카데미 유튜브 채널 구독하기버튼 매주 월요일 컨텐츠 업데이트!"/></a></li>
+      </ul>
+      <div>
+        <a href="#"><img src="images/circle_on(1).png" alt="접근성 오픈 아카데미 유튜브 채널"/></a>
+        <a href="#"><img src="images/circle_off(1).png" alt="2022년 제 2회 정보접근성 오픈아카데미"/></a>
+      </div>
+      <a href="#"><img src="images/btn_pause(2).png"/>정지버튼</a>
+    </div>
+    <!-- //main_banner 끝 -->
+    <!-- list_box2 시작 -->
+    <div class="list_box2">
+      <div>
+        <img src="images/m_box_bg05_1(1).gif" alt="아이콘 이미지5"/>
+        <h2><a href="#">모바일 애플리케이션 콘텐츠 접근성 지침2.0</a></h2>
+        <p><a href="#">2016년 10월 20일 지침2.0개정</a></p>
+      </div>
+      <div>
+        <img src="images/m_box_bg06(1).gif" alt="아이콘 이미지6"/>
+        <h2><a href="#">모바일 앱 접근성 평가 교육 동영상</a></h2>
+        <p><a href="#">모바일 앱 접근성 오프라인 진단 및 컨설팅에서 교육용 동영상</a></p>
+      </div>
+      <div>
+      <ul>
+        <h2><a href="#">모바일 앱 접근성 제작기법</a></h2>
+        <p><a href="#">IOS와 Android의 모바일 앱 접근성에 대한 제작기법을 제공</a></p>
+        <!-- 이미지는 ul로 넣어준다 -->
+        <li><a href="#"><img src="images/ico_ios(1).gif" alt="ios 아이콘"/></a></li>
+        <li><a href="#"><img src="images/ico_and(1).gif" alt="android 아이콘"/></a></li>
+      </ul>
+      </div>
+    </div>
+    <!-- list_box2 끝 -->
+  </div>
+  <!-- //banner_box 끝 -->
+
+  <hr/>
+  <!-- board 시작 -->
+  <div class="board">
+    <!-- notice 시작 -->
+    <div class="notice">
+      <h2>공지사항</h2>
+      <ul>
+         <li><img src="images/m_box_bg11(1).gif" alt="공지사항 이모티콘 이미지"/></li>
+         <li><a href="#">우선구매대상 지능정보제품(키오스크)...</a><span>2022-11-25</span></li>
+         <li><a href="#">[홍보]2023년 정보통신 및 정보...</a><span>2022-11-23</span></li>
+         <li><a href="#">2022년 제4차 정보접근성 오픈 아...</a><span>2022-11-21</span></li>
+         <li><a href="#">무인정보단말기 접근성 지침(KSX92...</a><span>2022-10-12</span></li>
+          </ul>
+      <p><a href="#"><img src="images/btn_more(1).gif" alt="공지사항 더보기"/></a></p>
+    </div>
+    <!-- //notice 끝 -->
+    <!-- dataroom 시작 -->
+    <div class="dataroom">
+      <h2>자료실</h2>
+      <ul>
+        <li><img src="images/m_box_bg12(1).gif" alt="자료실 이모티콘 이미지"/></li>
+        <li><a href="#">2021 웹 접근성 실태조사 결과보고..</a><span>2022-05-13</span></li>
+        <li><a href="#">캡차(CAPTCHA), 가상키보드</a><span>2017-12-19</span></li>
+        <li><a href="#">웹 접근성 국가대표(KWCAG2.2..</a><span>2017-12-19</span></li>
+        <li><a href="#">정보접근성 향상을 위한 W3C 국제표..</a><span>2016-12-14</span></li>
+      </ul>
+      <p><a href="#"><img src="images/btn_more(1).gif" alt="자료실 더보기"/></a></p>
+
+    </div>
+    <!-- //dataroom 끝 -->
+
+  </div>
+  <!-- //board 끝 -->
+</div>
+<!-- //container 끝 -->
+
+<hr/>
+<!-- footer 시작 -->
+<!-- p 테그와 한국지능정보 ul로 해주고  초로색 이모티콘 옆에서는 넣지마 p테그로 넣어 -->
+<div id="footer">
+  <!-- footer_inner 시작 -->
+  <div id="footer_inner">
+    <p><a href="#" target="_blank" title="한국지능정보사회진흥원 홈페이지 바로가기"><img src="images/nia(1).png"alt="NIA 한국지능정보사회진흥원 로고"/></a></p>
+    <ul>
+      <li><a href="#">한국지능정보사회진흥원 소개</a></li>
+      <li><a href="#">웹접근성 정책</a></li>
+      <li><a href="#">개인정보처리방침</a></li>
+      <li><a href="#">이메일무단수집거부</a></li>
+      <li><a href="#">찾아오시는길</a></li>
+    </ul>
+    <address>대구광역시 동구 첨단로 53(41068)한국지능정보사회진흥원 디지털포용본부 053-230-1388</address>
+    <p>Copunight&copy;2017National Information Society Agency</p>
+  </div>
+  <!-- //footer_inner 끝 -->
+</div>
+<!-- //footer 끝 -->
+</div>
+
+</body>
+</html>

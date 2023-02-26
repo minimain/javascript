@@ -1,0 +1,337 @@
+@import url(reset.css);
+
+
+/* main.css */
+/* common */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poiret+One&display=swap');/* 폰트 url */
+
+  body{font-size: 12px;line-height: 1.6;font-family: 'Indie Flower', cursive;
+    font-family: 'Poiret One', cursive;color: #555;}
+  a{text-decoration: none;color: #555;}
+
+
+/* layout */
+  header{position: fixed;left: 0;top: 0;width:15%;height: 100%;
+        background: rgb(255, 255, 255);}
+        /* h1,주메뉴,탑메뉴 의 위치 고정 | 바디기준 가로 15%, 세로 100% */
+  /* position 스크린을 기준으로 | 바디기준 가로세로*/
+
+  .lnb{position: relative;background: #212121;width: 85%;height: 35px;
+        margin-left: 15%;}
+        /* 상단 메뉴 , 바디기준 100-15=85% 가로, 세로는 메뉴 높이 크기
+        여기서 margin-left:15%는 원래 왼쪽부터 채워지는거라 margin으로 왼쪽으로 밀어서 오른쪽으로 딱 붙고 왼쪽으로부터 15%떨어지게 함 */
+
+  section{background: gray;width: 85%;margin-left: 15%;}
+  /* 아티클로 사진들 이것도 15%밀어주고 가로 85%줌 | px과 % 구분 잘하기 */
+  /* 원래 width 값이 왼쪽부터 끝가지 채워진거 header를 고려하여 header와 겹치지 않게 85%를 넣고 왼쪽부터 채워지는걸 15% 밀었다. */
+
+
+  /* header */
+
+  h1{position: absolute;left: 50%;margin-left: -90px;top: 70px;
+    width: 180px;height: 136px;background: url(../img/logo1.png) no-repeat 0 0; text-indent: -99999px;overflow: hidden;}
+    /* absolute로 떼어냄 | left로 중간위치로 오게함 | margin-left:-90px은 -니까 밀어내는것이 아닌 들어감 (left로 먼저 50%로 중간을 만들고 자세한 내용은 margin으로 설정) | top 위에서 70px만큼 내려옴 | background 이미지 있으니 가로세로값 설정 | 원래 글 없애기 hidden | 이미지 크기에 따라 저거 달라 1,2*/
+    /* 위에 header에 fixed가 있음 |  */
+
+  .gnb{position: absolute;top: 300px;right: 57px;}
+   /* absolute로 떼어냄 | 위에서 300px 떨어트림 |  오른쪽에서 57px 밀어냄*/
+  /* header 를 기준으로 위치 */
+
+  .gnb a{display: block;padding: 8px 30px;
+    font-size: 17px;font-weight: bold;color: #555;line-height: 1.8;}
+    /* a 가 들어가니 block해주고 | 위아래 8px 양옆30px | 패딩값도 줬는데 line-height도 주넹...*/
+
+  .gnb a i{margin-right: 10px;}
+  /* 이번에 알게된 프롬폰트인가(i) 그거와 글자 사이 padding 간격 10px 주기  */
+  .gnb a:hover{color: skyblue;}
+  /* a:hover 했을때  글씨 색 변화*/
+
+  .topMenu{position: absolute;right: 50%;bottom: 50px;margin-right: -45px;width: 90px;}
+  /* 탑메뉴(페북 그거 근데 두줄로 형성되어 있음) | 얘도 absolute로 떼어냄 |
+  right로 세로 중간 설정 | bottom으로 밑에서부터 위로 50px |얘도 세로는 중간으로 맞춰났으니 margin으로 자세히 조정 | width 값을 적게 줘서 두줄로 나오도록 설정*/
+  /*  두줄로 가로값 설정*/
+  .topMenu dd{float: left;}
+  /* dd리스트들 왼쪽 정렬이 아닌 right하면 순서 바뀜*/
+  /* float:right는 순서가 바뀌어서 불가 */
+
+
+
+ /* lnb */
+ /* 위에 상단메뉴 */
+ .lnb li:nth-child(1){position: absolute;left: 10px;top: 5px;}
+ .lnb li:nth-child(2){position: absolute;left: 150px;top: 5px;}
+ .lnb li:nth-child(3){position: absolute;right: 90px;top: 5px;}
+ .lnb li:nth-child(4){position: absolute;right: 10px;top: 5px;}
+ /* :nth-child로 해서 선택하고 두개는 왼쪽에 붙어있고 두개는 오른쪽 부터있음
+ 근데 float로 안한이유를보니 일단 float는 순서가 바뀌고 어차피 하나하나 설정하는거니까
+ absolute로 떼어내서 left와 top값만 설정 잘하면 충분히 가능 
+ 아니면 값이 계속 변경이 되고 그래서 absolute를 쓰는건가*/
+
+
+ /* section */
+ section > article{float: left;height: 260px;}
+ /* section 안에 있는 article 모두 선택 하여 float왼쪽 정렬 | height값은 위에서 지정하지 않았다. 그래서 임의로 일단 260px로 설정*/
+
+ /* 5개 20씩 */
+ /* 1번재 아티클은 3개 */
+ /* 1번째 줄 */
+section > article:nth-child(1){width: 60%;height: 520px;background: #ddd;}
+section > article:nth-child(2){width: 40%;background: #ccc;}
+section > article:nth-child(3){width: 20%;background: #bbb;}
+section > article:nth-child(4){width: 20%;background: #aaa;}
+/* 2번째 줄 */
+section > article:nth-child(5){width: 20%;background: #999;}
+section > article:nth-child(6){width: 40%;background: #888;}
+section > article:nth-child(7){width: 20%;background: #777;}
+section > article:nth-child(8){width: 20%;background: #666;}
+/*  3번째 줄 */
+section > article:nth-child(9){width: 40%;background: #555;}
+section > article:nth-child(10){width: 20%;background: #444;}
+section > article:nth-child(11){width: 20%;background: #333;}
+section > article:nth-child(12){width: 20%;background: #222;}
+
+
+/* 마우스 포인터 */
+article > div{position: relative;width: 100%;height: 100%;cursor: pointer;
+overflow: hidden;}
+/* transition 기준잡기 | hover을 했을때 scale 이커져서 여러개가 선택이되어 
+overflow:hidden으로 영역밖은 선택이 되지않게 한다.*/
+
+
+/* 배경이미지 50% 50% 가운데 위치 */
+article .bg1{background: url(../img/pic1.jpg) no-repeat 50% 50%;}
+article .bg2{background: url(../img/pic2.jpg) no-repeat 50% 50%;}
+article .bg3{background: url(../img/pic3.jpg) no-repeat 50% 50%;}
+article .bg4{background: url(../img/pic4.jpg) no-repeat 50% 50%;}
+article .bg5{background: url(../img/pic5.jpg) no-repeat 50% 50%;}
+article .bg6{background: url(../img/pic6.jpg) no-repeat 50% 50%;}
+article .bg7{background: url(../img/pic7.jpg) no-repeat 50% 50%;}
+
+
+/* background 이미지를 화면에 꽉차게 해주는것 */
+article .bg{background-size:cover;}
+
+
+/* transition */
+/* div를 기준으로 | 움직이는 애들은 position */
+article div.bg span{position: absolute;right: 20px;bottom: 0;font-size: 60px; color: #fff;transform: scale(10);opacity: 0;
+transition: all 0.6s linear 0s;}
+/* 최종크기,위치를 먼저 잡고 바꾸기 */
+article div.bg:hover span{transform: scale(1);opacity: 1;}
+
+
+/* moldives */
+article div.bg1 span{position: absolute;right: -6px;bottom: -76px;
+  font-size: 170px;transform: scale(1);opacity: 1;
+transition: all 0.5s linear 0s;}
+article div.bg1:hover span{transform: rotateY(180deg);color: #222;}
+
+
+/* text-box 텍스트박스*/
+article div.txt{color: #666;background: #fff;padding: 40px 30px;
+box-sizing: border-box;}
+article:hover div.txt{background: #6ce2fb;color: #fff;}
+
+article:nth-child(3) div.txt{background: #bff7fa;}
+article:nth-child(11) div.txt{background: #e3f1fb;}
+
+
+/* strong 글 */
+article div.txt strong{font-size: 30px;font-weight: normal;}
+
+
+
+/* 폰트 */
+/* div 기준 */
+article div.txt i{position: absolute;right: -200px;bottom: -70px;
+  font-size: 300px;color: #b2effc;opacity: 0;
+transition: all 0.7s linear 0s;}
+
+article:hover div.txt i{right: 0;opacity: 0.5;}
+
+/* 미디어쿼리 */
+@media screen and (min-width:1280px) and (max-width:1599px) {
+  /*1번째 1280~1599 | header가 바뀜*/
+  /* layout */
+  header{position: relative;left: 0;top: 0;width:100%;height: 80px;background: rgb(255, 255, 255);}
+  .lnb{position: relative;background: #212121;width: 100%;height: 35px;margin-left:0;}
+  section{background: gray;width: 100%;margin-left: 0;}
+   /* header */
+  h1{position: absolute;left: 20px;margin-left: 0;top: 20px;
+    width: 200px;height: 40px;background: url(../img/logo2.png) no-repeat 0 0; text-indent: -99999px;overflow: hidden;background-size: contain;}
+    .gnb{position: absolute;top: 20px;right: 200px;}
+    .gnb li{float: left;}
+  
+    .topMenu{position: absolute;right: 80px;bottom: 20px;margin-right:0;width: 90px;}
+    .topMenu dd{float: left;}
+}
+@media screen and (min-width:1024px) and (max-width:1279px) {/*2번째 1024~1279*/
+   /* layout */
+  header{position: relative;left: 0;top: 0;width:100%;height: 80px;background: rgb(255, 255, 255);}
+  .lnb{position: relative;background: #212121;width: 100%;height: 35px;margin-left:0;}
+  section{background: gray;width: 100%;margin-left: 0;}
+     /* header */
+  h1{position: absolute;left: 20px;margin-left: 0;top: 20px;
+    width: 200px;height: 40px;background: url(../img/logo2.png) no-repeat 0 0; text-indent: -99999px;overflow: hidden;background-size: contain;}
+    .gnb{position: absolute;top: 20px;right: 30px;}
+    .gnb li{float: left;}
+  
+    .topMenu{display: none;}
+
+    section > article:nth-child(1){width: 75%;height: 520px;}
+section > article:nth-child(2){width: 25%;}
+section > article:nth-child(3){width: 25%;}
+
+section > article:nth-child(4){width: 25%;}
+section > article:nth-child(5){width: 25%;}
+section > article:nth-child(6){width: 50%;}
+
+section > article:nth-child(7){width: 50%;}
+section > article:nth-child(8){width: 25%;}
+section > article:nth-child(9){width: 25%;}
+
+section > article:nth-child(10){width: 50%;}
+section > article:nth-child(11){width: 25%;}
+section > article:nth-child(12){width: 25%;}
+   
+}
+@media screen and (min-width:780px) and (max-width:1023px) {/*3번째 780~1023*/
+   /* layout */
+  header{position: relative;left: 0;top: 0;width:100%;height: 80px;background: rgb(255, 255, 255);}
+  .lnb{position: relative;background: #212121;width: 100%;height: 35px;margin-left:0;}
+  section{background: gray;width: 100%;margin-left: 0;}
+    /* header */
+  h1{position: absolute;left: 20px;margin-left: 0;top: 20px;
+    width: 200px;height: 40px;background: url(../img/logo2.png) no-repeat 0 0; text-indent: -99999px;overflow: hidden;background-size: contain;}
+    .gnb{position: absolute;top: 20px;right: 30px;}
+    .gnb li{float: left;}
+    .gnb a{display: block;padding: 8px 10px;}
+
+    .topMenu{display: none;}
+
+    section > article:nth-child(1){width: 100%;height: 400px;}
+section > article:nth-child(2){width: 66.666%;}
+section > article:nth-child(3){width: 33.333%;}
+
+section > article:nth-child(4){display: none;}
+section > article:nth-child(5){width: 33.333%;}
+
+section > article:nth-child(6){width: 66.666%;}
+section > article:nth-child(7){display: none;}
+section > article:nth-child(8){width: 33.333%;}
+section > article:nth-child(9){width: 33.333%;}
+
+section > article:nth-child(10){display: none;}
+section > article:nth-child(11){width: 33.333%;}
+section > article:nth-child(12){display: none;}
+   
+}
+@media screen and (min-width:640px) and (max-width:779px) {/*4번째 640~779*/
+    /* layout */
+    header{position: relative;left: 0;top: 0;width:100%;height: 80px;background: rgb(255, 255, 255);}
+    .lnb{position: relative;background: #212121;width: 100%;height: 35px;margin-left:0;}
+    section{background: gray;width: 100%;margin-left: 0;}
+      /* header */
+    h1{position: absolute;left: 20px;margin-left: 0;top: 20px;
+      width: 200px;height: 40px;background: url(../img/logo2.png) no-repeat 0 0; text-indent: -99999px;overflow: hidden;background-size: contain;}
+      .gnb{position: absolute;top: 20px;right: 10px;}
+      .gnb li{float: left;}
+      .gnb a{display: block;padding: 8px 10px;}
+  
+      .topMenu{display: none;}
+  
+      section > article:nth-child(1){width: 100%;height: 400px;}
+
+  section > article:nth-child(2){width: 100%;}
+
+  section > article:nth-child(3){display: none;}
+  section > article:nth-child(4){display: none;}
+
+  section > article:nth-child(5){width: 50%;}
+  section > article:nth-child(6){width: 50%;}
+
+  section > article:nth-child(7){display: none;}
+  section > article:nth-child(8){width: 50%;}
+  section > article:nth-child(9){width: 50%;}
+
+  section > article:nth-child(10){display: none;}
+  section > article:nth-child(11){width: 50%;}
+  section > article:nth-child(12){width: 50%;}
+     
+}
+@media screen and (min-width:501px) and (max-width:639px) {
+  /*5번째 501~639
+  크롬이 줄어들수있는 최대 줄어듬*/
+  /* layout */
+  header{position: relative;left: 0;top: 0;width:100%;height: 130px;background: rgb(255, 255, 255);}
+  .lnb{display: none;}
+  section{background: gray;width: 100%;margin-left: 0;}
+    /* header */
+  h1{position: absolute;left: 50%;margin-left: -100px;top: 20px;
+    width: 200px;height: 40px;background: url(../img/logo2.png) no-repeat 0 0; text-indent: -99999px;overflow: hidden;background-size: contain;}
+    .gnb{position: absolute;top: 80px;right: 0;width: 100%;}
+    .gnb li{float: left;width: 25%;text-align: center;}
+    .gnb a{display: block;padding: 8px 10px;}
+
+    .topMenu{display: none;}
+/* 모바일에서는 작은글씨 다 빼버림 */
+
+section > article{float: left;height: 150px;}
+
+article div.txt strong{font-size: 25px;font-weight: normal;}
+article div.txt em{display: none;}
+article div.bg1 span{position: absolute;right: -6px;bottom: -50px;
+  font-size: 120px;}
+
+
+section > article:nth-child(1){width: 100%;height: 300px;}
+
+section > article:nth-child(2){width: 100%;}
+
+section > article:nth-child(3){display: none;}
+section > article:nth-child(4){display: none;}
+
+section > article:nth-child(5){width: 50%;}
+section > article:nth-child(6){width: 50%;}
+
+section > article:nth-child(7){display: none;}
+section > article:nth-child(8){width: 50%;}
+section > article:nth-child(9){width: 50%;}
+
+section > article:nth-child(10){display: none;}
+section > article:nth-child(11){width: 50%;}
+section > article:nth-child(12){width: 50%;}
+   
+}
+@media screen and (max-width:500px) {/*6번째 0~500*/
+   /* layout */
+   header{z-index: 40;position: fixed;left: 0;top: 0;width:100%;height:100%;background: rgba(255, 255, 255,0);}
+   .lnb{display: none;}
+   section{background: gray;width: 100%;margin-left: 0;}
+     /* header */
+   h1{position: absolute;left: 50%;margin-left: -70px;top: 20px;
+     width: 140px;height: 136px;background: url(../img/logo1.png) no-repeat 0 0; text-indent: -99999px;overflow: hidden;background-size: contain;}
+     .gnb{position: absolute;top: 140px;right: 50%;margin-right: -125px;
+      width: 250px;}
+   
+     .gnb a{display: block;padding: 8px 30px;background: #000;color: #fff;opacity: 0.5;border-radius: 10px;margin: 8px 0;
+    transition: all 0.5s ease 0s;}
+     /* opacity는 배경과 글씨 모두 투명값을 줌 */
+     .gnb a:hover{color: skyblue;opacity: 1;transform: scale(1.1);}
+ 
+     .topMenu{display: none;}
+ /* 모바일에서는 작은글씨 다 빼버림 */
+ 
+ section > article{display: none;}
+ section > article:nth-of-type(1){display: block;position: fixed;
+  width: 100%;height: 100%;}
+  /* 스크롤이 생기지않고 화면에 꽉차게 해준다. */
+
+ article div.bg1 span{display: none;}
+ 
+}
+
+
+
+
+

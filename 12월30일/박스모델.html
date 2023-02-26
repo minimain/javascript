@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박스모델</title>
+  <style>
+    /* 박스모델 실제 크기: 가로400px, 세로400px
+    내용물width + 안쪽여백padding + 테두리선border + 바깥쪽여백margin 
+    * 애스터리스크(asterrisk), 전체선택자 , 우선순위 0점*/
+    *{padding:0;margin:0;}
+    body{font-size: 30px;color: #fff;font-weight: bold;}
+    #wrap{width: 360px; height: 360px;background-color: gray;
+    padding: 20px;}
+    /* 레이아웃 전체에 padding을 넣어야 위에까지 적용됨 
+    wrap의 내용물이 top과 bottom이다. 그러니 wrap의 크기가 줄면 top과 bottom의 크기도 줄여줘야함
+    가운데 선은 마진으로 넣어줌 보통은 위에 있는 박스를 기준으로 마진바텀으로 넣어줌
+    width:px; height:px;가 내용물의 크기*/
+    #top{width: 310px; height: 120px;background-color:red;
+    border: 5px solid #000;padding: 20px;margin-bottom: 20px;}
+    /* border을 넣는 순간 실제 박스크기가 커졌다.=레이아웃이 깨진다. 혼자 삐져나옴 
+     #top{width: 400px; height: 200px;background-color:red;
+    border: 5px solid #000;}
+    내용물을 줄여주면 됨 400-390으로 200을190으로 
+    border기준 안쪽여백을 패딩(역시서 박스와 글자간의 여백) 패딩이 왼쪽 오른쪽이 40이 들어감*/
+    #bottom{width: 310px; height: 120px;background-color:blue;
+    border: 5px solid#000;padding: 20px;}
+    /* 각각의 엘리먼트들의 여백 크기는 다 다름 
+    *는 전체 선택자 (모든 엘리먼트 우선순위 0점)*/
+    /* padding. margin
+
+    border(테두리선)을 기준으로 안쪽은 패딩 바깥쪽은 마진 (표시를 할때 시계방향으로 위 오른쪽 아래 왼쪽)
+    두개만 적었을경우 위아래 묶음 세개있을 경우 위 오른쪽 아래 표시되어있으면 왼쪽은 오른쪽 값이 적용
+
+    padding:20px;               top,right,bottom,left
+    padding:20px 10px;          top bottom, right left
+    padding:20px 10px 5px;      top , right left, bottom 
+    paddinng:20px 10px 5px 0;   top,right,bottom,left
+    
+    padding-top:20px;
+    padding-right:20px;
+    padding-bottom:20px;
+    padding-left:20px;
+    
+    
+  margin
+  박스가 지붕위에 붙어있을경우 적용이 안된다(모양이 이상함).*/
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="top">Top</div>
+    <div id="bottom">
+      BottomBottomBottom</br />
+      BottomBottom<br />
+      BottomBottom<br />
+    </div>
+  </div>
+</body>
+</html>

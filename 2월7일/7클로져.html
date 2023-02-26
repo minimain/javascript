@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>클로져</title>
+  <script>
+    // ++n 전치 | 더 이상 증가가 되지않는다. | n이 전역변수은 값이 늘어남 | n이 지역변수면 값이 같음 
+
+    // 함수이름이 달라야함
+ function add(){
+  var n=0;
+  return ++n;
+ }
+ console.log(add());
+ console.log(add());
+ console.log(add());
+
+
+    // 클로져 : 지역변수를 전역변수처럼 바꿔준다는 것
+
+    // 클로져(Closure) :함수안에 지역변수를 함수 밖에서도 참조할수있게 함
+    // 1.리턴값을 함수로 만든다
+    // 2.변수에 함수호출을 저장
+    // 3.변수를 함수처럼 호출
+
+    // 클로져 기본 구조
+    function add2(){
+      var n=0;
+      return function(){
+        return ++n; //1
+      }
+    }
+   var increase = add2();//2
+   console.log(increase());//3
+   console.log(increase());
+   console.log(increase());
+   
+
+  //  지역변수를 함수안에 넣으면 증감이 되지않아 증감이 되게 할려면 클로져를 사용해야한다. 
+
+  //  문제 1
+
+  function multiply(n){
+    return n *= n;
+  }
+
+  console.log(multiply(10)); //100
+  console.log(multiply(10)); //100
+
+  // ---------
+// 내가 짠 코드 였음 (근데 틀린듯)
+  // function multiply2(){
+  //   var m = 10;
+  //   return function(){
+  //     return m *= m;
+  //   }
+  // }
+  // var s = multiply2()
+  // console.log(s(10));
+  // console.log(s(10));
+  // console.log(s(10));
+// ------------
+
+// 이게 맞는것
+  function multiply3(n){
+    return function(){
+      return n *= n;
+    }
+  }
+  var num1 = multiply3(10);
+  console.log(num1()); //10 * 10 = 100
+  console.log(num1()); //100 * 100 = 10000
+
+
+  // 즉시실행 함수
+  var multiply4 = (function(n){
+    return function(){
+      return n *= n;
+    }
+  })(10);
+
+  console.log(multiply4()); //10*10=100
+  console.log(multiply4()); //100*100=10000
+  console.log(multiply4()); //1000*1000=1000000
+
+
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

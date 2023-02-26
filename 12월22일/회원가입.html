@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입</title>
+  <style>
+    th,td{border: 1px solid black}
+  </style>
+</head>
+<body>
+<div id="content">
+  <h2>회원가입</h2>
+  <p><img src="images/icon2.gif" alt="필수"> 표시 필수 입력사항</p>
+<!-- div로 묶어주고 필수라서 alt필수 table구조로 되어 있음 안에 caption이나 summer이 꼭 들어가야함  -->
+  <form action="/" method="post">
+<fieldset>
+  <legend>기본 회원정보</legend>
+  <table>
+    <caption>기본회원정보</caption>
+    <tbody>
+      <tr>
+        <th scope="row"><label for="Rname"><img src="images/icon2.gif" alt="필수"/> 한글이름</label></th>
+        <td><input type="text" id="Rname" placeholder="이름을 입력해주세요" required autofocus /> 반드시 설명을 입력해주시기 바랍니다.</td>
+      </tr>
+      <tr>
+        <th scope="row"><label for="Ename"><img src="images/icon2.gif" alt="필수" />영어이름</label></th>
+        <td><input type="text" id="Ename" placeholder="영문이름을 입력해주세요" required />여권에 등록된 영문이름과 동일하게 작성해주세요</td>
+      </tr>
+      <tr>
+        <th scope="row"><label for="userId"><img src="images/icon2.gif" alt="필수"/>회원 아이디</label></th>
+        <td><input type="text" id="userId" placeholder="회원아이디를 입력해주세요" required />
+        <input type="image" src="images/overalp.jpg" alt="중복검사"/>
+      </td>
+      </tr>
+      <tr>
+        <th scope="row"><label for="psw"><img src="images/icon2.gif"/>회원 비밀번호</label></th>
+        <td><input type="password" id="psw" placeholder="비밀번호를 입력해주세요" maxlength="12" required />영문, 숫자 조합으로 6~12자 이내</td>
+      </tr>
+      <tr>
+        <th scope="row"><label for="rpsw"><img src="images/icon2.gif" alt="필수"/>비밀번호 확인</label></th>
+        <td><input type="password" id="rpsw" placeholder="비밀번호를 입력해주세요" required /></td>
+      </tr>
+      <tr>
+        <th scope="row"><label for="pEmail"><img src="images/icon2.gif" alt="필수" />신청자 E-Mail</label></th>
+        <td>
+          <input type="email" id="pEmail" title="신청자 아이디 입력" size="10" required /> @
+          <input type="email" title="신청자 이메일 도메인 입력" size="10" required />
+          <select title="이메일 도메인 선택">
+            <option value="직접입력">직접입력</option>
+            <option value="gmail.com">gmail.com</option>
+            <option value="naver.com">naver.com</option>
+          </select>
+          <input type="image" src="images/overalp.jpg" alt="중복검사"/>
+          <span>허위기재시, 비밀번호 찾기 등을 이용할 수 없습니다</span>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row"><label for="adrr"><img src="images/icon2.gif" alt="필수" />우편번호</label></th>
+        <td><input type="tel" id="adrr" title="우편번호 앞자리 번호" size="10" required /> - 
+          <input type="tel" title="우편번호 뒷자리 번호" size="10" required />
+          <input type="image" src="images/post.jpg" alt="우편번호 찾기 검색" />
+        </td>
+      </tr>
+      <tr>
+        <th scope="row"><label for="home"><img src="images/icon2.gif" alt="필수"/>주소</label></th>
+        <td>
+          <input type="text" id="home" size="50" placeholder="주소를 입력해주세요" required autocomplete="off" />
+          <!-- autocomplete="off": 자동완성을 끄는 기능 (전에 입력한것이 뜨는거) -->
+        </td>
+      </tr>
+      <tr>
+        <th scope="row"><label for="eHome"><img src="images/icon2.gif" alt="필수"/>영문 주소</label></th>
+        <td>
+          <input type="text" id="eHome" size="50" placeholder="영문 주소를 입력해주세요" required />
+        </td>
+      </tr>
+      <tr>
+        <th scope="row"><label for="hPhon"><img src="images/icon2.gif" alt="필수"/>신청자 전화번호</label></th>
+        <td><input type="tel" id="hPhon" placeholder="-을 포함하여 입력해주세요" required />허위 기재시 긴급공지사항 등을 전달 할 수 없습니다.</td>
+      </tr>
+      <tr>
+        <th scope="row"><label for="phon"><img src="images/icon2.gif" alt="필수"/>신청자 휴대번호</label></th>
+        <td><input type="tel" id="phon" placeholder="-을 포함하여 입력해주세요" required /></td>
+      </tr>
+      <tr>
+        <th scope="row"><span>이메일 수신여부</span></th>
+        <td>
+          <input type="radio" id="yes" name="receive">
+          <label for="yes">동의</label>
+          <input type="radio" id="no" name="receive">
+          <label for="no">거부</label> 
+          | 약관변경 및 공지성 메일은 수신거부 회원에게도 발송됩니다.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    <input type="submit" value="확인" />
+    <input type="reset" value="취소" />
+  </p>
+</fieldset>
+
+  </form>
+ 
+</div>
+  
+  
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수4</title>
+  <script>
+    function salePrice(){
+      var theOrg = document.getElementById("oPrice").value; //input
+      var thePrice = parseInt(theOrg * 0.7);
+      var myArea = document.getElementById("Area"); //div 안에
+      myArea.innerHTML = thePrice + "원 입니다.";
+      return false;
+    }
+    /*인풋에 입력된 값을 가져오는것 벨류의 속성값 | 
+    변수에 벨류의 값을 저장
+    세일가 계산, 파스인풋은 정수값만 계산
+    아이디 엘리먼트 찾고 Area | innerhtml 은 div안에 내용을 입력할때 사용 | */
+  </script>
+</head>
+<body>
+  <h1>백화점 세일 기간입니다</h1>
+  <p>모든 상품에 대해 30% 세일을 하고 있습니다.</p>
+  <form action="" method="post" onsubmit="return salePrice()">
+  <label for="oPrice">정상가</label>
+  <input type="text" name="price" id="oPrice" />
+  <button>세일가</button>
+  </form>
+  <div id="Area">   </div>
+  <!--onsubmit 폼안에 입력된 값을 함수로 호출 | 새로고침을 하는 특징이 있다. 그래서 return을 적으면 된다 그러면 새로고침 안됨| html 안에 -->
+</body>
+</html>

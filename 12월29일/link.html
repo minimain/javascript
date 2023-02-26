@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>link</title>
+  <style>
+    /* display:block, inline-block, inline */
+    body{text-align: center; ;}
+    ul,li{list-style: none;}
+    li{display: inline;} /*블록레벨요소를 인라인으로 바뀜*/
+    li a{color: black; font-size: 12px; }
+    #over a{text-decoration: none;}
+    #over a:hover{color: green;} /*마우스를 가져다대면 글씨가 그린색으로 바뀜 | 가상클래스 a:hover*/
+    #over1 a{text-decoration: none;} /*unset을 어쩌다 알게 됨...(뭐야면 데코에 넣으면 마우스 가져다대면 줄이 사라짐 ㅋㅋ*/
+    #over1 a:hover{text-decoration: underline;color: green;}
+    #over2 a{text-decoration: none;color: purple;}
+    #over2 a:hover{color: #fff; text-decoration: underline; background-color: #00f;padding: 10px;}
+  </style>
+</head>
+<body>
+  <h1>변화가 없는 형태의 하이퍼 링크</h1>
+  <ul>
+    <li><a href="#">처음으로</a>&nbsp;</li>
+    <li><a href="#">메뉴1</a>&nbsp;</li>
+    <li><a href="#">메뉴2</a>&nbsp;</li>
+    <li><a href="#">메뉴3</a>&nbsp;</li>
+    <li><a href="#">메뉴4</a>&nbsp;</li>
+  </ul>
+  <hr/>
+  <h1>롤오버가 있는 형태의 하이퍼링크</h1>
+  <ul id="over">
+    <li><a href="#">처음으로</a>&nbsp;</li>
+    <li><a href="#">메뉴1</a>&nbsp;</li>
+    <li><a href="#">메뉴2</a>&nbsp;</li>
+    <li><a href="#">메뉴3</a>&nbsp;</li>
+    <li><a href="#">메뉴4</a>&nbsp;</li>  
+  </ul>
+  <hr/>
+  <h1>롤오버가 있는 형태의 하이퍼링크1</h1>
+  <ul id="over1">
+    <li><a href="#">처음으로</a>&nbsp;</li>
+    <li><a href="#">메뉴1</a>&nbsp;</li>
+    <li><a href="#">메뉴2</a>&nbsp;</li>
+    <li><a href="#">메뉴3</a>&nbsp;</li>
+    <li><a href="#">메뉴4</a>&nbsp;</li>
+  </ul>
+  <hr/>
+  <h1>롤오버가 있는 형태의 하이퍼링크2</h1>
+  <ul id="over2">
+    <li><a href="#">처음으로</a>&nbsp;</li>
+    <li><a href="#">메뉴1</a>&nbsp;</li>
+    <li><a href="#">메뉴2</a>&nbsp;</li>
+    <li><a href="#">메뉴3</a>&nbsp;</li>
+    <li><a href="#">메뉴4</a>&nbsp;</li>
+  </ul>
+</body>
+</html>

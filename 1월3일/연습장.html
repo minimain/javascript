@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    /* .title{width: 500px;margin: 20px auto;border: 1px solid red;}
+    div{width: 100px;height: 100px;border: 1px solid black;
+    padding: 10px; margin: 10px;font-size: 20px;font-weight: bold; color:black;}
+    .one{float:right;width: 146px;}
+    .two{float:right;width: 146px;}
+    .three{float:left;width: 146px;}*/
+
+    .menu_list{width: 500px;margin: 20px auto; border: 1px solid red;}
+    .menu_list{width: 430px;background-color: aqua;}
+    .menu_list>.economy{float: left; width: 137px; margin-right: 10px;}
+    .menu_list>.culture{float: left;width: 137px;}
+    .menu_list>.welfare{float: right;width: 137px;} 
+    .menu_list::after{content: "";display: block;clear: both;}
+
+
+  </style>
+</head>
+<body>
+  <div class="menu_list">
+    <div class="economy">
+      <h4><img src="images/list1.jpg" alt="산업경제"></h4>
+      <ul>
+        <li>강원마트</li>
+        <li>중소기업지원</li>
+        <li>구인/구직</li>
+        <li>소비자정보/상담</li>
+      </ul>
+    </div>
+      <div class="culture">
+        <h4><img src="images/list2.jpg" alt="문화/관광/환경"></h4>
+      <ul>
+        <li>동트는 강원</li>
+        <li>그린투어리즘</li>
+        <li>축제/행사</li>
+        <li>강원관광모바일존</li>
+      </ul>
+    </div>
+    <div class="welfare">
+      <h4><img src="images/list3.jpg" alt="보건/복지/여성"></h4>
+    <ul>
+      <li>여성정보센터</li>
+      <li>반비다복카드</li>
+      <li>사회복지시설</li>
+      <li>자원봉사</li>
+    </ul>
+     </div>
+  </div>
+  <!-- <div class="title">
+   <div class="one">one</div>
+   <div class="two">two</div>
+   <div class="three">three</div>
+  </div> -->
+</body>
+</html>

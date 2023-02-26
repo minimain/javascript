@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css3: first-child가상클래스, ~ 형제선택자, +인접형제선택자</title>
+  <style>
+    div > p:first-child{color: green;}
+    div >p:last-child{color: blue;}
+    /* div안에 첫번째 자식인 p 하나를 선택해라 (가상클래스)*/
+    h2+div{font-weight:bold ;font-style: italic;}
+    /* h2에 가장 인접한 형제인 div만 선택(인접 형제 선택자)r가장 가까운 div하나 선택함 */
+    h2~div{text-decoration: underline;}
+    /* h2 뒤에 있는 형제인 div는 모두 선택 */
+  </style>
+</head>
+<body>
+  <div class="child">
+    <p>first-child 가상 클래스는 첫번재 자식 요소에만 스타일을 적용할수있는 선택자입니다</p>
+    <p>child 클래스의 두번째 자식 요소에는 스타일이 적용되지 않습니다</p>
+    <p>child클래스의 세번째 자식 요소에는 스타일이 적용되지 않습니다</p>
+  </div>
+  <h2>first-child 가상클래스</h2>
+  <div class="child">
+    <p>first-child 가상 클래스는 첫번재 자식 요소에만 스타일을 적용할수있는 선택자입니다</p>
+    <p>child 클래스의 두번째 자식 요소에는 스타일이 적용되지 않습니다</p>
+    <p>child클래스의 세번째 자식 요소에는 스타일이 적용되지 않습니다</p>
+  </div>
+  <div class="child">
+    <p>first-child 가상 클래스는 첫번재 자식 요소에만 스타일을 적용할수있는 선택자입니다</p>
+    <p>child 클래스의 두번째 자식 요소에는 스타일이 적용되지 않습니다</p>
+    <p>child클래스의 세번째 자식 요소에는 스타일이 적용되지 않습니다</p>
+  </div>
+</body>
+</html>

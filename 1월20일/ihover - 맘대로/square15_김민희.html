@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+  /* 공통 */
+  .square,.square * {box-sizing: border-box;}
+  .square a{text-decoration: none;}
+  .square img{width:100%;height:100%;}
+
+  /* square */
+  .square{ position: relative;width: 316px;height: 216px;border: 8px solid #fff; box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    overflow: hidden;perspective: 900px;}
+  
+  /* 이미지 */
+  .square .img{opacity: 1;transition: all 0.4s ease-in-out 0s;}
+
+  /* 글씨 */
+  .square .info{ position: absolute;
+    top: 0;bottom: 0;left: 0;right: 0;
+    text-align: center;background: #333333;
+    opacity: 0;
+    transition: all 0.35s ease-in-out 0.3s;}
+
+  .square .info h3 {text-transform: uppercase;color: #fff;
+   
+    font-size: 17px;padding: 10px;background: #111111;
+    margin-top: 30px;}
+
+  .square .info p {font-style: italic;font-size: 12px;position: relative;
+    color: #bbb;padding: 20px;}
+
+  /* colored */
+  .square.colored .info{background: #1a4a72;}
+
+  /* 공통hover */
+  .square a:hover .img {opacity: 0;}
+  .square a:hover .info {opacity: 1;}
+
+  /* left_to_right */
+  .square.left_to_right .img {
+    transform: rotateY(0);transform-origin: 100% 50%;}
+  .square.left_to_right .info {
+    transform: rotateY(90deg);transform-origin: 0% 50%;}
+  .square.left_to_right a:hover .img {transform: rotateY(-90deg);}
+  .square.left_to_right a:hover .info {transform: rotateY(0);}
+
+  /* right_to_left */
+  .square.right_to_left .img {
+    transform: rotateY(0);transform-origin: 0% 50%;}
+  .square.right_to_left .info {
+    transform: rotateY(-90deg);transform-origin: 100% 50%;}
+  .square.right_to_left a:hover .img {transform: rotateY(90deg);}
+  .square.right_to_left a:hover .info { transform: rotateY(0);}
+
+  /* top_to_bottom */
+  .square.top_to_bottom .img {
+    transform: rotateX(0);transform-origin: 50% 100%;}
+  .square.top_to_bottom .info {
+    transform: rotateX(-90deg);transform-origin: 50% 0;}
+  .square.top_to_bottom a:hover .img {transform: rotateX(90deg);}
+  .square.top_to_bottom a:hover .info {transform: rotateX(0);}
+
+  /* bottom_to_top */
+  .square.bottom_to_top .img {
+    transform: rotateX(0);transform-origin: 50% 0;}
+  .square.bottom_to_top .info {
+    transform: rotateX(90deg);transform-origin: 50% 100%;}
+  .square.bottom_to_top a:hover .img {transform: rotateX(-90deg);}
+  .square.bottom_to_top a:hover .info {transform: rotateX(0);}
+
+</style>  
+</head>
+<body>
+
+  <!-- Left to right-->
+<div class="row">
+    <!-- normal -->
+    <div class="square left_to_right"><a href="#">
+        <div class="img"><img src="images/assets/rect/1.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+    <!-- end normal -->
+    <!-- colored -->
+    <div class="square colored left_to_right"><a href="#">
+        <div class="img"><img src="images/assets/rect/2.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+    <!-- end colored -->
+</div>
+<!-- end Left to right-->
+ 
+ 
+<!-- Right to left-->
+<div class="row">
+    <!-- normal -->
+    <div class="square right_to_left"><a href="#">
+        <div class="img"><img src="images/assets/rect/3.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+    <!-- end normal -->
+    <!-- colored -->
+    <div class="square colored right_to_left"><a href="#">
+        <div class="img"><img src="images/assets/rect/4.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+    <!-- end colored -->
+</div>
+<!-- end Right to left-->
+ 
+ 
+<!-- Top to Bottom-->
+<div class="row">
+    <!-- normal -->
+    <div class="square top_to_bottom"><a href="#">
+        <div class="img"><img src="images/assets/rect/5.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+    <!-- end normal -->
+    <!-- colored -->
+    <div class="square colored top_to_bottom"><a href="#">
+        <div class="img"><img src="images/assets/rect/6.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+    <!-- end colored -->
+</div>
+<!-- end Top to Bottom-->
+ 
+ 
+<!-- Bottom to top-->
+<div class="row">
+    <!-- normal -->
+    <div class="square bottom_to_top"><a href="#">
+        <div class="img"><img src="images/assets/rect/7.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+    <!-- end normal -->
+    <!-- colored -->
+    <div class="square colored bottom_to_top"><a href="#">
+        <div class="img"><img src="images/assets/rect/8.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+    <!-- end colored -->
+</div>
+<!-- end Bottom to top-->
+</body>
+</html>

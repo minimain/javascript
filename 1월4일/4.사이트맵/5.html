@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body,div,h2,p,h3,ul,li{padding: 0;margin: 0;}
+    ul,li{list-style: none;}
+    body{font-size: 11px;font-family: Dotum,"돋움",sans-serif;}
+    a{text-decoration: none;color: #666;}
+    a:hover{color: #f00;}
+
+    .sitemap{width: 540px;margin: 20px auto;border: 1px solid red;}
+
+    .title{width: 540px;border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+      background-color: yellow;}
+    
+    .title>h2{margin-bottom: 10px;}
+    .title:after{content: "";display: block;clear: both;}
+    .title>p.img{float: left;}
+    p.path{float: right;}
+
+    .site_tree{width: 540px;padding-top: 20px; background-color: aqua;}
+    .site_tree:after{content: "";display: block;clear: both;}
+
+    .site_tree li{background: url(images/site_blet.gif) no-repeat 10px 50%;
+    padding-left: 30px;line-height: 25px;border-bottom: 1px solid #ccc;}
+    .site_tree>.board_customer{float: left;margin-right: 10px;}
+    .site_tree>.board_free{float: left;}
+    .site_tree>.board_notice{float: right;}
+    
+
+    /* body,div,h2,p,h3,ul,li{padding: 0;margin: 0;}
+       ul,li{list-style: none;}
+    body{font-size: 12px;font-family: Dotum,"돋움",sans-serif;}
+    a{text-decoration: none;color: gray; font-weight: bold;}
+    a:hover{text-decoration: underline;color: red;}
+
+
+    .sitemap{width: 540px;margin: 20px auto;background-color: yellow;}
+    여기서 전체 레이아웃의 넓이인 width를 주었다. auto는 레이아웃이 중간으로 올수있게 한다. 20px의 자리는 top,bottom자리로 위아래 20씩 넓이를 설정한것.
+
+    .title{width: 540px;border-bottom: 1px solid #ccc; padding-bottom: 10px;
+    이걸 난 안썼음..ㅎ테두리가 들어가는지 몰랐지 근데 보니까 padding-bottom이 10px이 들어감 그럼 어디에 간격이 주는거냐면 p.img에 패딩값이 들어가서 넓이를 가지게 된다. 
+
+    .title>h2{margin-bottom: 5px;}
+    자식 선택자가 보면 전체적인 부분이 아니라면 거의 이 자식선택자를 쓴다. 사이트맵 밑에공간 
+
+  .title::after{content:"";display: block;clear: both;}  
+  그리고 여기에 가상요소인 :after을 넣어준다. 위에 .title을 고정시키는 역할
+
+
+    .title p{float: left;border-bottom: 2px solid #ccc;width: 400px;padding-bottom: 10px;}  이게 아닌
+     .title>p.img{float: left;}
+      p.path{float: right;} 이렇게 써준다. 
+      .title 자식인 p안에 .img클래스를 선택 .title이 묶여있는 div가 블록레벨 요소
+      p태그 안에.path클래스 선택 p가 블록레벨 요소
+이걸로 제목 끝------------------
+
+    .title .path{float: right;width: 140px;padding-bottom: 10px;}
+    이건 틀린거 이 당시에 right이 선이 끊겨서 이런 방법을 쓴건데 선택자를 잘 잡으면 해결
+
+
+  ---------site_tree 시작----------
+    .site_tree{width: 540px;}
+    .site_tree가 생각해보면 밑에를 모두 선택하는 레이아웃인데 그리고 너무 패딩값을 .tilte에만 넣어도 된다는 생각을 한거같다. 골고루 줘야지
+    아 그리고 마진은 겹치면 큰값이 승리함
+    그래서 패딩값인 padding-top: 20px;를 추가해줘야함. 
+    .site_tree{width: 540px;padding-top: 20px; background-color: aqua;}
+    이게 정답
+
+    .site_tree::after{content: "";display: block;clear: both;}
+    가상 요소인 이것은 앞에 선택자를 밑에를 감싸는 site_tree를 선택해서 위치는 상관이 없다.보기편하게 순서를 생각하며 위에 둔것 뿐 
+    그래서 밑에를 고정시켜서 내용이 움직이지 않는다.
+    이걸 적지 않으면 .sitemap에 적은 border이 찌그러진다.
+
+ .site_tree li{background: url(images/site_blet.gif) no-repeat 10px 50%;
+    padding-left: 30px; line-height: 25px; border-bottom: 1px solid #ccc;}
+    와 그리고 여기,,, 나는 밑에를 보면 알겠지만 여러개의 li를 선택함
+    근데 보면 .site_tree안에는 li가 내가 원하는 곳 뿐이야.. 그리고 자식 선택자도 사용하지 않아 
+    이게 맞는지는 더 찾아봐야 하는데 왜 >이것을 쓴거는 둘다 블록레벨인 애들만 쓰지...? 이거 약간 조사 각
+    padding-left대신에 text-indent도 가능
+
+    .site_tree > .board_customer{float: left; margin-right: 10px;}
+   .site_tree > .board_free{float: left;}
+   .site_tree > .board_notice{float: right;}
+   분류큰 범위 내에 클래스를 잡고 세개일경우 left left right사용
+   그리고 margin으로 간격 주기
+
+-----------------실패---------------------------
+    .board_customer li,.board_free li,.board_notice li
+    {text-indent: 30px;border-bottom: 2px solid #ccc;padding-bottom: 5px;padding-top: 5px;
+      background: url(images/site_blet.gif)no-repeat 10px 6px;}
+      .board_customer h3,.board_free h3,.board_notice h3{padding-top: 20px;}
+    .board_customer{float:left;width: 174px;}
+    .board_free{float: left;width:174px;padding-left: 10px;}
+    .board_notice{float: right;width: 174px;}
+
+    .site_tree::after{content: "";display: block;clear: both;} */
+   
+  </style>
+</head>
+<body>
+  <div class="sitemap">
+    <div class="title">
+        <h2><img src="images/site_title.gif" alt="사이트맵"/></h2>
+        <p class="img"><img src="images/site_p.gif" alt="우편물류의 지속성장을 선도하는 녹색물류 대표기관이 되겠습니다"/></p>
+        <p class="path">
+          <a href="#" title="홈페이지 바로가기">HOME&gt;</a>
+          <a href="#">기타&gt;</a><strong>사이트맵</strong></p>
+
+        <!-- <p><img src="images/site_p.gif" alt="우편물류의 지속성장을 선도하는 녹색물류 대표기관이 되겠습니다"></p>
+        <p class="path">HOME&gt;기타&gt;사이트맵</p> -->
+    </div>
+    <div class="site_tree">
+    <div class="board_customer">
+      <h3><img src="images/site_1.gif" alt="고객만족"></h3>
+      <ul>
+        <li><a href="#">고객서비스현장</a></li>
+        <li><a href="#">고객만족도조사결과</a></li>
+        <li><a href="#">서비스이행표준</a></li>
+        <li><a href="#">CS스탠다드메뉴얼</a></li>
+        <li><a href="#">CS리더 및 활동</a></li>
+        <li><a href="#">칭찬합시다</a></li>
+        <li><a href="#">CS동영상</a></li>
+      </ul>
+    </div>
+    <div class="board_free">
+      <h3><img src="images/site_2.gif" alt="신문고"></h3>
+      <ul>
+        <li><a href="#">고객불만</a></li>
+        <li><a href="#">설문조사</a></li>
+        <li><a href="#">XEO핫라인</a></li>
+        <li><a href="#">행동강령신고</a></li>
+        <li><a href="#">성희롱/성폭력신고</a></li>
+        <li><a href="#">Q&amp;A</a></li>
+        <li><a href="#">제안해주세요</a></li>
+        <li><a href="#">예산낭비신고센터</a></li>
+      </ul>
+      </div>
+    <div class="board_notice">
+      <h3><img src="images/site_3.gif" alt="알림마당"></h3>
+      <ul>
+        <li><a href="#">공지사항</a></li>
+        <li><a href="#">입찰정보</a></li>
+        <li><a href="#">행사안내</a></li>
+        <li><a href="#">갤러리</a></li>
+        <li><a href="#">기관동정</a></li>
+        <li><a href="#">전자간행물</a></li>
+      </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

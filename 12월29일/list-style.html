@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>list-style</title>
+  <style>
+    /* ol,ul,li{list-style:none;} */
+    /* ul에 클래스in이 붙은걸 선택 inside 안쪽으로 해라*/
+    ul.in{list-style-position: inside;}
+    ul.out{list-style-position: outside;} /*기본값*/
+    li.none{list-style-type: none;}
+    .disc{list-style-type: disc;} /*기본값*/
+    .circle{list-style-type: circle;}
+    .square{list-style-type: square;}
+    .upperA{list-style-type: upper-alpha;}
+    .lowerA{list-style-type: lower-alpha;}
+    .upperR{list-style-type: upper-roman;}
+    .lowerR{list-style-type: lower-roman;}
+
+    ul.marker{list-style-image: url(images/marker.gif);}
+    ul.marker2{list-style-image: url(images/list_dot.gif);}
+    ul.marker3{list-style-image: url(images/li.gif);}
+    li.red{list-style-image: url(images/list_dot.gif);}
+
+    /* list-style-image: url(images/list_dot.gif); 이 있다는것만 알고 있고 백그라운드 이미지로 사용하기 */
+    
+  </style>
+</head>
+<body>
+  <ul class="in">
+    <li class="none">로그인</li>
+    <li class="disc">회원가입</li>
+    <li class="circle">마이페이지</li>
+    <li class="square">회사소개</li>
+    <li class="upperA">사이트맵</li>
+  </ul>
+  <ul class="out">
+    <li class="lowerA">ENGLISH</li>
+    <li class="upperR">ENGLISH</li>
+    <li class="lowerR">ENGLISH</li>
+  </ul>
+  <ul class="marker">
+    <li>로그인</li>
+    <li>회원가입</li>
+    <li>마이페이지</li>
+    <li>회사소개</li>
+    <li>사이트맵</li>
+  </ul>
+  <hr/>
+  <ul class="marker2">
+    <li>로그인</li>
+    <li>회원가입</li>
+    <li>마이페이지</li>
+    <li>회사소개</li>
+    <li>사이트맵</li>
+  </ul>
+  <hr/>
+  <ul class="marker3">
+    <li class="red">로그인</li>
+    <li>회원가입</li>
+    <li>마이페이지</li>
+    <li>회사소개</li>
+    <li>사이트맵</li>
+  </ul>
+</body>
+</html>

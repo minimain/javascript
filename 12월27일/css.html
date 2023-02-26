@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css 단계적 적용 Cascading Style Sheets</title>
+  <style>
+    /* style에서의 주석 단축키는 같음*/
+    /* 선택자 selelector{속성property: 값 value;} */
+    h2{color: red;} 
+    h2{color: green;}
+    h2{color: blue;}
+    /* Cascading Style Sheets 순차적으로 적용한다는 것이다 결국 최종인 블루가 된다는 의미 그래서 순서가 중요함 */
+    /* h2를 다 선택해라 , color 글자 색, 웹표준에서는 html과 css를 별도로 해서 사용한다. 이렇게 함께 사용 안함  */
+  </style>
+</head>
+<body>
+  <!-- html의 주석 -->
+  <!-- Element 요소
+      <시작태그  attribute속성="vaalue값"></종료태그> -->
+      <h2>title=""> 단계적으로 적용되는 스타일</h2>
+      <h2>단계적으로 적용되는 스타일</h2>
+      <h2>단계적으로 적용되는 스타일</h2>
+</body>
+</html>

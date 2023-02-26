@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    .ryan{position: relative;width: 400px;height: 380px;background-color: #313654;padding: 40px 32px 32px 18px;}
+    .face{position: absolute;left: calc(50% - 200px);top:calc(50% - 189px); width: 400px;height: 368px;border-radius: 50%;border: 10px solid black;box-sizing: border-box;background-color: #d5972a;}
+    .ears{position: absolute;left:54px;top: 32px;width: 96px;height: 87px;border-radius: 50%;border: 10px solid black;box-sizing: border-box;background-color: #d5972a;}
+    .ears::after{content: "";position: absolute;left: calc(282px - 48px)  ;top: -10px;width: 96px;height: 87px;border-radius: 50%;border: 10px solid black;box-sizing: border-box;background-color: #d5972a;}
+    .eyebrows{position: absolute;left: calc(50% - 122px);top: 115px;width: 78px; height: 14px;border-radius: 40px;background-color: black;}
+    .eyebrows::after{content: "";position: absolute;left: 166px;width: 78px; height: 14px;border-radius: 40px;background-color: black;}
+    .eyes{position: absolute;left: calc(50% - 92px);top: 158px;width: 26px;height: 26px;background-color: #000;border-radius: 50%;}
+    .eyes::after{content: "";position: absolute;left: 158px;width: 26px;height: 26px;background-color: #000;border-radius: 50%;}
+    .mouth{position: absolute;left: calc(50% - 53px);top: 212px;width: 56px;height: 48px;border-radius: 50%;background-color: #fff;box-shadow: 0 0 0 10px #000;}
+    .mouth::before{content: "";position: absolute;left: 52px;top: 0px;width: 56px;height: 48px;border-radius: 50%;background-color: #fff;box-shadow: 0 0 0 10px #000;}
+    .mouth::after{content: "";position: absolute;left: 0px;top: 0px;width: 56px;height: 48px;background-color: #fff;border-radius: 50%}
+    /* .mouth::after{content: "";position: absolute;left: 44px;top: 16px;width: 18px;height: 18px;background-color: #fff;} */
+    .nose{position: absolute;left: calc(50% - 15px);top: 195px;width: 30px;height: 33px;border-radius: 50% 50% 45% 45% / 40% 40% 50% 50%;background-color: #000;}
+    .ryan:hover .eyebrows::after{animation: eyebrow_right 1.5s linear 0s ;}
+    .ryan:hover .eyebrows{animation: eyebrow_left 1.5s linear 0s ;}
+    .ryan:hover .eyes::after{animation: eye 1.5s linear 0s ;}
+    
+    @keyframes eyebrow_right {
+      0%{transform: rotate(0);}
+      40%,80%{transform: rotate(-8deg) translateY(20px);}
+      100%{transform: rotate(0);}
+    }
+    @keyframes eyebrow_left {
+      0%{transform: rotate(0);}
+      40%,80%{transform: rotate(-4deg) translateY(2px);}
+      100%{transform: rotate(0);}
+    }
+    @keyframes eye {
+      30%,35%,80%{transform: scaleY(.2);border-radius: 50% 0 0 50%;}
+    }
+  </style>
+
+</head>
+<body>
+  <div class="ryan">
+    <div class="ruler"></div>
+      <div class="ears"></div>
+      <div class="face">
+        <div class="eyebrows"></div>
+        <div class="eyes"></div>
+        <div class="mouth"></div>
+        <div class="nose"></div>
+      </div>
+   </div>
+
+</body>
+</html>

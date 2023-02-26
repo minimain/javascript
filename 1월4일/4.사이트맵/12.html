@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div,ul,li,a,p,img,h4,h3,h2{
+      padding:0;
+      margin:0;
+    }
+    body{
+      font-family: Dotum,'돋움',sans-serif;
+      font-size: 12px;
+    }
+    ul,li{
+      list-style: none;
+    }
+    a{
+      text-decoration: none;
+      color:#666;
+    }
+    a:hover{
+     color:red;
+    }
+    .frame{
+      width:540px;
+      margin:20px auto;
+      background: yellow;
+    }
+    .title{
+      width:540px;
+      padding:0 0 0px 0;
+      border-bottom:1px solid #ccc;
+    }
+    .title::after{
+      content: "";
+      clear:both;
+      display:block;
+    }
+    .title>h2{
+      margin-bottom:5px;
+    }
+    .title>p.siteMap{
+      float:right;
+      font-size:12px;
+      color:#333;
+    }
+    .menu{
+      width:540px;
+      padding-top:10px;
+      background: aqua;
+    }
+    .menu::after{
+      content: "";
+      clear: both;
+      display: block;
+    }
+    .menu div{
+      width:172.6px;
+      margin-right:11px;
+      float:left;
+      font-weight: bold;
+    }
+    .menu div>ul>li{
+      line-height:2;
+      padding-left:25px;
+      background:url('images/site_blet.gif') no-repeat 10px 60%;
+      border-bottom:1px solid #aaa;
+    }
+    .menu div.notice{
+      margin-right:0;
+    }
+  </style>
+</head>
+<body>
+
+</head>
+<body>
+  <div class="frame">
+    <div class="title">
+      <h2><img src="images/site_title.gif" alt="사이트맵"></h2>
+      <p class="path">
+        <img src="images/site_p.gif" alt="우편물류의 지속성장을 선도하는 녹색물류 대표기관이 되겠습니다.">
+      </p>
+      <p class="siteMap">
+        <a href="#">Home</a> &gt; <a href="#">기타</a> &gt; <a href="#"><strong>사이트맵</a></strong>
+      </p>
+    </div>
+    <div class="menu">
+      <div class="client">
+        <h3>
+          <img src="images/site_1.gif" alt="고객만족">
+        </h3>
+        <ul>
+          <li><a href="#">고객서비스현장</a></li>
+          <li><a href="#">고객만족도조사결과</a></li>
+          <li><a href="#">서비스이행표준</a></li>
+          <li><a href="#">CS스태다드매뉴얼</a></li>
+          <li><a href="#">CS리더 및 활동</a></li>
+          <li><a href="#">칭찬합시다</a></li>
+          <li><a href="#">CS동영상</a></li>
+        </ul>
+      </div>
+      <div class="feedBack">
+        <h3>
+          <img src="images/site_2.gif" alt="신문고">
+        </h3>
+        <ul>
+          <li><a href="#">고객불만</a></li>
+          <li><a href="#">설문조사</a></li>
+          <li><a href="#">CEO핫라인</a></li>
+          <li><a href="#">행동강령신고</a></li>
+          <li><a href="#">성희롱/성폭력신고</a></li>
+          <li><a href="#">Q&A</a></li>
+          <li><a href="#">제안해주세요</a></li>
+          <li><a href="#">예산낭비신고센터</a></li>
+        </ul>
+      </div>
+      <div class="notice">
+        <h3>
+          <img src="images/site_3.gif" alt="알림마당">
+        </h3>
+        <ul>
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">입찰정보</a></li>
+          <li><a href="#">행사안내</a></li>
+          <li><a href="#">갤러리</a></li>
+          <li><a href="#">기관동정</a></li>
+          <li><a href="#">전자간행물</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</body>
+</html>

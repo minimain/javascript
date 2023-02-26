@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형웹5 | Tiny Tweaks</title>
+  <style>
+    /* 부모가 기준
+    부모는 무조건 100% */
+    *{margin: 0;padding: 0;}
+    ul{list-style: none;}
+    #box_a{height: 400px;background: #f1779e;}
+    .list{width: 80%;margin: 0 auto; padding-top: 50px;background: yellow;}
+    .list li{float: left;width: 18%;margin: 1%;background: #fff;}
+    /* 18%+2%=20% | 20%x5=100% */
+    @media screen and (max-width:1024px) {/*4개*/
+      .list{width: 90%;}
+      .list li{width: 23%;margin: 1%;}
+    }
+    @media screen and (max-width:800px) {/*3개*/
+      .list li{width: 31.333%;margin: 1%;}
+    }
+    @media screen and (max-width:500px) {/*2개*/
+      .list li{width: 48%;margin: 1%;}
+    }
+    /* and 띄어쓰기 */
+  </style>
+</head>
+<body>
+  <div id="box_a">
+    <ul class="list">
+      <li>a</li>
+      <li>b</li>
+      <li>c</li>
+      <li>d</li>
+      <li>e</li>
+      <li>f</li>
+      <li>g</li>
+      <li>h</li>
+      <li>i</li>
+      <li>j</li>
+    </ul>
+  </div>
+</body>
+</html>

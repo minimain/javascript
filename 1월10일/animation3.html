@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>animation 시계</title>
+  <style>
+    .clock{position: relative;width: 500px;margin: 100px 300px;}
+
+    div.h{position: absolute;top:100px;left:0;
+      width: 10px;height: 200px;background: red;
+      animation: ani 43200s linear 0s infinite normal; }
+
+    div.m{position: absolute;top:50px;left:0;
+      width: 10px;height: 250px;background: green; 
+      animation: ani 3600s linear 0s infinite normal; }
+
+    div.s{position: absolute;top:0 ;left: 0;
+      width: 10px;height:300px;background: blue;
+      animation: ani 60s linear 0s infinite normal;}
+
+
+    @keyframes ani {
+      0%{transform: rotate(0deg);transform-origin: center bottom;}
+      100%{transform: rotate(360deg);transform-origin: 50% 100%;}
+    }
+    /* <style>
+    .clock{position: relative;}
+    .h{z-index:3;position: absolute;left:550px;top:300px;margin: 0 auto;
+      width: 10px;height: 200px;background: red;
+      animation: ani 21600s linear 0s infinite normal;}
+      .m{z-index:2;position: absolute;left:550px;top:200px;margin: 0 auto;
+      width: 10px;height: 300px;background: green;
+      animation: ani 3600s linear 0s infinite normal;}
+    .s{z-index:1;position: absolute;left: 550px;margin: 0 auto;
+      width: 10px;height:500px;background: blue;
+    animation: ani 60s linear 0s infinite normal;}
+
+
+    @keyframes ani {
+      0%{transform: rotate(0deg);transform-origin: center bottom;}
+      100%{transform: rotate(360deg);transform-origin: center bottom;}
+    }
+  </style>
+</head>
+<body>
+  <div class="clock">
+    <div class="h"></div>
+    <div class="m"></div>
+    <div class="s"></div>
+  </div> */
+  </style>
+</head>
+<body>
+  <div class="clock">
+    <div class="h"></div>
+    <div class="m"></div>
+    <div class="s"></div>
+  </div>
+</body>
+</html>

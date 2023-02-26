@@ -1,0 +1,27 @@
+box-sizing: border-box; /* 박스 실제 크기에 padding, border 값을 포함시키지 않는것 */
+box-shadow:0 0 0 16px #fff; /* shadow반경값,-음수값이면 박스보다 그림자 크기가 작아진다. */
+4번째 값이 스프레드값이다
+backface-visibility: hidden; /*3D transform 으로 회전시 반짝임이나 뒷면을 숨김*/
+뒷면을 숨기겠다.
+pointer-events: none;/*HTML 요소에 정의된 클릭, 상태(hover,active등), 커서 옵션들이 비활성화한다.*/
+
+visibility: visible:hidden;/* 숨기지만, 자신의 영역은 계속 차지한다. */
+
+transform-style: preserve-3d;/*하위요소에 3D속성을 그대로 전달*/
+부모가 있고   부모에게 적용된걸 자식에게도 적용을 하겠다.
+transform: rotate3d(0, 1, 0, 180deg);/* x,y,z 축을 기준으로 deg 각도 만큼 회전 */
+y축을 기준으로 회전
+transform: translate3d(0, 0, -220px);/* X좌표, Y좌표, Z좌표 이동. */
+z축으로 이동
+
+circle
+김승현:1번
+서지석:2번
+김민희:3번
+김성희:4번
+
+square
+서지석:13번
+김승현:14번
+김민희:15번
+김성희:13~15번 중 한개

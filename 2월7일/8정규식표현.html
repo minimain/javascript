@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정규표현식</title>
+  <script>
+    // es6는 아님
+
+    //  정규식 /^ 시작  $/끝  |    \d 정수 10자리 또는 11자리 | [반복 가능]  |  \. 역슬래시 점 은 문자 점(.)을 의미함
+    // true false로 나옴 | () 또 나올수있음 []1~2개 정도
+
+    var hpReg = /^\d{10,11}$/;
+    var emailReg = /^[A-Za-z0-9!#$%^&*_-]+@[A-Za-z0-9_-]+(\.[A-Za-z0-9_-]+){1,2}$/;
+
+    var hp1='010123456'
+    var hp2='01012345678'
+
+    var email1='abc&1_23&A-BC@icox';
+    var email2='abc&1_23&A-BC@icox.com';
+    var email3='abc&1_23&A-BC@icox.co.kr';
+    var email4='abc&1_23&A-BC@icox.abc.co.kr';
+
+    console.log(hpReg.test(hp1));
+    console.log(hpReg.test(hp2));
+    console.log(emailReg.test(email1));
+    console.log(emailReg.test(email2));
+    console.log(emailReg.test(email3));
+    console.log(emailReg.test(email4));
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

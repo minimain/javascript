@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>ihover-circle7</title>
+<style>
+/* circle */
+.circle,.circle *{box-sizing:border-box;}
+.circle a{text-decoration:none;}
+.circle img{width:100%;height:100%;}
+
+/*이미지*/
+.circle{position:relative;width:220px;height:220px;border-radius: 50%;}
+.circle .img{position:relative;width:220px;height:220px;border-radius:50%;opacity:1;transform:scale(1);transition:all 0.35s ease-out;}
+.circle .img:before{position:absolute;display:block;content:'';width:100%;height:100%;border-radius:50%;
+					box-shadow:inset 0 0 0 16px rgba(255, 255, 255, 0.6),0 1px 2px rgba(0, 0, 0, 0.3);transition: all 0.35s ease-in-out;}
+.circle .img img{border-radius: 50%;}
+
+/* 글씨 */
+.circle .info{position:absolute;top:0;bottom:0;left:0;right:0;text-align:center;border-radius:50%;background: #333333;opacity: 0;
+				transition: all 0.35s ease 0.2s;transform: translateX(-100%);}
+.circle .info h3{color:#fff;text-transform:uppercase;position:relative;letter-spacing:2px;
+				font-size:22px;margin:0 30px;padding: 55px 0 0 0;height:110px;text-shadow:0 0 1px white,0 1px 2px rgba(0, 0, 0, 0.3);}
+.circle .info p{color:#bbb;padding:10px 5px;font-style:italic;margin:0 30px;font-size:12px;border-top:1px solid rgba(255, 255, 255, 0.5);}
+
+/* hover */
+.circle a:hover .img{opacity:0; transform:scale(0.5);}
+.circle a:hover .info{opacity:1; transform:translateX(0);}
+
+</style>
+</head>
+<body>
+<div class="circle">
+	<a href="#">
+		<div class="img">
+			<img src="images/assets/4.jpg" alt="img">
+		</div>
+		<div class="info">
+		  <h3>Heading here</h3>
+		  <p>Description goes here</p>
+		</div>
+	</a>
+</div>
+</body>
+</html>

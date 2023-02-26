@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>네비</title>
+  <style>
+    body,nav,ul,li{margin: 0;padding: 0;}
+    ul{list-style-type: none;}
+    body{font-weight:bold;font-size: 14px;font-family: "굴림" ;}
+    
+    nav>ul>li{float: left;position: relative;}
+    nav>ul>li>a{display:block;background: #600;color: #fff;text-decoration: none;padding: 20px 25px;
+    transition: color 1s ease 0s;}
+    nav>ul>li:hover>a{color: #f90;}
+
+    nav>ul>li>ul{opacity: 0;/*display: none;*/position: absolute;left: 0;
+    transition: opacity 1s ease 0s;}
+    /* display: none; 안보이게 하는것 (스크린리더에서 읽어주지도 않는다. )  display 는 transition이 먹히지 않는다. */
+    nav>ul>li:hover>ul{opacity: 1;/*display: block;*/}
+
+    nav>ul>li>ul>li{opacity: 0;height: 0;background: #d8afaf;
+      transition: all 1s ease 0s;}
+    nav>ul>li:hover>ul>li{opacity: 1;height: 30px;}
+    /* 여기서 height의 길이는 li의 글자 부분 높이 이다.  */
+
+    nav>ul>li>ul>li>a{display: block;width: 135px;padding: 5px 25px;color: #900;text-decoration: none;
+    transition: color 1s ease 0s, background 1s ease 0s;}
+    nav>ul>li>ul>li>a:hover{background: #900; color:#f90;}
+    /* a 가 들어간 부분은 block으로 처리함 */
+  
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#"> 웹 개발 </a>
+        <ul>
+        <li><a href="#"> 웹 디자인</a></li>
+        <li><a href="#"> HTML5 + CSS3 </a></li>
+        <li><a href="#">JQuery</a></li>
+        <li><a href="#">웹 + 모바일</a></li>
+        </ul>
+      </li>
+      <li><a href="#"> 게시판 </a>
+         <ul>
+         <li><a href="#">Q & A</a></li>
+         <li><a href="#">방명록</a></li>
+         </ul>
+      </li>
+      <li><a href="#"> 프로필 </a></li>
+    </ul>
+  </nav>
+</body>
+</html>

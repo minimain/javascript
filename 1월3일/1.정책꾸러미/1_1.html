@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정책꾸러미</title>
+  <style>
+    body,div,h3,p,h4,ul,li{margin: 0;padding: 0;}
+    ul,li{list-style: none;}
+    body{font-size: 12px;font-family: Dotum,"돋움",sans-serif;color: #666;}
+    a{text-decoration: none;color: #666;}
+    a:hover{text-decoration: underline;color: #00f;}
+    /* 정책꾸러미 */
+    .cast{position:relative;width: 450px;margin: 20px auto;border: 2px solid #ddd;
+          padding: 10px;
+          background: url(images/background.gif) repeat-x 0 0;}
+    .cast:after{content:"";display:block;clear: both;}
+    .cast>h3{padding-bottom: 10px;margin-bottom: 10px;}
+    /* .cast>h3{border-bottom:2px solid #ddd;
+      padding-bottom: 10px;margin-bottom: 10px;} */
+    .cast>p.cast_img{float:left;width: px;border: 1px solid red;}
+    .cast>div.cast_txt{float:right;width: 290px;border: 1px solid red;}  
+    .cast>p.more{position:absolute;right: 10px;top: 10px;}
+    .cast>div.cast_txt li{background: url(images/cast_list.gif) no-repeat 0 50%; padding-left: 10px;line-height: 20px;}
+    /* .cast>p.cast_img{float:left;width: 138px;border: 1px solid red;}
+    가로가 너무 길면 안들어간다 */
+    /* 자식요소가 float된 경우, (쪼그라들어서) 
+    부모요소에 높이 지정 방법
+    1.height (부모요소에 높이 지정|단점: 내용물이 늘어날경우 같이 늘어나지 않는다)
+    2.overflow:hidden, overflow:auto (내용물이 늘어나도 부모의 높이가 자동으로늘어난다)
+    3.float (내용물이 늘어나도 함계 늘어남)
+    4.공갈 div 만들어서 clear:both
+    (<div class="clear"></div> 이렇게 만들어줌)
+    5.:after{contert:"";display:nlock;clear:both;}
+    (일반적으로 이것을 씀 (부모가 조그라들지 않게)
+    after 가상요소 내용이 없는 가상 content를 만들겠다.content가 인라인 요소라서 display:block을 해서 블록레벨 요소로 바꿔준다. 그리고 clear:both 입력) */
+    .clear{clear:both;}
+  </style>
+</head>
+<body>
+  <div class="cast">
+    <h3><img src="images/cast_title.gif" alt="정책꾸러미"></h3>
+    <p class="cast_img"><img src="images/cast_img.gif" alt="우측통행실시 이미지"></p>
+    <!-- 위에서 아래로 왼쪽에서 오른쪽 우측통행 실시가 나란히 있어야 해서 div로 묶어줌 -->
+    <div class="cast_txt">
+    <h4>우측통행실시</h4>
+    <ul>
+      <li><a href="#">우측보행, 7월1일부터 본격 시행</a></li>
+      <li><a href="#">안전한 보행방법 우측통행 홍보 동영상</a></li>
+      <li><a href="#">우측보행이 교통안전, 보행효율면에..</a></li>
+      <li><a href="#">시범시행 주인 "우측보행 " 호응도...</a></li>
+    </ul>
+  </div>
+     <p class="more" title="우측통행실시 더보기"><a href="#">더보기</a></p>
+     <!-- <div class="clear"></div> -->
+  </div>
+</body>
+</html>

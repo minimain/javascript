@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ES6변수 :let,const</title>
+
+  <script>
+    //ECMAScript2015(ES6)
+    // let,const : 이름이 같으면 안된다.
+
+    // var 변수를 중복 선언 가능
+    var num = 10;
+    var num = 20;
+    document.write(`${num}\n문자`);
+    console.log(`${num}\n문자`);
+
+// `이거는 tap키 위에 있는 백킷? 이고 
+// $백틱 안에 변수나 문자 섞어서 사용가능
+    let Num = 10;
+    let Num2 = 20;
+    document.write(`${Num}\n문자`);
+    console.log(`${Num}\n문자`);
+    // let은 같은 변수 이름을 쓴다면 에러 나옴
+    // let 변수는 중복선언 안됨
+
+    // const : 중복 변수이름 불가
+
+    const DIVISION_VALUE = 100;
+    const DIVISION_VALUE2 = 200; //const 중복변수 안됨
+    //DIVISION_VALUE = 1000; //상수.즉 값을 변경할수 없음
+
+    //함수 레벨 스코프와 블록 레벨 스코프
+    // 블록으로 감싸져있는 애들을 블록레벨 스코프
+    //전역변수, 지역변수
+
+    var kor=90; //전역변수
+    function getScore(){
+      kor = 100; //전역변수
+      console.log(kor); //100
+    }
+    getScore();
+    console.log(kor); //100
+
+    // 여기서부터 주석처리를 밑에 하면 100의 값이 나옴 | 이유는 밑에 변수가 kor가 중복되어서 그런것
+    // var가 안붙어서 전역변수
+
+
+    var kor= 90; //전역변수
+    function getScore(){
+      var kor = 100; //지역변수
+      console.log(kor); //100
+    }
+    getScore();
+    console.log(kor); //90
+
+    var num1=10; //전역변수
+     {
+      var num1 = 20; //전역변수
+      console.log(num1); //20
+     }
+     console.log(num1); //20
+    //  얘는 함수가 없음 그래서 위에 값인듯
+// var는 함수내에서만
+
+    //  let :블록레베 안에서도나눔
+    // const는 저녁변수 전역변수 이름 같아도 오케이? | 값 변경 불가
+    let num2=100;//전역변수
+    {
+    let num2=20; //지역변수
+    console.log(num2);//20
+    }
+    console.log(num2); //100
+
+
+    const num3 = 10; //전역변수
+    {
+      const num3= 30; //지역변수
+      console.log(num3); //30
+    }
+    console.log(num3); //10
+
+
+    var num4=70;//전역변수
+    if(num4===70){
+      var sum=50; //전역변수
+    }
+    console.log(sum); //50
+
+
+
+    let num5=90; //전역변수
+    if(num5===90){
+      let sum2=100; //지역변수
+    }
+
+    
+    console.log(sum2); //에러 |sum2가 지역변수에 들어가있어서 에러 sum2가 밖에 있었으면 출력됨
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

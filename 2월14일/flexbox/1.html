@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>flexbox</title>
+<style>
+*{margin:0;padding:0;list-style:none;}
+ul{display: flex;flex-direction:row;justify-content:flex-start;align-items:flex-start;border:1px solid red;height: 900px;}  
+/* display:flex;부모요소를 플렉스 컨테이너로 지정
+	flex 플랙스 박스를 박스레벨요소로 정의, 
+	inline-flex 플랙스박스를 인라인레벨요소로 정의 */
+
+/* 플랙스항목 배치 방향 지정
+flex-direction: row 기본값, column, row-reverse, column-reverse */
+/* flex-direction: row     주축은 가로, 교차축은 세로
+   flex-direction: column  주축은 세로, 교차축은 가로 */
+
+/* 플랙스 항목을 주축 방향으로 배치할때
+justify-content:flex-start 기본값, flex-end, center, space-between, space-around */
+
+/*  플랙스 항목을 교차축 기준으로 배치할때
+align-items:stretch 기본값, flex-start, flex-end, center,  baseline */
+
+li{width:100px;height:100px;background-color:aqua;margin:8px;}  
+li:nth-child(3){font-size: 50px;}  
+</style>
+</head>
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+  </ul>  
+</body>
+</html>

@@ -1,0 +1,61 @@
+/* wrap 956
+snb 135
+content 800*/
+@import url(reset.css);
+
+
+
+/* common */
+body{font-size: 12px;font-family: Dotum,"돋움",sans-serif;}
+a{text-decoration: none;color:#666;}
+a:hover{color: red;}
+
+/* layout */
+#wrap{width: 956px;margin: 0 auto;border: 1px solid red;}
+#header{width: 956px;padding: 10px 0;border: 1px solid blue;}
+#container{width: 956px;padding-top: 20px;}
+#container::after{content: "";display: block;clear: both;}
+  .snb{float: left;width:135px;border: 1px solid green;}
+  #content{float:right;width: 800px;border: 1px solid green;}
+
+/* header */
+#header h1{background: url(../images/logo.gif)no-repeat 0 0;width: 256px;height: 41px;
+text-indent: -9999px;overflow: hidden;}
+
+/* container */
+/* snb */
+.snb h2{font-size: 24px;font-weight: bold;padding-bottom: 8px;}
+.snb li{border-top: 2px solid #eee;line-height: 250%;font-weight: bold;}
+
+
+/* content */
+#content h2{background: url(../images/title_01.gif)no-repeat 0 0;width: 328px;height: 22px;text-indent: -999px;overflow: hidden;
+}
+#content h3{background: url(../images/title.jpg)no-repeat 0 0;width: 769px;height:227px;text-indent: -9999px;overflow: hidden;border-top: 1px solid #eee;margin-top:20px;}
+
+/* 본문 */
+.txt{line-height: 150%;margin: 15px 0;}
+.txt>b{float: left;background: url(../images/txt.gif)no-repeat 0 0;width: 61px;height: 33px;text-indent: -9999px;overflow: hidden;}
+
+/* 파스타 온 키워드 */
+.onkeyword{float: left;background: url(../images/tue_list_bg.gif)no-repeat 0 0;width: 338px;height: 425px;margin-right: 20px;}
+.onkeyword h4{font-size: 25px;font-weight: bold;text-align: center;padding-top: 10px;}
+
+.onkeyword ol{padding-left: 50px;padding-top: 15px;}
+.onkeyword li{line-height: 215%;font-size: 15px;}
+.onkeyword li>a{float: right;margin-right: 25px;}
+
+/* 스파게티 */
+
+#content dl dt img{float: left;margin-right: 20px;}
+#content>dl>dd:first-of-type{margin-bottom: 180px;}
+#content dd{line-height: 150%;}
+#content dl dt{font-weight: bold;line-height: 150%;}
+#content dl>dd>a{display: block;color: red;text-align: left;font-weight: bold;text-decoration: none;padding: 10px 0 40px 5px;}
+
+#content dl{border-bottom: 2px solid #eee;}
+
+/* 블로그 담기 */
+#content p:last-of-type{background: url(../images/bu_arw1.gif)no-repeat 0 20px;text-indent: 20px;padding: 20px 0;}
+
+

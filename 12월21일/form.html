@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form-로그인</title>
+</head>
+<!-- 웹접근성을 준수한 폼(form) 어디로 이동하느냐 어떤 방식으로 이동하느냐 | 한덩어리 fieldset-->
+    <!-- action(목적지) | method(유형):겟 방식(주소창에 노출)과 포스트(노출 안되는) 방식 -->
+     <!-- 속성과 값으로 이루어져있는데 속성과 값의 이름이 같다면 속성만 쓴다(required, autofocus) -->
+      <!--두번째 단어는 대문자(id="userId") | for 유저아이디를 위한 레이블이다 | 인풋이 나오면 레이블이 나와야함 군데 인풋에 벨류가 있으면 오케이 | required(필수항목) 입력을 안하면 서브밋으로 넘어갈수 없다. 로그인 이동 얘기 | placeholder(힌트) | autofocus 커서가 깜빡이는 것(새로고침을 해도) -->
+<body>
+  <h1><a href="#">NAVER</a></h1>
+  <form action="/" method="post">
+    <fieldset>
+      <legend>ID 로그인</legend>
+      <ol>
+        <li>
+          <label for="userId">아이디</label>
+          <input type="text" id="userId" required placeholder="아이디를 입력하세요" autofocus />
+        </li>
+        <li>
+          <label for="userPw">비밀번호</label>
+          <input type="password" id="userPw" required placeholder="비밀번호를 입력하세요"/>
+        </li>
+        <li>
+          <input type="submit" value="로그인"/> <!--submit서버로 이동(전송)-->
+        </li>
+      </ol>
+      <ul>
+        <li><a href="#">비밀번호 찾기</a></li>
+        <li><a href="#">아이디 찾기</a></li>
+        <li><a href="#">회원가입</a></li>
+      </ul>
+    </fieldset>
+
+  </form>
+</body>
+</html>

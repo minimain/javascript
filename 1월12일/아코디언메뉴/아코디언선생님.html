@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    section,ul,li,p,h1,h2{padding: 0;margin: 0;}
+    ul{list-style: none;}
+    section{width: 500px;border:1px solid red;padding: 10px;padding: 10px;background-color: white;font-size: 14px;line-height: 20px;color: #424242;font-family: "돋움";}
+
+    section>h1{font-size:20px;text-shadow: 2px 2px 2px #aeaeae;}
+
+    h2{margin: 5px 0;}
+
+    h2>a{display: block;padding: 10px;border-radius: 5px;background: linear-gradient(to bottom, #cecece,#8f8f8f);color: #424242;text-decoration: none;font-size: 15px;font-weight: normal;}
+
+    h2>a:hover,li:target>h2>a{background: linear-gradient(to bottom, #6bb2ff,#2288dd);}
+    p{height: 0;overflow: hidden;transition: height 0.5s ease-in 0s;}
+
+    li:target>p{height: 100px;}
+
+
+    /* h1{font-size: 25px;font-weight: 500;text-shadow: 1px 2px 2px gray;}
+
+    ul{position: relative;list-style-type: none;padding: 10px;font-size: 14px;}
+    li h2 a{position: absolute;display: block;
+      text-decoration: none;font-weight: 100;
+      color: black;font-size: 20px;
+      padding-left: 10px;line-height: 2;
+      background: rgb(164, 164, 164);width: 470px;border-radius: 5px;
+      background: linear-gradient(to top, gray, rgb(197, 197, 197));}
+      
+    li h2>a:hover{background: rgb(0, 140, 255);color:white;}
+
+    li:target{height: 100%;background-color: burlywood;} */
+
+
+    
+  </style>
+</head>
+<body>
+  <!-- 빨간 border 섹션 가로 500 p는 0이었다가 100 
+  회색 블루 -->
+  <section>
+    <h1>아코디언 메뉴</h1>
+    <ul>
+      <li id="a">
+        <h2><a href="#a">HTML5</a></h2>
+        <p>HTML5는 화면 상에서 그림을 그리는 등 더 많은 기능을 추가한 마크업 언어입니다. 또한 HTML5는 단순히 마크업 언어로서의 기능 뿐만 아니라 자바스크립트를 사용해 프로그램을 만들 수 있는 API까지 포함하고 있습니다.</p>
+      </li>
+      <li id="b">
+        <h2><a href="#b">CSS3</a></h2>
+        <p>CSS는 웹 디자인이나 웹 개발에 있어서 핵심적인 요소입니다. 특히 현재 개발 중인 CSS3는 기존의 CSS에서는 할 수 없던 여러 가지 효과를 쉽게 만들 수 있고 CSS3만으로도 간단한 애니메이션을 만들 수도 있고 멋진 내비게이션을 만들 수 있기 때문에 더욱 주목을 받고 있습니다.</p>
+      </li>
+      <li id="c">
+        <h2><a href="#c">API</a></h2>
+        <p>HTML5에는 웹 애플리케이션 제작을 위한 API들이 다양하게 제시되고 있습니다. API를 이해하기 위해서는 자바스크립트 문법 뿐만 아니라 DOM(Document Object Model)에 대한 기본 지식이 필요합니다.</p>
+      </li>
+    </ul>
+  </section>
+</body>
+</html>

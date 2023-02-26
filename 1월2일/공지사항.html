@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body,div,h3,ul,li,p{margin: 0;padding: 0;}  /* * 전체선택자를하게되면 비효율적이라서 엘리먼트들을 하나하나 나열하는 방식을 주로 쓴다.*/ 
+    ul,li{list-style: none;}
+    body{font-size: 12px;font-family: Dotum,"돋움",sans-serif;}
+    a:link,a:visited{text-decoration: none;}
+    a:hover,a:active,a:focus{text-decoration: underline;}
+    /* 공지사항 */
+    .tab{position:relative;
+      width:306px;margin:0 auto;border: 1px solid red;}
+    .tab h3{width: 291px;height: 24px;/* text-indent: 15px;*/padding-left: 15px; /*line-height:31px;*/padding-top:7px; /*패딩이 들어가면실제크기를 넘음*/
+      background: url(images/tab_bg.gif) no-repeat 0 0;}
+    .tab li{background: url(images/news_list.gif) no-repeat 6px 50%;padding-left: 15px;line-height: 1.5;/*text-indent: 15px;*/}
+      /*top에 50%를 하면세로로 가운데를 맞춰줌*/
+      /* .tap>ul>li가 자식 선택자
+      .tap li>span
+      .tap>.more */
+    .tab .more{position: absolute;right:10px;top:10px;} /*선택자 div*/
+    .tab li span{position: absolute;right: 5px;} /*li 가 부모인데 div에게 선택자가 있어서 div를 기준 |top을 쓰게되면 한자리에모이게 되어 
+      쓰지 않는다.*/
+
+    
+  </style>
+</head>
+<body>
+  <div class="tab">
+    <h3>공지사항</h3>
+    <ul>
+      <li><a href="#">제 22년 웹 접근성 품질마크</a>
+      <span>2002-12-30</span></li>
+      <li><a href="#">제 22회 웹 접근성 품질마크 인증 사...</a><span>2022-12-30</span></li>
+      <li><a href="#">제 22회 웹 접근성 품질마크 사용자심...</a><span>2022-12-22</span></li>
+      <li><a href="#">제 22회 웹 접근성 품질마크 심사 일...</a><span>2022-11-23</span></li>
+    </ul>
+    <p class="more"><a href="#"><img src="images/more.gif"></a></p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Righteous&display=swap');
+/* main.css */
+*{margin: 0;padding: 0;}
+ol,ul{list-style: none;}
+a{text-decoration: none;color: #555;}
+
+/* 스크롤이 내려가면 가로가 움직임 */
+
+body{width: 100%;min-width: 1400px;/*height: 4000px;*/font-family: 'Poiret One',cursive;background: #ddd;}
+
+/* 로고 */
+h1{position: fixed;right: 20px;top: 20px;}
+h1 img{box-shadow: 5px 5px 3px #888;}
+
+/* sns */
+.sns{position: fixed;left: 60px;top: 30px;}
+.sns li{float: left;margin-right: 30px;}
+.sns li a{display: inline-block;font-size: 25px;color: #fff;transition: all 0.5s ease 0s;}
+.sns li:hover a{transform: scale(1.5);color: #888;}
+
+/* gnb */
+.gnb{position: fixed;left: 60px;top: 50%;margin-top: -280px;}
+.gnb li{float: left;margin-right: 25px;font-size: 16px;font-weight: bold;color: #fff;
+transition: all 0.5s ease 0s;cursor: pointer;}
+.gnb li:hover,.gnb li.on{color: #888;}
+
+/* text_txt */
+.txt{position: fixed;right: 20px;top: 50%;margin-top: -80px;
+font-size: 100px;color: #fff;text-align: right;line-height: 0.5;}
+.txt span{color: #aaa;}
+.txt em{font-family: arial;font-size: 18px;font-style: normal;color: #888;letter-spacing: 1px;}
+
+/* section */
+section{position: fixed;left: 0;top: 50%;margin-top: -250px;/*width: 4600px;*/height: 500px;border: 1px solid red;
+transition: left 0.6s ease 0s;}
+section>article{overflow: hidden;float: left;width: 180px;width: 180px;height: 400px;margin: 10px;
+position: relative;top: 50%;margin-top: -200px;
+background: #fff;border-radius: 5px;box-shadow: 3px 3px 3px #bbb;
+transition: all 0.5s ease 0s;}
+
+
+section>article.on{width: 780px;height: 500px;}
+
+section>article>h2{z-index: 2;position: absolute;right:0;top: 300px;cursor: pointer;width: 100%;height: 50px;background: #111;opacity:0.4;box-sizing: border-box;padding-left: 20px;
+transition: all 0.5s ease 0s;}
+section>article:hover >h2{opacity: 0.8;}
+section>article.on>h2{top: 100px;height: 100px;opacity: 0.3;} 
+
+
+article>h2 a{font-size: 14px;font-weight: bold;line-height: 3.5;color: #fff;letter-spacing: 2px;
+transition: all 0.5s ease 0s;}
+article.on>h2 a{font-size: 30px;}
+
+
+/* 작은이미지 */
+section>article>strong{opacity: 0.4;
+transition: all 0.5s ease 0s;}
+section>article:hover >strong{opacity: 1;}
+section>article.on >strong{opacity: 0;}
+
+
+/* 큰이미지 */
+section>article>p{z-index: 1;position: absolute;right: 0;top: 50%;margin-top: 0;width: 100%;height: 0;background-color: #fff;text-align: center;
+transition: all 0.5s ease 0s;}
+/* height 값이 0에서 커질예정  | 밑에 img는 위에꺼 상속받음*/
+section>article>p>img{height: 100%;}
+section>article.on>p{opacity: 1;height: 500px;margin-top: -250px;}
+/* 글씨 박스 */
+section>article>em{z-index: 2;position: absolute;right: -300px;bottom: 50px;padding: 10px 20px;background: #000;color: #fff;transition: all 1s ease 0s;}
+section>article.on>em{right: 20px;}
+
+
+/* 닫기 */
+section>article>span{z-index: 3;position: absolute;right: -300px;top: 110px;cursor: pointer;
+transition: all 0.5s ease 0s;}
+section>article.on>span{right: 20px;} 
+/* 위치 다시보기 close안으로 들어가야함 */
+
+.copyright{position: fixed;right: 30px;bottom: 20px;letter-spacing: 4px;color: #999;text-align: center;font-size: 12px;line-height: 1.5;font-family: arial;}
+
+

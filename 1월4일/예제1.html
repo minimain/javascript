@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>버튼 예제1</title>
+  <style>
+
+    ul{list-style: none;}
+    li{margin: 10px 0;}
+  
+    li a{display: inline-block;
+      padding: 5px 10px; border-radius: 5px;
+      color: white;text-decoration: none;font-weight: bold;
+      text-shadow: 0 -1px 1px #555;
+      box-shadow: 0 1px 3px #999;}
+  
+    .blue{background-color: #2daebf;}
+    .red{background-color: #e33100;}
+    .yellow{background-color: #ffb515;}
+
+    .blue:hover{background-color: #007d9a;}
+    .red:hover{background-color: #872300;}
+    .yellow:hover{background-color: #fc9200;}
+    /* a에 클래스가잡혀있어서 a.hover과 같음 */
+
+    li a:active{position: relative;top: 2px;}
+
+    /* 움직이는건 무조건 position이다 
+    위에서 2px내려와라
+    inline-block은 내용물만큼 잡히면서 세로 가로 길이를 잡을 수 있다.*/
+
+    /* body{font-size: 50px;font-weight: bold;font-family: "맑은 고딕",sans-serif;}
+    ul{list-style: none;}
+    a{text-decoration: none;color: white;}
+    li{width:500px;height: 100px;padding: 20px;text-align:left;}
+
+    .blue{background-color: #32abbc;padding: 20px 25px;
+    border-radius: 20px;
+    box-shadow:0 5px 2px #208194,0 0 5px black;
+    text-shadow:1px -4px 2px rgb(70, 69, 69);}
+
+    .red{background-color: #e13300;padding: 20px 20px;
+      border-radius: 20px;
+      border-radius: 20px;
+    box-shadow:0 5px 2px #a62305,0 0 5px black;
+    text-shadow:1px -4px 2px rgb(70, 69, 69);}
+
+    .yellow{background-color: #ffb516;padding:20px 35px;
+    border-radius: 20px;
+    border-radius: 20px;
+    
+      border-radius: 20px;
+    box-shadow:0 5px 2px #b78e12,0 0 5px black;
+    text-shadow:1px -4px 2px rgb(70, 69, 69);} */
+
+  </style>
+</head>
+<body>
+  <ul>
+     <li><a href="#" class="blue">Blue Button &raquo;</a></li>
+     <li><a href="#" class="red">Red Button &raquo;</a></li>
+     <li><a href="#" class="yellow">Yellow Button &raquo;</a></li>
+  </ul>
+  <!-- a:active -->
+</body>
+</html>

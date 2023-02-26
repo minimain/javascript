@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 헤럴드</title>
+</head>
+<body>
+<!-- 본문바로가기 -->
+<div id="skipNavi"><a href="#container">본문바로가기</a></div>
+<!-- //본문바로가기 -->
+<hr/>
+<div id="wrap">
+<!-- header 시작 -->
+<header>
+  <h1>HTML5<img src="images/logo.png" alt="html css3"/>헤럴드</h1>
+  <h2>HTML5 & CSS3를 이용해 옛 신문 스타일을 재현하다</h2>
+  <nav class="gnb">
+    <h2>주메뉴</h2>
+    <ul>
+      <li><a href="#">홈</a></li>
+      <li><a href="#">등록</a></li>
+    </ul>
+  </nav>
+  <p>Vol. MMXI</p>
+  <p><time datetime="1904-06-04">June 4, 1904</time></p>
+</header>
+<!-- //header 끝 -->
+<hr/>
+<!-- main -->
+<main id="container">
+  <!-- content1 -->
+  <div class="content1">
+    <article>
+      <video width="373" height="280" controls autoplay poster="images/ford-plane-still.png" muted >
+        <source src="media/ford-plane-takes-off.mp4" type="viedio/mp4"/>
+      </video>
+      <h2>마지막 미개척지 비디오. 드디어 정복하다!</h2>
+      <div class="text">
+        <p>Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida congue sed sit amet purus. Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Morbi ac commodo nulla.</p>
+        <p>In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh. Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida congue sed sit amet purus.</p>
+        <p>Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+        <p>Neque sit amet nunc gravida congue sed sit amet purus. Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+      </div>
+    </article>
+    <article>
+      <h2>엄청난 일이 CSS 단으로 가능해지다!</h2>
+      <div class="text">
+        <p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+        <p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit.</p>
+        <p>Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+        <p>Neque sit amet nunc gravida congue sed sit amet purus. Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh</p>
+        <p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit.</p>
+      </div>
+    </article>
+  </div>
+  <!-- //content1 -->
+  <hr/>
+  <!-- content2 -->
+  <div class="content2">
+    <article>
+      <header>
+      <h2>더 새로워진 텍스트 섀도</h2>
+      <h3>어떻게 가능한가?</h3>
+      </header>
+      <!-- header, footer가 꼭 레이아웃에만 쓰는 것이 아닌 상단이나 제목에 사용 가을 -->
+      <div class="text">
+        <p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+        <p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit.</p>
+      </div>
+      <!-- <footer>홍길동 기자</footer> -->
+    </article>
+    <article>
+      <header>
+      <h2>WAI-ARIA? 아하!</h2>
+      <h3>폼 접근성</h3>
+      </header>
+      <figure>
+        <img src="images/cat.png" title="고양이"/>
+        <figcaption>고양이 사진</figcaption>
+      </figure>
+      <figure>
+        <img src="images/computer-mouse-pic.png" alt="컴퓨터 마우스" width="30"/>
+        <img src="images/computer-mouse-pic.png" alt="컴퓨터 마우스" width="30"/>
+        <img src="images/computer-mouse-pic.png" alt="컴퓨터 마우스" width="30"/>
+        <figcaption>컴퓨터 마우스 사진</figcaption>
+      </figure>
+      <div class="text">
+        <p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum.</p>
+        <p>Nam vestibulum, arcu sodales feugiat.</p>
+      </div>
+    </article>
+    <article>
+      <header>
+      <h2>MODERNIZR 타임즈</h2>
+      <h3>새로운 시대</h3>
+      </header>
+      <div class="text">
+        <p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum.</p>
+        <p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit.</p>
+      </div>
+    </article>
+  </div>
+  <!-- //content2 -->
+  <hr/>
+  <!-- content3 -->
+  <div class="content3">
+    <aside>
+      <h2>광고</h2>
+      <!-- 광고하나가 여러 사이트에서 나타난다 그러니 마크업을 아티클로 해준다. 왜냐면 광고는 독릭접으로 퍼가는 것이기 때문이다. 
+      나중에 css로 다 움직이게 만들 예정 광고 -->
+      <article>
+        <h3>수배중</h3>
+        <p></p>
+        <a href="#">&lt;HTML5&gt; &amp;</a>
+        <p>보사이 행복과 만족</p>
+      </article>
+      <article>
+        <h3>PUT YOUR <span>DUKES</span> UP SIRE</h3>
+        <!-- 광고 이미지가 글에서 (사진이 글의 의미를 나타내지 않음)중요하지는 않기 때문에 백그라운드 이미지도 할예정 -->
+        <p>싹싹 비는 편이 좋을 텐데,<br/>흠씬 얻어맞게 될테니!</p>
+      </article>
+      <article>
+        <h3><a href="#">HTML5 &amp; CSS3 <br/>단행본으로!</a></h3>
+      </article>
+      <article>
+        <h3>지금 계신곳이 어딘가요?</h3>
+        <form action="/" method="post">
+          <fieldset>
+            <legend>지도</legend>
+        <input type="button" value="알려주세요!">
+          </fieldset>
+        </form>
+      </article>
+    </aside>
+    <article>
+    <header>
+      <h2>CSS TRANSITIONS - THE STATE OF PLAY</h2>
+      <h3>CSS TRANSITIONS - THE STATE OF PLAY</h3>
+    </header>
+    <div class="text">
+      <p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+      <p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum.</p>
+      <p>Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+      <p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at. vestibulum. Nulla at.</p>
+      <p>Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+      <p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at. vestibulum. Nulla at.</p>
+    </div>
+    </article>
+  </div>
+  <!-- //content3 -->
+</main>
+<!-- //main 끝 -->
+<hr/>
+<!-- footer 시작 -->
+<footer>
+  <section>
+    <h2>인물소개</h2>
+    <!-- 인물정보를 section으로 나누는데 세개의 section이 모두 인물 정보니까 인물 소개로 다시 section으로 묶어주는것이다. -->
+  <section>
+    <h2>알렉시스 골드스타인</h2>
+    <p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+  </section>
+  <section>
+    <h3>루이스 라자리스</h3>
+    <p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+  </section>
+  <section>
+    <h3>에스텔 웨일</h3>
+    <p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+  </section>
+  </section>
+  <address>
+    <small>&copy;  SitePoint</small>
+    <a href="#"><img src="images/logo-sp.png" alt="SitePoint"/></a>
+  </address>
+</footer>
+<!-- //footer 끝 -->
+</div>
+</body>
+</html>

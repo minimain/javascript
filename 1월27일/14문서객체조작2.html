@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문서객체조작2</title>
+  <script>
+    window.onload = function(){
+      var theList = document.getElementById("theList"); //ul
+      var listAll = theList.getElementsByTagName("li"); //lililili
+      console.log(listAll);
+      var copyList = listAll[3].cloneNode(true); //복제
+      theList.insertBefore(copyList,listAll[0]); //삽입
+      theList.removeChild(listAll[4]); //삭제
+    }  
+    //listall은 배열 형태로 전부 가져와라 | 맨앞에 끼워넣어라 insertBefore index0앞에 끼워넣어라
+    
+    
+    </script>
+</head>
+<body>
+  <h1>문서객체조작</h1>
+  <ul id="theList">
+    
+    <li>리스트2</li>
+    <li>리스트3</li>
+    <li>리스트4</li>
+    <li>리스트1</li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position:absolute</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    #outer{z-index: 150;    /*z-index의 숫자가 부모인 outer에 150이 주어져서 box1,2,3이 부모의 값인 150이 되어 side에 입력된 100이 가장 낮은수가 된것이다*/
+      position:relative;
+      width: 600px;border: 5px solid red;}
+    .box{width: 100px;height: 100px;border: 5px solid #000;}
+    #box1{z-index: 3;
+      position:absolute;left: 0;top: 0;
+      background: red;}
+    #box2{z-index: 2;
+      position:absolute;left: 40px;top: 40px;
+      background: orange;}
+    #box3{z-index: 1;
+      position:absolute;left:80px; top:80px;
+      background: yellow;}
+    #side{z-index: 100;
+      position: absolute;left: 150px;top: 150px;
+      background: green;}
+    /*절대위치라서 절대자가 하나 있어야함 부모 이상으로만 잡는거 가능 예를 들어 outer을 기준으로 잡고 box1에 absolute 적용 
+    position:absolute;left: 0;top: 0;를 하면 box1이 box2위에 위치
+    position:absolute;left: 40px;top:40px; 를 하면 빨간색 outer을 기준으로 왼쪽에서 안으로 40px들어와라 top에서 안쪽으로 40px 들어와라 box3은 box1뒤에 있음
+    position:absolute;left:80px; top:80px; outer에서 분리 그래서outer가 작아짐
+    position:absolute(절대위치) , releative(상대위치), fixed(고정위치) - 오프셋 속성값 :left, top, right, bottom 
+    레이어 순서 바꿈 (주변에 영향을 준다.): z-indent, 큰숫자가 맨위에 옴 (위치)
+    순서를 바꾸고 싶으면z-index: 숫자;를 사용하면 된다. 그러면 해당 박스가 가장 위로해서 위치한다.(position 이 있을경우만 쓸수있다.)
+    
+     #side{position: absolute;
+      background: green;}는 부모 이상의 절대자로 body를 기준으로 잡는다.그런데 바디는 원래 기준이 적용이된다.*/
+  </style>
+</head>
+<body>
+  <div id="outer">
+    <div class="box" id="box1">Box1</div>
+    <div class="box" id="box2">Box2</div>
+    <div class="box" id="box3">Box3</div>
+  </div>
+  <div class="box" id="side">side Box</div>
+</body>
+</html>

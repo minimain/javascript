@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수_3</title>
+
+  <style>
+    *{margin: 0;padding: 0;}
+    img{vertical-align: top;border: 0;}
+    ul{list-style: none;}
+    div#bannerWrap{position: relative;width: 420px;height: 680px;}
+    div.frame{width: 400px;overflow: hidden;}
+    ul#bannerList{width: 2800px;position: relative;left: 0;}
+    ul#bannerList:after{content: "";display: block;clear: both;}
+    ul#bannerList li{float: left;width: 100px;}
+    .leftBtn{position: absolute;right: 5px;top: 10px;}
+    .rightBtn{position: absolute;right: 5px;top: 40px;}
+  </style>
+  <script>
+    /*
+    재귀함수 - 함수안에 실행문에서 자기자신 함수를 스스로 호출하는것
+    */
+
+    var i=0;
+    function theTest(){
+      i++;
+      document.write("안녕하세요" + i + "<br/>");
+      if(i<10) theTest();
+    }
+
+    theTest();
+  /*theTest 함수를 다시 호출해라 | 함수안에서 자기자신을 다시 호출 | for문을 사용하지 않아도 반복이 가능 (재귀함수를 쓰면 )
+  최초로 한번 호출은 해야함 theTest(); 밑에 이걸 의미함 | 조건이 있어야함 없으면 무한 반복 | */
+
+  // ---------------------------------
+
+  /*
+  지역 변수- 변수가 정의되어있는 함수 내에서만 쓴다. (우선 호출),
+  함수내에서 선언하며 반드시 앞에 var 키워드를 붙여 선언한다.
+
+  전역 변수 - 현재페이지 내 자바스크립트 어디서든 사용가능 
+  함수 바깥에 선언하거나 함수내에서 var 없이 선언한다.
+  */
+ /* 변수 둘의 차이 |
+ 최초로 실행 |
+ 전역변수- - var가 함수 바깥에서 선언하는 있는 건 전역변수 
+ 어디 페이지든 사용가능
+ 
+ 지역변수 - 함수 안에 var를 붙여 b라는 변수를 만든건 지역 변수로 함수 안에서만 사용 가능 | b가 두개 인데 바깥에 있는것과 안에 있는것이 있으면 안에 있는 지역 변수가 우선 호출이라 안에 있는 값이 나온다. | 함수 바깥에서는 없는것 |*/
+// 전역변수
+ var Num;
+ function theFnc(){
+  Num = 30;
+ }
+
+ theFnc();
+ console.log(Num);
+
+//  지역변수
+ var a=10;
+ var b=20;
+ function theT(){
+  var b = a + 200;
+  alert(b);
+ }
+ theT();
+ console.log(b);
+
+// ---------이미지 (배너 구조)-----
+/*지금 ul에 28개가 들어있음 | 기차 형식으로 나와야함 4개씩 | 
+배너번호를 0부터 시작 |곱하기 할 값을 변수로 지정 -400*/
+/*
+var Num = 0;
+var colWidth = -400;
+
+function myBanner(whichBtn){
+  var myBannerList = document.getElementById("bannerList") //ul
+  myBannerList.style.left = (Num * colWidth) + "px";
+}
+*/
+var Num = 0;
+var colWidth = -400;
+
+function myBanner(whichBtn){
+  var myBannerList = document.getElementById("bannerList") //ul
+  if(whichBtn == 'next'){
+    Num++;
+    if(Num>6) Num=1;  
+    myBannerList.style.left = (Num * colWidth) + "px";
+  return false;
+
+  }else{
+    Num--;
+    if(Num<1) Num=6;   
+    myBannerList.style.left = (Num * colWidth) + "px";
+  return false;
+  }
+}
+// ul은 반복되니 바깥으로 빼줌
+/*어제는 이미지를 바꾸는것 | 오늘은 ul이 기차처럼 움직이는것 |
+ul의 left값이 -400,-800,-1200 으로 | 하나당 100px이라 4개씩 | 
+*/
+
+// -----------------------------------
+
+
+  </script>
+</head>
+<body>
+  <div id="bannerWrap">
+    <div class="frame">
+      <ul id="bannerList">
+        <li><a href="#"><img src="images/s_img1-33.jpg" alt="배너1"/></a></li>
+        <li><a href="#"><img src="images/s_img1-33.jpg" alt="배너1"/></a></li>
+        <li><a href="#"><img src="images/s_img1-33.jpg" alt="배너1"/></a></li>
+        <li><a href="#"><img src="images/s_img1-33.jpg" alt="배너1"/></a></li>
+
+        <li><a href="#"><img src="images/s_img2-33.jpg" alt="배너2"/></a></li>
+        <li><a href="#"><img src="images/s_img2-33.jpg" alt="배너2"/></a></li>
+        <li><a href="#"><img src="images/s_img2-33.jpg" alt="배너2"/></a></li>
+        <li><a href="#"><img src="images/s_img2-33.jpg" alt="배너2"/></a></li>
+
+        <li><a href="#"><img src="images/s_img3-33.jpg" alt="배너3"/></a></li>
+        <li><a href="#"><img src="images/s_img3-33.jpg" alt="배너3"/></a></li>
+        <li><a href="#"><img src="images/s_img3-33.jpg" alt="배너3"/></a></li>
+        <li><a href="#"><img src="images/s_img3-33.jpg" alt="배너3"/></a></li>
+
+        <li><a href="#"><img src="images/s_img4-33.jpg" alt="배너4"/></a></li>
+        <li><a href="#"><img src="images/s_img4-33.jpg" alt="배너4"/></a></li>
+        <li><a href="#"><img src="images/s_img4-33.jpg" alt="배너4"/></a></li>
+        <li><a href="#"><img src="images/s_img4-33.jpg" alt="배너4"/></a></li>
+
+        <li><a href="#"><img src="images/s_img5-33.jpg" alt="배너5"/></a></li>
+        <li><a href="#"><img src="images/s_img5-33.jpg" alt="배너5"/></a></li>
+        <li><a href="#"><img src="images/s_img5-33.jpg" alt="배너5"/></a></li>
+        <li><a href="#"><img src="images/s_img5-33.jpg" alt="배너5"/></a></li>
+
+        <li><a href="#"><img src="images/s_img6-33.jpg" alt="배너6"/></a></li>
+        <li><a href="#"><img src="images/s_img6-33.jpg" alt="배너6"/></a></li>
+        <li><a href="#"><img src="images/s_img6-33.jpg" alt="배너6"/></a></li>
+        <li><a href="#"><img src="images/s_img6-33.jpg" alt="배너6"/></a></li>
+
+        <li><a href="#"><img src="images/s_img7-33.jpg" alt="배너7"/></a></li>
+        <li><a href="#"><img src="images/s_img7-33.jpg" alt="배너7"/></a></li>
+        <li><a href="#"><img src="images/s_img7-33.jpg" alt="배너7"/></a></li>
+        <li><a href="#"><img src="images/s_img7-33.jpg" alt="배너7"/></a></li>
+
+      </ul>
+    </div>
+    <a href="#" class="leftBtn" onclick="myBanner('prev');">
+      <img src="images/left_arrow-33.png" alt="이전 왼쪽버튼"/>
+    </a>
+    <a href="#" class="rightBtn" onclick="myBanner('next');">
+      <img src="images/right_arrow-33.png" alt="다음 오른쪽버튼"/>
+    </a>
+  </div>
+</body>
+</html>

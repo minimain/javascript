@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가로메뉴</title>
+  <style>
+*{margin: 0;padding: 0;}
+/* ul의 위치가 다다름 */
+li{list-style-type: none;}
+.gnb{position: relative;width: 100%;}
+.gnb li{float: left;}
+.gnb li ul{display:none;position: absolute;left: 0;top: 40px;}
+.gnb li:nth-child(1) ul{left: 0;}
+.gnb li:nth-child(2) ul{left: 100px;}
+.gnb li:nth-child(3) ul{left: 200px;}
+.gnb li:nth-child(4) ul{left: 300px;}
+.gnb li:nth-child(5) ul{left: 400px;}
+.gnb li:nth-child(6) ul{left: 500px;}
+.gnb li ul li{padding: 0 15px;}
+
+  </style>
+  <script>
+      // 인덱스 0 부터 메뉴리스트의 인덱스 5번까지 
+  // 마우스 | 이벤트가 발생된 애는 this 마우스를 오버한 li의 a가 this다
+  // nextNode에 공백문자가 저장되어잇음 트루면 뒤에 형제를 또 저장해라
+    // onclick을 했을때 dispay:block이 되도록
+
+window.onload = function(){
+
+  //일단 재료들을 다 가져와라
+  var gnb =document.getElementById("gnb"); //큰ul
+  var menuList = gnb.children; //li 6개
+  var subMenu=gnb.getElementsByTagName("ul"); //하위ul
+    console.log(gnb);
+    console.log(menuList);
+    console.log(subMenu);
+  
+    var myAuto=null;
+    var aout = 1;
+    var ulout = 1;
+
+  function hideMenu(){
+     if(aout&&ulout){//사라져라
+     //모든 하위 ul 안보이게
+     for(var k=0; k<subMenu.length;k++){
+      //모든 하위 ul 안보이게
+      subMenu[k].style.display="none";
+      }
+
+     //모든 img가 .gif가 되고
+     for(var k=0;k<menuList.length;k++){
+        var myImg = menuList[k].children[0].children[0]; //img
+        myImg.src = myImg.src.replace("_over.gif",".gif");
+      }
+    }
+  }
+
+  for(var i=0; i<menuList.length;i++){
+    //큰 li a에mouseover
+    menuList[i].children[0].onfocus = menuList[i].children[0].onmouseover = function(){ //li
+    //모든 하위 ul 안보이게
+    for(var k=0; k<subMenu.length;k++){ //모든 하위 ul 안보이게
+      subMenu[k].style.display="none";
+    }
+
+    // this(마우스오버한 li a)의 하위ul만 보이게
+    var nextNode = this.nextSibling;
+    if(nextNode.nodeType == 3) {//공백문자
+     nextNode = nextNode.nextSibling;
+    }//ul
+    nextNode.style.display="block";
+
+    
+    // 모든 img가 .gif 가 되고
+    // this(마우스오버한 li a)의 img만 _over.gif로 바꿔라
+    for(var k=0;k<menuList.length;k++){
+      var myImg = menuList[k].children[0].children[0]; //img
+      myImg.src = myImg.src.replace("_over.gif",".gif");
+    }
+    // this(마우스오버한 li a)의 img만 _over.gif로 바꿔라
+    this.children[0].src = this.children[0].src.replace(".gif","_over.gif");
+    aout=0;
+    }  
+    //onmouseover
+
+    // 큰li a - onmouseout 안보여라 | 아직위에for문 안이다.
+    menuList[i].children[0].onblur = menuList[i].children[0].onmouseout = function(){//li a
+      aout=1;
+      if(myAuto)clearTimesout(myAuto)
+      myAuto = setTimeout(hideMenu,1000);
+    } //onmouseout
+
+    //하위ul - onmouseenter 보여라
+    subMenu[i].onmouseenter = function(){
+      ulout = 0;
+    }
+
+    // 하위ul - onmouseleave 안보여라
+    subMenu[i].onmouseleave =function(){
+      ulout=1;
+      if(myAuto) clearTimeout(myAuto)
+      myAuto = setTimeout(hideMenu,1000);
+    }
+  } //for문
+}
+
+  
+//  .onblur 포커스 반대말 }
+//   // 더 넓은 범위 onmouseleave 나가고 마우스가 떠나면| onmouseenter 마우스가 들어가고 
+// }
+
+// clearTimes는 setTimes 없애버려라 | 지우고 하면 다시 지정가능
+// null값은 false임 | 저장이되어있다면 true임 
+// this는 위에 값
+
+  </script>
+</head>
+<body>
+    <ul id="gnb" class="gnb">
+      <li><a href="#"><img src="images/gnb01.gif" alt="협의회소개"/></a>
+         <ul>
+           <li><a href="#">Sub1-1</a></li>
+           <li><a href="#">Sub1-2</a></li>
+           <li><a href="#">Sub1-3</a></li>
+         </ul>
+      </li>
+      <li><a href="#"><img src="images/gnb02.gif" alt="협의회소식"/></a>
+        <ul>
+           <li><a href="#">Sub1-1</a></li>
+           <li><a href="#">Sub1-2</a></li>
+           <li><a href="#">Sub1-3</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><img src="images/gnb03.gif" alt="자료실"/></a>
+        <ul>
+           <li><a href="#">Sub1-1</a></li>
+           <li><a href="#">Sub1-2</a></li>
+           <li><a href="#">Sub1-3</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><img src="images/gnb04.gif" alt="게시판"/></a>
+        <ul>
+           <li><a href="#">Sub1-1</a></li>
+           <li><a href="#">Sub1-2</a></li>
+           <li><a href="#">Sub1-3</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><img src="images/gnb05.gif" alt="제주복지방"/></a>
+        <ul>
+           <li><a href="#">Sub1-1</a></li>
+           <li><a href="#">Sub1-2</a></li>
+           <li><a href="#">Sub1-3</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><img src="images/gnb06.gif" alt="푸드뱅크"/></a> 
+        <ul>
+           <li><a href="#">Sub1-1</a></li>
+           <li><a href="#">Sub1-2</a></li>
+           <li><a href="#">Sub1-3</a></li>
+        </ul>
+      </li>
+    </ul>
+</body>
+</html>

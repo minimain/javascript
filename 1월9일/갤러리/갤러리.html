@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+   body,div,ul,li{margin: 0;padding: 0;}
+   ul{list-style: none;}
+
+   .gallery{width: 430px;height: 300px;margin: 0 auto;border:10px solid #1d0c16;background: #272229;box-shadow: 10px 10px 20px #272229;}
+
+   .gallery li{position: relative;float:left;padding: 10px;}
+
+   .gallery li>.pic{z-index:10;position: absolute;left: 100px;top: 0;
+    opacity: 0;width: 0;height:0;
+    box-shadow: #272229 2px 2px 10px;border: 1px solid black;
+    transition: all 3s ease-in-out 0s;}
+
+   .gallery li:hover>.pic{opacity: 1;width:320px;height: 240px;}
+
+    /* div,ul,li{margin: 0;padding: 0;}
+    body{margin: ;}
+    .gallery{position:relative;background:rgb(30, 29, 29); border: 20px solid black;}
+
+    ul::after{content: "";display: block;clear: both;}
+    ul li{float: left; list-style: none; padding: 20px;margin: 20px auto;}
+
+    .gallery li img:first-child{position: absolute;
+    list-style: none;opacity: 0; }
+
+    li img:first-child:hover{opacity: 1;}
+
+    li img:last-child:hover{} */
+    
+    /* .gallery li:first-child{background-color: red;} */
+  </style>
+</head>
+<body>
+  <!-- ul li 로  사진 들어감 li에 사진 두개가 들어감 오퍼시티 0이었는데 원래크기가 되는것 사진이 커짐 오른쪽 위쪽에 위치 포지션 -->
+
+  <div class="gallery">
+    <ul>
+      <li>
+        <img src="images/ph1_s.jpg" alt="작은그림" class="small">
+        <img src="images/ph1.jpg" alt="큰 그림" class="pic">
+      </li>
+      <li>
+        <img src="images/ph2_s.jpg" alt="작은그림" class="small">
+        <img src="images/ph2.jpg" alt="큰 그림" class="pic">
+      </li>
+      <li>
+        <img src="images/ph3_s.jpg" alt="작은그림" class="small">
+        <img src="images/ph3.jpg" alt="큰 그림"class="pic">
+      </li>
+      <li>
+        <img src="images/ph4_s.jpg" alt="작은그림" class="small">
+        <img src="images/ph4.jpg" alt="큰 그림"class="pic">
+      </li>
+      <li>
+        <img src="images/ph5_s.jpg" alt="작은그림" class="small">
+        <img src="images/ph5.jpg" alt="큰 그림"class="pic">
+      </li>
+      <li>
+        <img src="images/ph6_s.jpg" alt="작은그림" class="small">
+        <img src="images/ph6.jpg" alt="큰 그림"class="pic">
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

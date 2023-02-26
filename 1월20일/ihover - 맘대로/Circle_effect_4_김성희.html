@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circle_effect_4</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- stylesheets-->
+  <link href="http://fonts.googleapis.com/css?family=Lustria|Lato:300,400,700,400italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="styles/main.css"/>
+  <!-- script -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58400131-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <!-- //script -->
+  
+  <!-- style-->
+  <style>
+/* common */
+body{width: 800px;border: 1px solid red;margin: 0 auto;padding-left: 20px;}
+
+/* circle */
+.circle,.circle *{box-sizing:border-box;}
+.circle a{text-decoration:none;}
+.circle img{width:100%;height:100%;}
+
+/*이미지*/
+.circle{position:relative;width:220px;height:220px;border-radius: 50%;}
+.circle .img{position:relative;width:220px;height:220px;border-radius:50%;opacity:1;transition:all 0.35s ease-out;}
+.circle .img:before{position:absolute;display:block;content:'';width:100%;height:100%;border-radius:50%;
+					box-shadow:inset 0 0 0 16px rgba(255, 255, 255, 0.6),0 1px 2px rgba(0, 0, 0, 0.3);transition: all 0.35s ease-in-out;}
+.circle .img img{border-radius: 50%;}
+
+/* 글씨 */
+.circle .info{position:absolute;top:0;bottom:0;left:0;right:0;text-align:center;border-radius:50%;  background: #333333;
+  opacity: 0;visibility: hidden;pointer-events: none;transition: all 0.35s ease;transform: translateX(-100%);}
+.circle .info h3{  color: #fff;text-transform: uppercase;position: relative;letter-spacing: 2px;font-size: 22px;
+  margin: 0 30px;padding: 55px 0 0 0;height: 110px;text-shadow: 0 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.3);}
+.circle .info p{  color: #bbb;padding: 10px 5px;font-style: italic;margin: 0 30px;font-size: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);transition: all 0.35s ease-in-out;}
+
+/* hover */
+.circle a:hover .img{opacity: 0;pointer-events: none;}
+.circle a:hover .info{visibility: visible;opacity: 1;}
+
+  </style>
+  <!-- //style-->
+</head>
+
+<body>
+  <!-- Left to right-->
+<div class="row">
+  <div class="col-sm-6">
+ 
+    <!-- normal -->
+    <div class="ih-item circle effect4 left_to_right"><a href="#">
+        <div class="img"><img src="images/assets/4.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+    <!-- end normal -->
+ 
+  </div>
+  <div class="col-sm-6">
+ 
+    <!-- colored -->
+    <div class="ih-item circle colored effect4 left_to_right"><a href="#">
+        <div class="img"><img src="images/assets/5.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+    <!-- end colored -->
+ 
+  </div>
+</div>
+<!-- end Left to right-->
+ 
+ 
+<!-- Right to left-->
+<div class="row">
+  <div class="col-sm-6">
+ 
+    <!-- normal -->
+    <div class="ih-item circle effect4 right_to_left"><a href="#">
+        <div class="img"><img src="images/assets/6.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+    <!-- end normal -->
+ 
+  </div>
+  <div class="col-sm-6">
+ 
+    <!-- colored -->
+    <div class="ih-item circle colored effect4 right_to_left"><a href="#">
+        <div class="img"><img src="images/assets/7.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+    <!-- end colored -->
+ 
+  </div>
+</div>
+<!-- end Right to left-->
+ 
+ 
+<!-- Top to bottom-->
+<div class="row">
+  <div class="col-sm-6">
+ 
+    <!-- normal -->
+    <div class="ih-item circle effect4 top_to_bottom"><a href="#">
+        <div class="img"><img src="images/assets/1.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+    <!-- end normal -->
+ 
+  </div>
+  <div class="col-sm-6">
+ 
+    <!-- colored -->
+    <div class="ih-item circle colored effect4 top_to_bottom"><a href="#">
+        <div class="img"><img src="images/assets/2.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+    <!-- end colored -->
+ 
+  </div>
+</div>
+<!-- end Top to bottom-->
+ 
+ 
+<!-- Bottom to top-->
+<div class="row">
+  <div class="col-sm-6">
+ 
+    <!-- normal -->
+    <div class="ih-item circle effect4 bottom_to_top"><a href="#">
+        <div class="img"><img src="images/assets/3.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+    <!-- end normal -->
+ 
+  </div>
+  <div class="col-sm-6">
+ 
+    <!-- colored -->
+    <div class="ih-item circle colored effect4 bottom_to_top"><a href="#">
+        <div class="img"><img src="images/assets/4.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+    <!-- end colored -->
+
+  </div>
+</div>
+<!-- end Bottom to top-->
+  
+</body>
+</html>

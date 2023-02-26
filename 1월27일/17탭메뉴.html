@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>탭메뉴</title>
+
+
+  <style>
+    body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,caption,form,fieldset,legend,input{margin: 0;padding: 0;}
+    body{font-size: 12px;font-family: Dotum,"돋움",sans-serif;}
+    li{list-style-type: none;}
+/* id는 js | class는 css 에서 사용 */
+a{color: #666;text-decoration: none;}
+a:hover{color: #d06;text-decoration: underline;}
+
+    .tabMenu{position: relative;margin:10px;width: 350px;height: 200px;
+    background: url(images/ta_bg.gif) repeat-x 0 -1px;}
+    .tabMenu dt{float: left;margin-right: 2px;}
+    .tabMenu dd{display:none;position: absolute;left: 0;top: 25px;width: 350px;
+    padding-top: 10px;}
+    .tabMenu dd:nth-of-type(1){display: block;}
+    .tabMenu dd li{background: url(images/tab_bul.gif) no-repeat 3px 50%;text-indent: 10px;padding: 5px 0;border-bottom: 1px solid #ccc;}
+    .tabMenu dd span{position: absolute;right: 0;}
+    .tabMenu dd .more{position: absolute;right: 0;top: -20px;}
+
+  </style>
+
+
+
+
+  <script>
+    // 이거 문제 다시 확인
+window.onload = function(){
+  var myList =document.getElementById("tabMenu"); //dl
+  var myTab =myList.getElementsByTagName("dt"); //dt,dt,dt
+  var myDD =myList.getElementsByTagName("dd"); //dd,dd,dd
+  console.log(myList);
+  console.log(myTab);
+  console.log(myDD);
+  for(var i=0; i<myTab.length;i++){
+    myTab[i].children[0].onfocus = myTab[i].children[0].onclick =function(){//dt a
+     //모든 dd가 안보이게함
+     for(var k=0;k<myDD.length;k++){
+      myDD[k].style.display="none";
+     }
+    //  내가 클릭이벤트 발생한데 this | 공백문자 뒤에 있는 형제를 저장해라
+    // 클릭한 dt a(this) 의 dd만 보여야
+    var theNext = this.parentNode.nextSibling; //공백문자
+    if(theNext.nodeType==3) theNext = theNext.nextSibling;
+    theNext.style.display="block";
+
+    //모두 회색 이미지가 되라.
+    // dt에 자식의 자식이 이미지
+    for(var k=0; k<myTab.length; k++){
+      var theTab =  myTab[k].children[0].children[0]; //img
+      theTab.src = theTab.src.replace("over.gif","out.gif");
+      // myTab[k].children[0].children[0].src = myTap[k].children[0].children[0].src.replace("over.jpg","out.jpg");
+    }
+
+    //클릭한 dt a (this)의 img만 빨간색이 되라
+    // var theNext = this.parentNode.nextSibling; //공백문자
+    // if(theNext.nodeType == 3) theNext = theNext.nextSibling;
+    // theNext.src.color="red";
+this.children[0].src = this.children[0].src.replace("out.gif","over.gif");
+        }
+      }
+    }
+
+  </script>
+</head>
+<body>
+  <dl id="tabMenu" class="tabMenu">
+    <dt>
+      <a href="#">
+        <img src="images/ta_1_over.gif" alt="공지사항"/>
+      </a>
+    </dt>
+    <dd>
+      <ul>
+        <li><a href="#">공지사항</a><span>2021-12-30</span></li>
+        <li><a href="#">공지사항</a><span>2021-12-30</span></li>
+        <li><a href="#">공지사항</a><span>2021-12-30</span></li>
+        <li><a href="#">공지사항</a><span>2021-12-30</span></li>
+      </ul>
+      <p class="more"><a href="#"><img src="images/tab_more.gif" alt="공지사항 더보기"></a></p>
+    </dd>
+    <dt>
+      <a href="#">
+        <img src="images/ta_2_out.gif" alt="입찰정보"/>
+      </a>
+    </dt>
+    <dd>
+      <ul>
+        <li><a href="#">입찰정보</a><span>2021-12-30</span></li>
+        <li><a href="#">입찰정보</a><span>2021-12-30</span></li>
+        <li><a href="#">입찰정보</a><span>2021-12-30</span></li>
+        <li><a href="#">입찰정보</a><span>2021-12-30</span></li>
+      </ul>
+      <p class="more"><a href="#"><img src="images/tab_more.gif" alt="입찰정보 더보기"></a></p>
+    </dd>
+    <dt>
+      <a href="#">
+        <img src="images/ta_3_out.gif" alt="채용공고"/>
+      </a>
+    </dt>
+    <dd>
+      <ul>
+        <li><a href="#">채용공고</a><span>2021-12-30</span></li>
+        <li><a href="#">채용공고</a><span>2021-12-30</span></li>
+        <li><a href="#">채용공고</a><span>2021-12-30</span></li>
+        <li><a href="#">채용공고</a><span>2021-12-30</span></li>
+      </ul>
+      <p class="more"><a href="#"><img src="images/tab_more.gif" alt="채용공고 더보기"></a></p>
+    </dd>
+  </dl>
+</body>
+</html>

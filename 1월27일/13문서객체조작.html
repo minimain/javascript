@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문서객체 조작</title>
+  <script>
+    /*
+    문서객체 조작 - 새로운 요소를 생성, 추가, 삭제, 복제
+
+    메서드
+    생성 - createElement("요소면")
+        appendTextNode("텍스트") / createTextNode("텍스트")
+    추가 - 선택요소.appendChild(새요소) - 선택요소에 새로운 자식   요소를 추가
+        부모요소.inserBefore(새요소,자식요소) - 자식요소 앞에 새로운 자식 요소 추가 | 끼워넣는것..?
+    교체 - 부모요소.replaceChild(새요소, 자식요소) - 자식요소를 새요소로 덮어쓰기
+    삭제 - 부모요소.removeChild(자식요소) - 자식요소 삭제
+    복제 - 선택요소.cloneNode(true or false)
+        - 선택요소를 복제해서 true일 경우 하위 요소까지 모두 복제
+    속성부여 - 선택요소.setAttribute("속성","값") - 선택요소에 해당 속성값 부여
+        
+        innerText : 순수텍스트를 가져오거나, 해당 요소에 텍스트 지정
+        innerHTML: 태그와 함께 텍스트를 가져오거나, 해당 요소에 태그와 함께 텍스트 지정
+        textContent : 텍스트를 가져오되, 화면에 보이는대로가 아니라 소스에 있는대로 가져옴
+        (화면에 감춘 요소에서도 내용을 가져올수 있고, 소스에 공백이 여러개일 경우 그 공백도 모두 가져옴 )
+        */
+
+        /*
+        자바스크립트로 p태그를 만들어볼려는것
+        */
+
+        window.onload = function(){
+          var newPtag = document.createElement("p");
+          var newButton1 = document.createElement("button");
+          var newButton2 = document.createElement("button");
+
+          newButton1.setAttribute("id","btn1");
+          newButton2.setAttribute("id","btn2");
+
+          var text1 = document.createTextNode("버튼1");
+          var text2 = document.createTextNode("버튼2");
+
+          newButton1.appendChild(text1);
+          newButton2.appendChild(text2);
+
+          newPtag.appendChild(newButton1);
+          newPtag.appendChild(newButton2);
+
+          var theObj =document.getElementById("theBox"); //div
+          theObj.appendChild(newPtag);
+
+          // html속성 Attribute - 선택한 요소에 속성 지정
+
+          // 다연결을 해줘야함
+          //버튼에다가 마지막요소로 텍스트 노드를붙여라
+          // 버튼을 p태그와연결을 해줘야함 |div의 자식으로p태그 연결
+          // html을 생성할수 있다.- 속성과값을 연결 -
+        }
+  </script>
+</head>
+<body>
+  <div id="theBox">
+    <h1>요소 생성 연습</h1>
+    <!-- <p>
+      <button id="btn1">버튼1</button>
+      <button id="btn2">버튼2</button> 
+         </p>
+    -->
+  </div>
+</body>
+</html>

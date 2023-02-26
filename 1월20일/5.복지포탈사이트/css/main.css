@@ -1,0 +1,49 @@
+@import url(reset.css);
+
+/* common */
+body{font-size: 12px;font-family: Dotum,"돋움",sans-serif;
+background: url(../images/bg_top.gif) no-repeat 50% 0;}
+/* 위치 가운데로 */
+a{color: black;text-decoration: none;}
+a:hover{color: red;}
+
+/* rayout */
+#wrap{width: 700px;margin: 0 auto;border: 1px solid red;}
+ #header{width: 700px;border: 1px solid blue;}
+ #container{width: 700px;border: 1px solid black;}
+
+/* header */
+#header>h1{float: left;}
+#header>p.path{float: right;margin-top: 50px;padding-left: 10px;
+  background: url(../images/blet.gif)no-repeat 0 50%;}
+
+/* container */
+/* content */
+/* 가로 700 하고 p와 이미지 크기 정하고 float하는 애들은 div로 하나 묶어주고 밑에가 못올라오게 after해주기
+내가 b로 묶은거 strong을 해서 bold해줌 안중요한줄 알았는데 중요한가봄
+table에 보더를 넣을때는 최대한 th와 td에 넣기
+table이 가로가 꽉차게 하기 위해서는 container을 해서 부모 크기를 가지고 온ㄴ다.
+#container>table{width:100%;}
+td로 묶어서 td를 first와 last로 설정하고 , 쉼표 이용해서 border넣어줌  */
+.img1{float: left;background: url(../images/img_01.gif) no-repeat 0 0;width: 320px;height: 233px;margin:0 20px 30px 0;}
+.content{float: right;padding-right: 5px;}
+.content h2{font-size: 18px;color: rgb(246, 111, 111);font-weight: bold;padding-bottom:20px;}
+.content h3{color: red;font-weight: bold;font-size: 15px;padding-bottom: 15px;}
+.content p{text-align: justify;line-height: 150%;}
+
+
+/* table */
+h3{color: red;padding-bottom: 15px;font-size: 15px;font-weight: bold;
+text-indent: 20px;}
+
+table{width: 750px;margin-left: 20px;}
+
+table tr th{border-right:1px solid #ccc;text-align: center;padding: 5px 10px}
+
+table thead th{font-weight: bold;border-top:2px solid red;background:linear-gradient(to bottom,#fff 70%,#eee);}
+
+table tr{border-top: 1px solid #ccc;}
+
+table td{text-indent: 10px;}
+
+

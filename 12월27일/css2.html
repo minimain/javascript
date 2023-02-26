@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css 선택자</title>
+  <style>
+    p{color: red;}  
+    /* Element 요소 선택자, type타입선택자 : 우선순위 1점 */
+    .green{color: green;}
+    /* class 클래스 선택자 : 우선순위 10점 (똑같은 클래스 여러번 넣을 수 있음*/
+    #blue{color: blue;}
+    /* id는 한문서에서 같은 이름의 id를 쓸수없음 , id 아이디 선택자, 우선순위 100점 , id는 #으로 표시 */
+    /* 우선순위가 무엇이냐면 선택이 되었을 때 우선순위가 높을 수록 적용의 우선순위가 앞으로 나가는것이다 */
+    /* style="" 인라인 스타일 : 우선순위 1000점 | 
+    (웹표준이라는건 html과 css를 분리를 하는거라 사용을 잘 안함 | element에 직접 적용하는건 자바스크립트에서 사용하곤 한다.*/
+    /*  */
+  </style>
+
+</head>
+<body>
+  <h1 class="green">css 디자인 표현</h1>
+  <p class="green">css는 기본적으로 선택자, 속성, 값을 가진다.</p>
+  <p id="blue">내부 스타일시트, 외부 스타일시트, 인라인 스타일, 태그에 직접 삽입하기</p>
+  <p style="color:yellow">선택자에는 스타일을 적용할 대상을 지정하고, {} 안에 스타일을 지정한다. 
+    스타일은 속성을 기록하고 : 로 구분한 후 값을 기록한다
+    값을 기록한 뒤에 ; 로 마무리 한뒤에 추가로 다른속성과 값을 계속 넣을 수 있다
+  </p>
+</body>
+</html>

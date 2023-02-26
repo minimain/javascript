@@ -1,0 +1,91 @@
+<body>
+  <!-- 전체하나가 dl이고  -->
+  <dl id="tabMenu" class="tabMenu">
+    <dt>
+      <a href="#">
+        <img src="images/ta_1_over.gif" alt="공지사항" />
+      </a>
+    </dt>
+    <dd>
+      <ul>
+        <li><a href="#">공지사항</a><span>2021-12-30</span></li>
+        <li><a href="#">공지사항</a><span>2021-12-30</span></li>
+        <li><a href="#">공지사항</a><span>2021-12-30</span></li>
+        <li><a href="#">공지사항</a><span>2021-12-30</span></li>
+        <li><a href="#">공지사항</a><span>2021-12-30</span></li>
+      </ul>
+      <p class="more"><a href="#"><img src="images/tab_more.gif" alt="공지사항 더보기"/></a></p>
+    </dd>
+    <dt>
+      <a href="#">
+        <img src="images/ta_2_over.gif" alt="입찰정보" />
+      </a>
+    </dt>
+    <dd>
+      <ul>
+        <li><a href="#">입찰정보</a><span>2021-12-30</span></li>
+        <li><a href="#">입찰정보</a><span>2021-12-30</span></li>
+        <li><a href="#">입찰정보</a><span>2021-12-30</span></li>
+        <li><a href="#">입찰정보</a><span>2021-12-30</span></li>
+        <li><a href="#">입찰정보</a><span>2021-12-30</span></li>
+      </ul>
+      <p class="more"><a href="#"><img src="images/tab_more.gif" alt="입찰정보 더보기"/></a></p>
+    </dd>
+    <dt>
+      <a href="#">
+        <img src="images/ta_3_over.gif" alt="채용공고" />
+      </a>
+    </dt>
+    <dd>
+      <ul>
+        <li><a href="#">채용공고</a><span>2021-12-30</span></li>
+        <li><a href="#">채용공고</a><span>2021-12-30</span></li>
+        <li><a href="#">채용공고</a><span>2021-12-30</span></li>
+        <li><a href="#">채용공고</a><span>2021-12-30</span></li>
+        <li><a href="#">채용공고</a><span>2021-12-30</span></li>
+      </ul>
+      <p class="more"><a href="#"><img src="images/tab_more.gif" alt="채용정보 더보기"/></a></p>
+    </dd>
+    
+  </dl>
+</body>
+
+
+
+<style>
+  body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,caption,form,fieldset,legend,input{margin: 0;padding: 0;}
+  body{font-size: 12px;font-family: Dotum,"돋움",sans-serif;}
+  li{list-style-type: none;}
+  a{display:block;color: blue;}
+  .menu{position: relative;}
+  .menu dt{float: left;}
+  .menu dd{position: absolute;} /*display: none;*/
+  
+</style>
+<script>
+ window.onload = function(){
+var myGnb =document.getElementById("gnb"); //dl
+var myDt =document.getElementsByTagName("dt");
+var myDD =document.getElementsByTagName("dd");
+console.log(myGnb);
+console.log(myDt);
+console.log(myDD);
+for(var i=0;i<myDt.length;i++){
+ myDt[i].children[0].onfocus = myTab[i].children[0].onclick = function(){
+   for(var k=0;k<myDD.length;k++){
+     myDD[k].style.display="none";
+   }
+ }
+}
+
+
+
+for(var k=0; k<myDt.length; k++){
+  var theDt = myDt[k].children[0].children[0];
+  theDt.src = theDt.src.replace(".gif","_over.gif");
+}
+
+//클릭한 dt a(this)의 img만 빨간색
+this.children[0].src = this.children[0].src.replace("_over.gif",".gif");
+}
+</script>

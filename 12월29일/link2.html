@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>link2</title>
+  <style>
+    ol,li{list-style: none;}
+    li a{text-decoration: none; color: black;}
+    li a:hover{text-decoration: underline;color: red;}
+    /* 가상클래스 a:link, a:visited, a:hover, a:active, a:focus 순서중요, 우선순위10점*/
+    .a1 a:link{color: yellow;} /*처음 링크가 걸렸을때*/
+    .a1 a:visited{color: green;} /*방문을 하고 나면 그린으로 바뀜*/
+    .a1 a:hover{background-color: aqua;} /*마우스를 가져다 되었을때*/
+    .a1 a:active{font-size: 30px;}/*누르고 있을때 어떻게 바뀌어라 지정*/
+    .a1 a:focus{font-style: italic;} /*키보드 포커스가 갔을 때 어떻게 지정이 되어라 Tap키를 눌렀을때*/
+    /* a호버 다음에는 a링크가 올수없다. 순서가 중요하다. a태그에 밑줄이 그어지며 a가상클래스를 통해 바뀌는것 */
+    /* a가상클래스를 한줄에 넣는거를 한번 알아봐라 */
+    
+  </style>
+</head>
+<body>
+  <ol>
+    <li class="a1"><a href="#">menu</a></li>
+    <li class="a2"><a href="http://www.naver.com" target="_blank" >menu</a></li>
+    <li class="a3"><a href="#">menu</a></li>
+    <li class="a4"><a href="http://www.naver.com" target="_blank" >menu</a></li>
+  </ol>
+</body>
+</html>

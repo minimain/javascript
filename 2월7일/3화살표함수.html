@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>화살표 함수</title>
+  <script>
+    // 1. 선언적 함수
+    compute(10,100); //함수를 선언하기 전에 미리 호출을 할수 있는게 선언적 함수 | 앞뒤로 가능
+    function compute(a,b){
+      var x=a;
+      var y=b;
+      var resurt=x/y;
+      console.log(resurt);
+    }  //함수를 만든것
+    // compute(10,100);
+    // 함수 호출
+
+    // ------------------------
+    // 2. 익명함수
+    // 함수를 변수 안에 저장
+    // 함수에 이름이 없는것 변수에 함수를 저장을 하고 있음 | 변수이름을 함수이름처럼 호출해서 사용
+    // 익명함수는 뒤에서만 호출이 가능하다. | 앞은 안됨 오류뜸
+
+    // compute2(0.5,10); //결과 안나옴
+    var compute2 = function(a,b){
+      var x=a;
+      var y=b;
+      var resurt2 =x*y;
+      console.log(resurt2);
+    }  //함수를 만든것
+    compute2(0.5,10);
+
+    // ------------------------
+    // 3. 즉시실행 함수 - 선언과 동시에 실행 함수, 재호출 안됨, 한번만 실행
+    // 익명함수처럼 이름이없음 | 괄호()로 묶어줌 | 10 이 a로 전달 | 10이 인자값 호출 되는 값이 인자값
+    (function(a){
+      var sum=a;
+      console.log(sum);
+    })(10);
+
+    var instant = (function(){
+      console.log('즉시 실행 함수');
+    })();
+    // 함수명이 비어 있고 인자값도 비어있음 | 콘솔 창에 텍스트가 보임,,
+    // -------------------------
+
+    // 4. 매개변수의  개수가 전해지지 않은 함수
+    // arguments객체는 인자값을 저장해주는 객체
+    function showSubject(){
+      for(i=0;i<arguments.length;i++){
+        console.log(arguments[i]);
+      }
+    }
+    showSubject('html','css','js','jquery');
+    // 매개변수가 몇개일지 정확하지 않을때 arguments라는 객체를 사용해서 글자수에 따라 인자값을 얼마나 출력할지 결정한다.| 객체 매개변수 역할
+// 인자값의 개수가 달라져도 매개변수가 그때그때 적용이 되도록 해줌
+
+    // ------------------------------
+
+    // 5. ES6 화살표 함수 - 익명함수, function키워드 생략, {} 생략, return 생략
+    
+    // return 반환 | 익명 함수로 바꿔줌 |function을 쓰지 않음 매개변수 뒤에 화살표를 넣어줌 | 실행문이 하나라면 {} 블록도 쓰지 않음 그리고 return도 쓰지 않음 
+
+  function TheFnc(a,b){
+    return a*b;
+  }
+  console.log(TheFnc(2,5));
+
+  var TheFnc = function(a,b){
+    return a*b;
+  }
+  console.log(TheFnc(2,5));
+
+  var TheFnc = (a,b) => a*b;
+  console.log(TheFnc(2,5));
+
+// 예시1
+  function TheFnc2(c,d){
+    var sum = c+d;
+    return sum;
+  }
+  console.log(TheFnc2(10,5));
+//예시1_화살표 함수 ver
+ let TheFnc3 = (c,d) => {
+  var sum = c+d;
+  return sum;
+}
+ console.log(TheFnc3(10,5));
+// 실행문이 두개라서 {}블록 사용
+
+// 화살표함수가 안될때도 있음
+// ------------------------
+
+
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

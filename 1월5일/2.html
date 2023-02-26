@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메뉴 예제</title>
+  <style>
+    /* body,ul,ul{margin: 0;padding: 0;} */
+    ul{list-style: none;}
+    li{display: inline-block; margin: 30px 0;} /*float도 가능*/
+    li a{padding: 8px 30px;background: red;
+      /*모든 글자의 크기는 다 달라서 wieth와 height는 주지않은 padding으로 해주기*/
+    font-size: 15px;color: white;font-family: Arial, Helvetica,sans-serif;text-align: center;
+    line-height:100%;border-radius: 5px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 3);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 2);
+    text-decoration: none;}
+    /* a{text-decoration: none;} li a에 넣어도 됨
+    rgba(0, 0, 0, 3) 이거는 불투명 인거 같음*/
+    
+
+    .button1>li a{background: hsl(34deg 94% 54%);
+     background:linear-gradient(to bottom,hsl(34deg 100% 68%),hsl(26deg 91% 54%));
+    border: 1px solid #da7c0c;}
+    .button2>li a{background: hsl(34deg 94% 54%); background:linear-gradient(to bottom,hsl(34deg 100% 68%),hsl(26deg 91% 54%));
+    border: 1px solid #da7c0c;}
+    .button3>li a{background: hsl(211deg 54% 52%);
+      background:linear-gradient(to bottom,hsl(206deg 70% 61%),hsl(218deg 72% 47%));}
+    .button4>li a{background: hsl(211deg 54% 52%); background:linear-gradient(to bottom,hsl(206deg 70% 61%),hsl(218deg 72% 47%));}
+
+    .button1>li a:hover{background:linear-gradient(to bottom,hsl(30deg 93% 52%),hsl(23deg 89% 51%)) 100%; }
+    .button2>li a:active{position: relative;top: 3px;
+      background:linear-gradient(to top,hsl(23deg 89% 51%) 80%,hsl(36deg 97% 55%) 100%);
+      color:hsl(40deg 82% 80%) ;}
+    .button3>li a:hover{background:linear-gradient(to top,hsl(219deg 88% 25%),hsl(208deg 55% 41%));}
+    .button4>li a:active{position: relative;top: 3px;
+      background:linear-gradient(to bottom,hsl(216deg 72% 44%),hsl(207deg 51% 53%));
+      color:hsl(209deg 96% 59%) ;}    
+
+
+       /* 만약 두줄로만 가능하다면 */
+       /* 테두리선 있던데..추가해야하나..ㅜ */
+    
+
+
+
+    
+    
+  
+  </style>
+</head>
+<body>
+<ul class="button1">
+  <li><a href="#">HOME</a></li>
+  <li><a href="#">HTML5</a></li>
+  <li><a href="#">CSS3</a></li>
+  <li><a href="#">BOARD</a></li>
+  <li><a href="#">PROFILE</a></li>
+</ul>
+<ul class="button2">
+  <li><a href="#">HOME</a></li>
+  <li><a href="#">HTML5</a></li>
+  <li><a href="#">CSS3</a></li>
+  <li><a href="#">BOARD</a></li>
+  <li><a href="#">PROFILE</a></li>
+</ul>
+<ul class="button3">
+  <li><a href="#">HOME</a></li>
+  <li><a href="#">HTML5</a></li>
+  <li><a href="#">CSS3</a></li>
+  <li><a href="#">BOARD</a></li>
+  <li><a href="#">PROFILE</a></li>
+</ul>
+<ul class="button4">
+  <li><a href="#">HOME</a></li>
+  <li><a href="#">HTML5</a></li>
+  <li><a href="#">CSS3</a></li>
+  <li><a href="#">BOARD</a></li>
+  <li><a href="#">PROFILE</a></li>
+</ul>
+</body>
+</html>

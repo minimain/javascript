@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>신용등급 | 한국남부발전(주)</title> <!--현재페이지 제목|사이트제목-->
+  <style>
+    th,td{width: 100px;height: 100px;text-align: center;
+    border: 1px solid black}
+  </style>
+</head>
+<body>
+  <h2>신용등급</h2>
+  <h3>국내외 신용등급 및 현황</h3>
+  <h4>국내외 신용등급 보유현황</h4>
+  <table summary="국내외 신용등급 보유현황">
+  <caption>국내외 신용등급 보유현황</caption> <!--table제목 (summary나 캡션중에 넣어주기)-->
+<!-- id고유한 식별자 (이름이 같으면 안됨) -->
+
+<colgroup>
+ <col/>
+</colgroup>
+<colgroup>
+ <col/>
+ <col/>
+ <col/>
+</colgroup>
+<colgroup>
+  <col/>
+  <col/>
+  <col/>
+ </colgroup>
+ <!-- 콜그룹은 열로 생각해서 묶어준다. -->
+
+  <thead>
+    <tr>
+      <th scope="col">구분</th> <!--열에 해당하는거 세로 col-->
+      <th colspan="3" scope="col" id="domestic">국내신용등급</th> <!--col 칸이 세칸-->
+      <th colspan="3" scope="col" id="international">국제신용등급</th>
+    </tr>
+    
+  </thead>
+<!-- <tfoot></tfoot> 
+하나의 셀만 선택해도 이게 어디위치에 있는 뭐다를 알수있게 id headers를 지정하는 것이다.-->
+  <tbody>
+    <tr>
+      <th scope="row" id="agency">평가기관</th> <!--가로에 해당하고 제목이니까 scope로 해준다-->
+      <td headers="domestic agency">한국기업평가</td>
+      <td headers="domestic agency">한국신용평가</td>
+      <td headers="domestic agency">나이스신용평가</td>
+      <td headers="international agency">Moody's</td>
+      <td headers="international agency">S&amp;P</td>
+      <td headers="international agency">Fitch</td>
+    </tr>
+    <!-- scope/id, headers -->
+    <tr>
+      <th scope="row" id="credit">신용등급</th>
+      <td headers="domestic credit">AAA</td>
+      <td headers="domestic credit">AAA</td>
+      <td headers="domestic credit">AAA</td>
+      <td headers="international credit">S&amp;P</td>
+      <td headers="international credit">AA</td>
+      <td headers="international credit">AA-</td>
+    </tr>
+    <tr>
+      <th scope="row" id="outlook">등급전망</th>
+      <td headers="domestic outlook">안정적</td>
+      <td headers="domestic outlook">안정적</td>
+      <td headers="domestic credit">안정적</td>
+      <td headers="international outlook">Stable</td>
+      <td headers="international outlook">Stable</td>
+      <td headers="international outlook">Stable</td>
+    
+    </tr>
+  </tbody>
+  </table>
+
+  <!-- 내용상 가로로 표를 나눌때 :thead, tfoot, tbody
+      내용상 세로로 표를 나눌때 : colgroup
+    캡션 밑에 사용 (열 하나를 묶을때)-->
+
+
+</body>
+</html>

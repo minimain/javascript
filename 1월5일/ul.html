@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{font-size: 12px;} /*폰트가 다 같아서*/
+    ul,li{margin: 0;padding: 0;}
+    ul{list-style: none;}
+    li{float: left;}
+    /*  */
+
+    li a{text-decoration: none;color: black;background: #a0a0a0;
+     font-family: Dotum,"돋움",sans-serif;
+      padding:8px 30px;
+    border-right:1px solid #939393 ; 
+    background: linear-gradient(to bottom,#c4c4c4,#8c8c8c);
+    box-shadow: 0 0 1px #949494 ;}
+
+    ul>li:first-child a{border-radius:5px 0 0 5px;}
+    ul>li:last-child a{border-radius: 0 5px 5px 0;border: none;}
+
+    ul>li a:hover{background: linear-gradient(to bottom,#373737,#4a4a4a);color: white;}
+
+    /* 이거 선생님이 한 버전 사진으로 찍었는데 그거는 선택자가 좀 더 자세히 나눠져 있음  */
+
+  </style>
+</head>
+<body>
+<ul>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">HTML5</a></li>
+  <li><a href="#">CSS3</a></li>
+  <li><a href="#">JQuery</a></li>
+  <li><a href="#">Mobbile</a></li>
+  <li><a href="#">Profile</a></li>
+</ul>
+
+  <!-- 양끝에만 모서리 동글함
+  ul hover만 -->
+</body>
+</html>

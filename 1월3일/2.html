@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float 2</title>
+  <style>
+    div{font-size: 30px;font-weight: bold;color: #fff;}
+    #wrap{width: 600px;height: 600px;background-color: gray;}
+    #yellow{width:600px;height: 100px;background-color:yellow;}
+    #red{float:left;width:300px;height: 400px;background-color:red;}
+    #green{float:left;width: 300px;height: 400px;background-color: green;}
+    #blue{clear:both;width: 600px;height: 100px;background-color: blue;}
+  </style>
+</head>
+<!-- div는 블록레벨 -->
+<!-- clear:left,right,both -->
+<!-- both는 자기자리를 지키는것(위에 있는 영향력(매꾸는 것)을 다 끊어버리는것) 
+clear:left는 위에 있는float:left의 영향력을 끊어버리는 것
+cla-->
+<body>
+<div id="wrap">
+  <div id="yellow">Yellow</div>
+  <div id="red">Red</div>
+  <div id="green">Green</div>
+  <div id="blue">Blue</div>
+
+</div>
+
+</body>
+</html>

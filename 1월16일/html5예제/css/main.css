@@ -1,0 +1,133 @@
+@import url(reset.css);
+/* main.css */
+
+/* common */
+body{font-size:13px;font-family:"Times New Roman",serif;
+	color:#484848;line-height:1;height:100%;
+	background:url(../images/bg-main.gif) repeat 0 0;}
+
+/* 웹폰트 */
+@font-face{font-family:Acknowledgement;
+  src:url(../fonts/Acknowledgement-webfont.ttf);
+  src:url(../fonts/Acknowledgement-webfont.woff);}
+  
+@font-face{font-family:League_Gothic;
+  src:url(../fonts/League_Gothic-webfont.ttf);
+  src:url(../fonts/League_Gothic-webfont.woff);}  
+  
+/* layout */   
+#wrap{width:758px;margin:6px auto;}
+  #header{position: relative; width:758px;/*height: ;*/ background-color: aqua;
+    border-top: 3px double #8e8e8e;border-bottom: 3px double #8e8e8e;}
+  #container{width:758px;padding:15px 0;background-color: yellow;}
+  #container::after{content: "";display: block;clear: both;}
+    .content1{float: left;width:375px;padding-right:4px;}
+    .content2{float: left;width:130px;}
+    .content3{float: right;width:244px;}
+  #footer{width:758px;/*height: ;*/background-color: orange;}
+
+/* header */ 
+#header>h1{font-family:"Times New Roman",serif;font-size:60px;
+  text-shadow:1px 1px 0 #fff;text-align: center;}
+#header>h2{font-family:League_Gothic,sans-serif;font-size:16px;
+  text-align: center;text-transform:lowercase;
+  letter-spacing:2px;line-height:2;}
+
+#header>.gnb{ border-top: 3px double #8e8e8e;}
+#header>.gnb>ul{width:10.2em;margin:0 auto;}
+#header>.gnb>ul:after{content: "";display: block;clear: both;}
+#header>.gnb>ul>li{float:left;width:5em;text-align:center;}
+#header>.gnb>ul>li>a{display:block;line-height:27px;
+  text-decoration:none;color:#484848;}
+#header>.gnb>ul>li>a:hover{text-decoration: underline;}
+
+#header>p{position: absolute;bottom: 0;line-height:27px;}
+#header>p:first-of-type{left: 0;}
+#header>p:last-of-type{right: 0;}
+
+/* container */
+#container h2,#footer h3{font-family:League_Gothic,sans-serif;
+  line-height:1;font-size:22px;margin:0 0 8px;
+  text-transform:uppercase;text-shadow:1px 1px 0 #fff;}
+
+#container p, #footer p{line-height:1em;text-align:justify;
+  word-break:break-all;padding:0 0 13px;}
+
+/* content1 */
+.content1>article:first-of-type>video{margin-bottom:12px;}
+#container>.content1>article>h2{font-size:33px;}
+.content1>article>div{column-count:3;column-width:9em;
+  column-gap:10px;margin-bottom: 20px;}
+  
+/* content2 */
+.content2>article{border-left: 1px solid #979797;
+  border-right: 1px solid #979797;padding: 0 4px;}
+
+article>.header{background: url(../images/bg-subhead.gif) no-repeat 50% 100%;padding: 0 0 10px;margin: 0 0 5px;text-align: center;}
+
+article>header>h3{background: url(../images/bg-header.gif) no-repeat 50% 0;padding: 7px 0 0;font-family: "Times New Roman" ,serif;font-size: 14px;font-weight: bold;}
+
+.content2>article>figure{text-align: center;line-height: 2;margin:0 0 13px;}
+/* content3 */
+aside article{width: 236px;border: 1px solid #ccc;margin-bottom: 5px;}
+aside>article:nth-of-type(1)>h3{font-size: 36px;text-align: center;font-family: Acknowledgement,sans-serif;letter-spacing:0.1em;}
+aside>article:nth-of-type(1)>h3::first-letter{letter-spacing: -0.1em;}
+aside>article:nth-of-type(1)>p+a{display: block;
+  background:#484848;
+text-decoration: none;color: #fff;
+font-size: 28px;font-family: Acknowledgement,sans-serif;
+text-align: center;padding: 15px 0;border-radius: 25px;
+border: 5px double #fff;box-shadow: 2px 5px 0 #484848;
+margin: 5px 5px 9px;text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);}
+
+aside>article:nth-of-type(1)>p+a:hover{box-shadow:4px 10px 0 #484848;/*position:relative;left:-2px;top:-5px;*/
+transform: translate3d(-2px, -5px, 0);}
+
+aside>article:nth-of-type(2){background: url(../images/dukes.png) no-repeat 0 100%;}
+
+aside>article:nth-of-type(2)>h3{font-family: Acknowledgement,sans-serif;font-size: 20px;line-height: 1;color: #999;
+  padding: 0 30px 0 75px;margin:0 0 15px;}
+
+#container aside>article:nth-of-type(2)>p{font-size: 0.85em;padding:5px 3px 0 75px;} /*우선순위가 낮아서 패딩이 적용안됬었음 */
+
+aside>article:nth-of-type(2)>h3>span{display: block;
+  color: #999;font-size: 30px;
+transition: all 0.5s ease-out 0s;}
+aside>article:nth-of-type(2)>h3>span:hover{color: #484848;
+  transform: translateX(40px) rotate(10deg) scale(1.5);}
+
+aside>article:nth-of-type(3){height: 170px;
+background: url(../images/bg-bike.png) no-repeat 50% 88%,
+linear-gradient(to bottom, rgba(0,0,0,0.4) 0, rgba(0,0,0) 37%,rgba(0,0,0,0) 83%,rgba(0,0,0,0.16) 92%, rgba(0,0,0,0) 98%);
+transition: background-position 1s linear 250ms;}
+aside>article:nth-of-type(3):hover{background-position: 150% 88%,0 0;}
+
+aside>article:nth-of-type(3)>h3{font-size: 30px;
+  text-align: center;letter-spacing: -1px;margin: 20px 5px;}
+aside>article:nth-of-type(3)>h3>a{color: #484848;text-decoration: none;}
+
+aside>article:nth-of-type(4){height: 140px;text-align: center;}
+aside>article:nth-of-type(4)>h3{font-size: 23px;}
+
+input[type="button"]{font-size: 28px;padding: 10px 30px;
+  border:none;background-color: #333;color: #fff;
+  border-radius: 5px;
+  background: radial-gradient(circle at center,#909090 0,#484848 50%);}
+/*radial 모양 circle,ellipse 기본값, 위치 at 30% 30%*/
+/* input 정확하게 설정 */
+
+.content3>article>div{column-count: 2;column-width: 9em;column-gap: 10px;margin-bottom: 20px;}
+
+/* footer */
+#footer>section{width: 738px;padding: 10px 20px 0 0;
+  background-color: #d1d1d1;
+  border-top: 1px solid #888;border-bottom: 1px solid #888;}
+#footer>section::after{content: "";display: block;clear: both;}
+#footer>section>section{float: left;width: 226px;
+padding-left: 20px;}
+
+address{height: 30px;width: 100%;}
+address>small{float: left;padding-left: 7px;font-size: 85%;
+  line-height: 32px;font-family: "League_Gothic",sans-serif;
+  text-transform: uppercase;letter-spacing: 0.08em;}
+address>a{float: right;padding-top: 5px;}

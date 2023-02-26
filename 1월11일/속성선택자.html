@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>속성선택자</title>
+  <style>
+    div.title p{color: red;}
+    /* 한칸 띄어서 쓰는것 하위 선택자 */
+
+    div.title>p{color: green;}
+    /* 자식 선택자 */
+
+    h1+h2{color: blue;}
+    /* 인접 형제 선택자 */
+
+    h1~h2{background: yellow;}
+    /* 형제 선택자 */
+
+    h2[title]{text-decoration: underline;}
+    /* 속성 선택자 [속성] h2 중에서 title 이라는 속성을 가진 곳만*/
+
+    a[href^="http"]{color: orange;}
+    a[href$="html"]{text-decoration: none;}
+    a[href*="www"]{font-style: italic;}
+    /* 속성^="속성값 시작" , 속성$="속성값 마지막" , 속성*="속성값 포함" */
+
+    input[type="image"]{}
+    /* input type 처럼 속성값이 정해져있다면 image같이 선택하면 된다 */
+
+    
+  </style>
+</head>
+<body>
+  <h1>css 선택자</h1>
+  <h2 title="속성 선택자">속성 선택자</h2>
+  <p>웹 표준이 지원되는 최신의 웹 브라우저에서 사용할 수 있는 선택자 방식입니다</p>
+  <h2>속성선택자의 다양한 활용</h2>
+  <ul>
+    <li><a href="#test.html">속성 선택자 Test</a></li>
+    <li><a href="http://www.w3c.org/">웹 표준</a></li>
+  </ul>
+  <div class="title">
+    <h3>웹 접근성의 정의</h3>
+    <p>아들
+    <a href="#">홈</a>&gt;
+    <a href="#">웹 접근성의 이해</a> &gt;
+    <em>웹 접근성의 정의</em>
+    </p>
+    <div>
+      <p>손자</p>
+    </div>
+  </div>
+</body>
+</html>

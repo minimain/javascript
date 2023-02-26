@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>팝업창 popup.html</title>
+</head>
+<body>
+  <p><img src="images/popup.jpg" alt="이달에 새로 나온책" usemap="#pop" /></p>
+  <map name="pop" id="pop">
+    <area shape="rect" coords="228,371,294,399" href="#" onclick="window.close();" alt="창닫기"/>
+  </map>
+
+  <!-- map이라는 엘리먼트를 사용하여 일부만 링크가 걸리게 
+    영역을 shape="rect":모양을 사각형으로 잡고  
+  coords="228,371,294,399" : 영역잡기 (left,top,left,top) 꼭지점
+  onclick="window.close();" : 팝업창을 닫게 하겠다.
+-->
+</body>
+</html>

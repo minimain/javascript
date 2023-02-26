@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 인터랙트 중요(포트폴리오) -->
+  <title>Transform</title>
+  <style>
+    img{margin: 100px;}
+
+    .rotate{transform: rotate(15deg);}
+    /* 회전 ( +시계방향 -반시계방향) */
+    .scale{transform: scale(0.5);}
+    /* 1은 원래 크기 | 2는 두배크기 | 0.5는 반의 크기 (가로세로 모두) */
+   /* scale(가로 세로 ),scaleX(가로),scaleY(세로) */
+    .skew{transform: skew(15deg,15deg);}
+    /* 평행사변형 */
+    /* skew(x,y) 값이 하나만 있으면 y는 0으로 인식, 
+    skewX(각도), skewY(각도) */
+    .translate{transform: translate(200px, 100px);}
+    /* (원래 있던 위치에서)이동 translate(x,y) 값이 하나만 있으면 y는 0 (세로), translateX(), translateY() */
+/* 하나로 뭉친다면  순서는 상관 없다.*/
+    .origin{transform: rotate(450deg) scale(0.5) skew(15deg) translate(300px);}
+    
+  </style>
+</head>
+<body>
+  <figure>
+    <img class="rotate" src="images_2/photo.jpg" alt="" />
+    <img class="scale" src="images_2/photo.jpg" alt="" />
+    <img class="skew" src="images_2/photo.jpg" alt="" />
+    <img class="translate" src="images_2/photo.jpg" alt="" />
+    <img class="origin" src="images_2/photo.jpg" alt="" />
+    <img class="translatez" src="images_2/photo.jpg" alt="" />
+    <img class="rotatex" src="images_2/photo.jpg" alt="" />
+  </figure>
+</body>
+</html>

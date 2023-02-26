@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form-회원가입</title>
+</head>
+<body>
+  <p><strong>*</strong>표시는 필수입력 항목입니다.</p>
+  <form action="/" method="post">
+    <fieldset>
+      <legend>회원가입양식</legend>
+      <ol>
+        <li><label for="userId"><strong>*</strong>아이디</label>
+        <input type="text" id="userId" autofocus required placeholder="아이디" />
+       <input type="image" src="images/overalp.jpg" alt="중복검사"/>
+        </li>
+        <li>
+          <label for="userPw"><strong>*</strong>비밀번호</label>
+          <input type="password" id="userPw" required placeholder="비밀번호"/>
+        </li>
+        <li> <!--input type="tel" 숫자 키패드가 나오는 것(모바일로 확장이 되며) | 똑같은 id가 올수 없다. 그렇기 때문에 레이블 대신 title이라도 넣어줘서 웹접근성이 되게 해야함 | size="" 전화번호의 길이는 길지않아도 되어 조절 | maxlength="" 는 최대 글자수-->
+          <label for="phone"><strong>*</strong>전화번호</label>
+          <input type="tel" id="phone"title="지역번호 입력" required size="10" maxlength="3"/> -
+          <input type="tel" title="전화번호 앞자리 입력" size="10" maxlength="4"/> -
+          <input type="tel" title="전화번호 뒷자리 입력" size="10" maxlength="4"/>
+        </li>
+        <li>
+          <!-- 라디오 버튼은 중복선택 불가 한개만 선택 가능 레이블의 뒤에 위치(레이블이 아님) 
+          라디오 버튼에서 여러개 중에 하나만 선택하기 위해서는 name을 같게 하면 하나만 선택이 가능하다-->
+          <span><strong>*</strong>수신방법</span>
+          <input type="radio" id="sms" name="receive" />
+          <label for="sms">휴대전화 SMS문자</label>
+          <input type="radio" id="email" name="receive" />
+          <label for="email">자주 사용하는 이메일</label>
+        </li>
+        <li>
+          <span>메일링 리스트 가입</span>
+          <input type="radio" id="yes" name="mailing"/>
+          <label for="yes">예</label>
+<!-- checked는 미리 눌러져있는 것을 말한다 -->
+          <input type="radio" id="no" name="mailing" checked />
+          <label for="no">아니오</label>
+        </li>
+        <li>
+          <label for="emailAddr">이메일</label>
+          <input type="email" id="emailAddr" placeholder="이메일 아이디를 입력해주세요"/>@
+          <input type="email" title="이메일 도메인을 입력해주세요" placeholder="이메일 도메인을 입력해주세요"/>
+          <select title="이메일 도메인 선택">
+            <option value="">직접입력</option>
+            <option value="gmail.com">gmail.com</option>
+            <option value="naver.com">naver.com</option>
+            <option value="daum.net">daum.net</option>
+          </select>
+        </li>
+        <li>
+          <label for="cellPhone">휴대전화번호</label>
+          <select id="cellPhone">
+            <option value="">직접입력</option>
+            <option value="010">010</option>
+            <option value="011">011</option>
+          </select> -
+          <input type="tel" title="휴대전화 앞자리 번호" size="10" maxlength="4"/> -
+          <input type="tel" title="휴대전화 뒷자리 번호" size="10" maxlength="4"/>
+        </li>
+        <li>
+          <label for="addr">주소찾기</label>
+          <select id="addr">
+            <option value="">선택하세요</option>
+          <optgroup label="서울특별시">
+            <option value="서초구">서초구</option>
+            <option value="강남구">강남구</option>
+            <option value="종로구">종로구</option>
+            <option value="강서구">강서구</option>
+          </optgroup>
+          <optgroup label="경기도">
+            <option value="수원시">수원시</option>
+            <option value="안양시">안양시</option>
+            <option value="용인시">용인시</option>
+            <option value="성남시">성남시</option>
+          </optgroup>
+          </select>
+        </li>
+        <!-- input은 한줄만 입력가능 | textarea는 길게 입력창이 늘어남(스크롤이 생긴다) row와 col로 크기 조절-->
+        <li>
+          <label for="textfield">자기소개</label>
+          <textarea id="textfield" cols="30" row="5"  >내용</textarea>
+        </li>
+        <li>
+          <label for="attach">첨부파일</label>
+          <input type="file" id="attach" multiple />
+<!-- multiple은 여러개의 파일을 선택할수있게 해준다. -->
+        </li>
+        <!-- checkbox는 중복선택 가능  -->
+        <li>
+          <span>취미</span>
+          <input type="checkbox" id="music"/>
+          <label for="music">음악감상</label>
+
+          <input type="checkbox" id="movie"/>
+          <label for="music">영화감상</label>
+
+          <input type="checkbox" id="book"/>
+          <label for="music">독서</label>
+        </li>
+        <li>
+          <input type="submit" value="확인"/>
+          <input type="reset" value="취소"/>
+          <input type="button" value="버튼"/>
+          <input type="hidden"/>
+        </li>
+        <!--히든은 서버로이동 화면에 보이지 않고 서버와 정보를 주고 받는데 사용
+        레이블을 안쓰는 겨우 3가지 벨류와 히든?,체크박스 이세개가 맞는지 다시 확인 하기. -->
+        <li>
+          <button>버튼</button>
+          <!-- ui을 지정할때 버튼 많이 사용 -->
+          <button type="submit">확인</button>
+          <button><img src="images/btn_search.gif" alt="검색"/></button>
+        </li>
+      </ol>
+    </fieldset>
+
+  </form>
+</body>
+</html>

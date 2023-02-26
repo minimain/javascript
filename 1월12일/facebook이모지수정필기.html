@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>facebook 이모지_css3:</title>
+  <style>
+
+/* -----------------동그란 틀---------------------------- */
+  body{text-align: center;margin:80 auto 0;}
+/* 동그란 모양 잡음 */
+  .emoji{position: relative;
+    display: inline-block;width: 120px;height: 120px;border-radius: 50%;margin: 15px 15px 40px;background: #ffda6a;}
+  /* 전체적으로 .emoji 클래스가 들어간다. 모양 잡기
+  = position을 잡아주고 (부모) | 가로세로  */
+
+
+  /* 이모지 밑에 글자 */
+  .emoji::after{content: "Emoji";position: absolute;bottom: -40px; left: calc(50% - 30px);width: 60px;font-size: 18px;color: #8a8a8a;}
+  /*여기서 bottom 은 emoji기준 에서 밑으로 40px 이동하라 
+  부모에 position | transform: translate3d 이동 (가운데 맞추는)
+left:50% 는 가운데 를뜻함 | top left 위 왼쪽이 0 시작 50이 전부 중간을 나타냄 | 가로크기1/2*/
+/* bottom: -40px;left: 50%;transform: translate3d(-50%,0,0); */
+/* position:absolute */
+
+
+
+/* ------------------------------엄지------------------------- */
+/* 1. emoji_like */
+.emoji_like{background: #548dff;}
+.emoji_like::after{content: "Like";}
+
+/* 손목 부분 */
+.emoji_like .emoji_hand{position: absolute;left: 25px;bottom: 30px;
+  width: 20px;height: 40px;background: #fff;
+  border-radius: 5px;
+animation: hands-up 2s linear 0s infinite;} 
+@keyframes hands-up {
+  25%{transform: rotate(15deg);}
+  50%{transform: rotate(-15deg) translateY(-10px);}
+  75%,100%{transform: rotate(0deg);}
+}
+/* 15도 꺽이며 내려갔다가 15도 다시 올라가며 y축으로 위로 올라감 그리고 원상태 */
+
+/* 손가락 */
+.emoji_like .emoji_hand::before{content: "";display: block;
+position: absolute;left: 25px;bottom: 5px;width: 40px;height: 10px;background: #fff;border-radius: 2px 10px 10px 2px;
+box-shadow: 1px -9px 0 1px white,2px -19px 0 2px white,3px -29px 0 3px white;}
+
+/* 엄지손가락 */
+.emoji_like .emoji_thumb{position: absolute;right: -25px;top: -25px;
+border-bottom: 20px solid white;
+border-left: 20px solid transparent;
+transform: rotate(5deg);transform-origin: 0 100%;
+animation:thumbs-up 2s linear 0s infinite ;}
+@keyframes thumbs-up {
+  25%{transform: rotate(20deg);}
+  50%, 100%{transform: rotate(5deg);}
+  
+}
+
+.emoji_like .emoji_thumb::before{content: "";position: absolute;left: -9.7px;top: -9px;width: 10px;height: 12px;background: #fff;
+border-radius: 50% 50% 0 0;box-shadow: -1px 4px 0 -1px #fff;transform: rotate(-14deg);transform-origin: 100% 100%;}
+
+/* 삼각형이 부모 */
+/* content: "";width: 40px;height: 10px;background: #fff; 블록레벨 요소로 바꿔줘야함 before은 인라인 | left: 25px;bottom: 5px; hand 기준 | 인라인요소에 podition이나 float를 넣으면 display:block을 안해줘도 가로세로가 먹힌다. | heigth가 10px 이라서 border도 10px하면 동그래짐 | box-shadow: 1px -9px 0 1px 스프레드(확장) = 0: 위아래 값이 같음 , 2px: 커진다.
+box-shadow 에서 x,y,블러,확장 (x축은 1만큼 ,-9px은 y축 위로 올라간거고) 앞에서 x축은 하나하나 생길때마다 1씩 기본으로 넘기는지 숫자를 지정해서 일자로 되네...- 그 이유는 확대를 해줘서 밀리지 않는거다  
+|box-shadow는 원본을 기준으로 | 오른쪽 아래 기준*/
+
+/* 삼각형 모양 : border이용 transparent:투명 
+border-bottom: 20px solid #f00;
+border-left: 20px solid transparent;*/
+
+/* -------------------------러브------------------------ */
+
+
+/* 2.imoji_love */
+.emoji_love{background: #f55064;}
+.emoji_love::after{content: "Love";}
+
+.emoji_love .emoji_heart{position: absolute;left: 50%;top:50%;
+  margin-top: -40px; margin-left: -40px;
+  width: 80px;height: 80px;/*border: 1px solid black;*/
+animation: heart-beat 1s linear infinite alternate;}
+@keyframes heart-beat {
+  25%{transform:scale(1.1)}
+  75%{transform:scale(0.6)}
+}
+/* alternate 역순(통통 튀기는 효과) */
+  /* 가운데로 오게 하는 방법으로
+  margin-top: -40%; margin-left: -40%; = 가로세로 값의 반
+  |emoji heart는 움직이만 나타내고 하트는 가상으로  */
+
+.emoji_heart::before,.emoji_heart::after{content: "";
+position: absolute;left: 50%;top: 50%;width: 40px;height: 64px;
+margin-left: -20px;margin-top: -32px;background: #fff;border-radius: 20px 20px 0 0 ;}
+
+.emoji_heart::before{transform-origin: 0 100%;transform:translateX(20px) rotate(-45deg);}
+
+.emoji_heart::after{transform-origin: 100% 100%;transform:translateX(-20px) rotate(45deg);}
+
+/* before,after이 붙어있다. 그래서 다시 나눠서 따로 움직여주기
+왼쪽으로 회전 before(시계 반대방향 중심축은 왼쪽 아래 | rotate만 하게 되면 ) */
+
+
+/* ------------------------------------------------------------ */
+
+
+  </style>
+</head>
+<body>
+  <!-- 클래스안에 띄어쓰기로 분리 가능 -->
+  <div class="emoji emoji_like">
+    <div class="emoji_hand">
+      <div class="emoji_thumb"></div>
+    </div>
+  </div>
+
+
+  <div class="emoji emoji_love">
+    <div class="emoji_heart"></div>
+  </div>
+
+
+  <div class="emoji emoji_haha">
+    <div class="emoji_face">
+      <div class="emoji_eyes"></div>
+      <div class="emoji_mouth">
+        <div class="emoji_tongue"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="emoji emoji_yay">
+    <div class="emoji_face">
+      <div class="emoji_eyebrows"></div>
+      <div class="emoji_mouth"></div>
+    </div>
+  </div>
+
+
+  <div class="emoji emoji_wow">
+    <div class="emoji_face">
+      <div class="emoji_eyebrows"></div>
+      <div class="emoji_eyes"></div>
+      <div class="emoji_tongue"></div>
+    </div>
+  </div>
+  
+
+  <div class="emoji emoji_sad">
+    <div class="emoji_face">
+      <div class="emoji_eyebrows"></div>
+      <div class="emoji_eyes"></div>
+      <div class="emoji_mouth"></div>
+    </div>
+  </div>
+
+
+  <div class="emoji emoji_angry">
+    <div class="emoji_face">
+      <div class="emoji_eyebrows"></div>
+      <div class="emoji_eyes"></div>
+      <div class="emoji_mouth"></div>
+    </div>
+  </div>
+
+</body>
+</html>

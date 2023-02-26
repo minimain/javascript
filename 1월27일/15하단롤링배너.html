@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>하단롤링배너</title>
+  <style>
+    body,p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dd,table,caption{
+      margin: 0;padding: 0;}
+    ul{list-style-type: none;}
+
+    div.bannerzone{position: relative;width: 740px;/*height:60px;overflow:hidden;*/border: 1px solid #ccc;}
+    .rollBanner{padding-left:33px;}
+    .rollBanner::after{content: "";display: block;clear: both;}
+
+    .rollBanner li{float: left;padding: 10px 5px;}
+    .prev{position: absolute;left: 10px;top: 20px;}
+    .next{position: absolute;right: 10px;top: 20px;}
+  </style>
+
+  <script>
+   window.onload = function(){
+      /*div{height: 60px;overflower:hidden;}*/
+  var bZone =document.getElementById("bannerzone"); //div
+  bZone.style.height ="60px";
+  bZone.style.overflow ="hidden";
+
+    var myBanner = document.getElementById("rollBanner"); //ul
+    var nextBtn = document.getElementById("nextBtn").children[0]; //a
+    nextBtn.onclick = function(){
+      var lastIndex = myBanner.children.length-1 //마지막 인덱스번호
+      var lastList = myBanner.children[lastIndex].cloneNode(true); //마지막 li 복제
+      myBanner.removeChild(myBanner.children[lastIndex]); //삭제
+      myBanner.insertBefore(lastList,myBanner.children[0]); //맨앞 끼워넣음
+      //복제후에 삭제를 해야 공간이 생김 그리고 맨앞에 끼워넣음
+    }
+    // prev ~ 첫번째 li를 복제해서 맨마지막 li로
+    var prevBtn = document.getElementById("prevBtn").children[0]; //a
+      prevBtn.onclick = function(){
+      var firstList = myBanner.children[0].cloneNode(true)
+      myBanner.removeChild(myBanner.children[0])
+      myBanner.appendChild(firstList);
+    }
+
+   }
+  </script>
+</head>
+<body>
+  <div id="bannerzone" class="bannerzone">
+    <ul id="rollBanner" class="rollBanner">
+      <li><a href="#"><img src="images/banner01.gif" alt="감사원" /></a></li>
+      <li><a href="#"><img src="images/banner02.gif" alt="온라인재택창업시스템" /></a></li>
+      <li><a href="#"><img src="images/banner03.gif" alt="법무부중소기업법률지원단" /></a></li>
+      <li><a href="#"><img src="images/banner04.gif" alt="무역위원회" /></a></li>
+      <li><a href="#"><img src="images/banner05.gif" alt="중소기업조사통계시스템" /></a></li>
+      <li><a href="#"><img src="images/banner06.gif" alt="원자재가격관련불공정거래신고센터" /></a></li>
+      <li><a href="#"><img src="images/banner07.gif" alt="일하고싶은중소기업" /></a></li>
+      <li><a href="#"><img src="images/banner08.gif" alt="중소기업수출지원센터" /></a></li>
+      <li><a href="#"><img src="images/banner09.gif" alt="기업의전자결재수단" /></a></li>
+      <li><a href="#"><img src="images/banner10.gif" alt="무역환경정보네트워크" /></a></li>
+      <li><a href="#"><img src="images/banner11.gif" alt="벤쳐기업현회 KKOVA" /></a></li>
+      <li><a href="#"><img src="images/banner12.gif" alt="중소기업연구원KOSBI" /></a></li>
+      <li><a href="#"><img src="images/banner13.gif" alt="원자재정보시스템" /></a></li>
+      <li><a href="#"><img src="images/banner14.gif" alt="jobyoung" /></a></li>
+      <li><a href="#"><img src="images/banner15.gif" alt="중소기업대출금리" /></a></li>
+    </ul>
+    <p class="prev" id="prevBtn">
+      <a href="#">
+        <img src="images/arrLeft.gif" alt="이전"/>
+      </a>
+    </p>
+    <p class="next" id="nextBtn">
+      <a href="#">
+        <img src="images/arrRight.gif" alt="다음"/>
+      </a>
+    </p>
+  </div>
+</body>
+</html>

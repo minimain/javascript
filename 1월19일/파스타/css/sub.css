@@ -1,0 +1,88 @@
+/* wrap 956
+snb 135
+content 800*/
+@import url(reset.css);
+
+/* 이게 진짜 내가 적은건 dl이 안눠진 hrml 파일을 보고 만든거라 형식 자체가 안맞음; */
+
+/* common */
+body{font-size: 12px;font-family: Dotum,"돋움",sans-serif;}
+a{text-decoration: none;color:#666;}
+a:hover{color: red;}
+
+/* layout */
+#wrap{width: 956px;margin: 0 auto;border: 1px solid red;}
+#header{width: 956px;padding: 5px 0;border-bottom: 1px dashed #ccc;
+  background: url(../images/logo_bg.gif)repeat-x 0 0;}
+#container{width: 956px;padding-top: 20px;}
+  #container::after{content: "";display: block;clear: both;}
+  .snb{float: left;width:135px;border: 1px solid green;}
+  #content{float:right;width: 800px;border: 1px solid green;}
+
+/* header */
+/* #header h1{background: url(../images/logo.gif)no-repeat 0 0;width: 256px;height: 41px;
+text-indent: -9999px;overflow: hidden;} */
+
+/* container */
+/* snb */
+.snb h2{font-size: 24px;font-weight: bold;padding-bottom: 8px;}
+.snb li{border-top: 1px solid #ccc;line-height: 250%;font-weight: bold;}
+
+
+/* content */
+#content>h2{padding-bottom: 15px;border-bottom: 1px solid #ccc;color: #666;line-height: 1.5;}
+#content>h2>strong{font-weight: bold;font-size: 14px;color: #333;}
+#content h3{background: url(../images/title.jpg)no-repeat 0 0;width: 769px;height:227px;text-indent: -9999px;overflow: hidden;}
+
+/* 본문 */
+#content>p.txt{line-height: 20px;padding: 20px 0;text-align: justify;}
+#content>p.txt>span{display: block;}
+#content>p.txt>b{float: left;font-size: 35px;line-height: 1;padding: 0 10px 0 0;}
+/*  b는 중요하지는 않지만 굵게 해주고 싶으면 씀
+paddingbottom을 넣어도 되는데 line-hieght 넣음 (1 = 35px)*/
+
+/* 파스타 온 키워드 */
+
+div.onkeyword{position: relative;float: left;width: 338px;height: 425px;
+  background: url(../images/tue_list_bg.gif)no-repeat 0 0;}
+div.onkeyword>h4{font-size: 20px;font-weight: bold;text-align: center;padding: 20px 0 10px;} /*선이 있는 부분까지 제대로 맞추고밑에 리스트를 함 선이 있으면 좀 보면서 하자,,, */
+div.onkeyword>h4>span{color: red;}
+div.onkeyword>ol{margin-left: 53px;}
+div.onkeyword>ol>li{line-height: 32px;}
+div.onkeyword>ol>li>a{position: absolute;right: 20px;}
+
+
+/* 파스타 */
+#content>dl:first-of-type{float: right;width: 430px;}
+#content dt img{float: left;padding-right: 10px;}
+#content dt{font-weight: bold;padding-bottom: 5px;}
+#content dd{text-align: justify;line-height: 160%;}
+#content dd a{display: block;padding: 10px 0;color: #ff3300;}
+
+#content>dl:first-of-type ~ dl{clear:both;padding-top:30px;} /*형제 선택자 | 첫번째 dl 다음인 두번재 dl 부터해서 마지막 dl까지 선택*/
+
+/* 블로그 담기 */
+#content>p:last-of-type{border-top: 1px solid #ccc;padding: 20px;
+  background: url(../images/bu_arw1.gif)no-repeat 0 20px;}
+
+/* .onkeyword{float: left;background: url(../images/tue_list_bg.gif)no-repeat 0 0;width: 338px;height: 425px;margin-right: 20px;}
+.onkeyword h4{font-size: 25px;font-weight: bold;text-align: center;padding-top: 10px;}
+
+.onkeyword ol{padding-left: 50px;padding-top: 15px;}
+.onkeyword li{line-height: 215%;font-size: 15px;}
+.onkeyword li>a{float: right;margin-right: 25px;} */
+
+/* 스파게티 */
+
+/* #content dl dt img{float: left;margin-right: 20px;}
+#content>dl>dd:first-of-type{margin-bottom: 180px;}
+#content dd{line-height: 150%;}
+#content dl dt{font-weight: bold;line-height: 150%;}
+#content dl>dd>a{display: block;color: red;text-align: left;font-weight: bold;text-decoration: none;padding: 10px 0 40px 5px;}
+
+#content dl{border-bottom: 2px solid #eee;} */
+
+/* 블로그 담기 */
+/* #content p:last-of-type{background: url(../images/bu_arw1.gif)no-repeat 0 20px;text-indent: 20px;padding: 20px 0;} */
+
+

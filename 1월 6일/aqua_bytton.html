@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>아쿠아버튼</title>
+  <style>
+    .button{position: relative;
+      width: 120px;height: 24px;padding: 5px 6px 3px;background: rgba(60, 132, 198, 0.8);background: linear-gradient(to bottom, rgba(28,91,155,0.8) 0%,rgba(108,191,255,0.9) 90%);
+    border-radius: 16px;
+    text-align: center;font-family: "Myriad Pro",sans-serif;color: #fff;font-weight: 800;
+    box-shadow: 0 10px 16px rgba(66, 140, 240, 0.5);
+    text-shadow: 1px 2px 2px rgba(10, 10, 10, 0.5);
+    border-width: 2px;
+    border-style: solid;
+    border-color: #8ba2c1 #5890bf #4f93ca #768fa5;}
+    /* border-color 도 순서가 top right bottom left 순서다(시계방향) */
+    /* rgba가 10 10 10이면 회색이다 */
+    /* 8배수의 법칙 border-radius
+    font-weight에서 800이 가장 굵은것 */
+
+    .aqua{position: absolute;left: 5px;top: 0;
+      width: 123px;height: 1px;padding: 8px 0;
+    background: rgba(255, 255, 255, 0.25);
+    background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%
+    ,rgba(255,255,255,0)95%);
+     border-radius: 8px;}
+     
+    .button:hover{top: 1px;text-shadow: 0 0 5px rgb(255, 255, 255);}
+
+  </style>
+</head>
+<body>
+  <div class="button">
+    <div class="aqua"></div>
+    HTML5
+  </div>
+</body>
+</html>

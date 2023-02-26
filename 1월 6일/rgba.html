@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rgba</title>
+</head>
+<style>
+   div{width: 300px;height: 30px;padding: 20px;font-size: 30px;font-weight: bold;font-family: "Arial Black";text-align: center;}
+   /* 불투명도 (알파값) 1.0이 가장 선명, 0.2 불투명 | 알파값을 조절하여 색상을 조절한다. |글씨색과 백그라운드색 모두 알파값(rgba) 적용 가능 | 투명도가 되어있다는건 밑에 뭐가 있다면 다 비친다.*/
+   .a1{background: rgba(255, 0, 0, 1.0);color: rgba(0, 0,0,0.2);}
+   .a2{background: rgba(255, 0, 0, 0.8);color: rgba(0, 0,0,0.4);}
+   .a3{background: rgba(255, 0, 0, 0.6);color: rgba(0, 0,0,0.6);}
+   .a4{background: rgba(255, 0, 0, 0.4);color: rgba(0, 0,0,0.8);}
+   .a5{background: rgba(255, 0, 0, 0.2);color: rgba(0, 0,0,1.0);}
+   /* 알파값: 불투명도 0~1 */
+</style>
+<body>
+  <div class="a1">RGBA</div>
+  <div class="a2">RGBA</div>
+  <div class="a3">RGBA</div>
+  <div class="a4">RGBA</div>
+  <div class="a5">RGBA</div>
+</body>
+</html>

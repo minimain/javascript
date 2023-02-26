@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형웹3 | Column Drop</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    #box_a{float: left;width: 30%;height: 400px;background: #fcb354;}
+    #box_b{float: left;width: 50%;height: 400px;background: #f1779e;}
+    #box_c{float: right;width: 20%;height: 400px;background: #24bbaf;}
+    @media screen and (max-width:1024px) {
+      #box_b,#box_c{float:none;width:100%;} 
+      /* 자기자리를 유지 clear:both */
+      /* #box_b{width: 70%;}
+      #box_c{clear: both;float: none;width: 100%;}*/
+    }
+    @media screen and (max-width:800px) {
+      #box_a{float: none;width: 100%;}
+    }
+  </style>
+
+</head>
+<body>
+  <!-- 헤더 / 컨텐트 / 어사이드 -->
+  <div id="wrap">
+    <div id="box_a"></div>
+    <div id="box_b">글씨</div>
+    <div id="box_c">글씨</div>
+  </div>
+</body>
+</html>

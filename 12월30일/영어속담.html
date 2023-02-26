@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>영어속담</title>
+  <style>
+    *{padding:0;margin:0;}
+    ul,li{list-style: none;}
+    body{font-size:12px;font-family: Dotum,"돋움",sans-serif;line-height: 150%;}
+    section{width:500px;
+    border: 3px double green;
+    margin: 20px auto;} /*박스자체가 가운데 위치 글이 아니라 section인 전체가 잡혀있으니*/
+    section h2{background-color: yellow;
+    border-bottom: 3px solid green;
+    text-align: center;padding: 10px;
+    letter-spacing: 10px;}
+    section ul{padding: 10px;}
+    section ul.line{border-bottom: 1px dotted green;}
+    section ul li.eng{color: #00f;}
+/*  실패작 
+    section{width: 500px; border:5px double green;}
+    h2{background-color: yellow;font-weight: bold; border-bottom:3px solid green;text-align:center; 
+      padding: 10px; margin:auto;}
+    ul li{list-style: none;}
+    ul li.tit01{width: 250px;margin-bottom:2px solid green;}
+    ul li.tit02{width: 250px;margin-top:2px solid green;} */
+  </style>
+</head>
+<body>
+  <!-- section으로 하고 h2제목 ul li로 ul 두개 가로 500 두줄짜리 테두리선 굵은 선 하나 닷점 하나 패딩 10-->
+  <section>
+    <h2>영어 속담</h2>
+    <ul class="line">
+      <li class="eng">Better later than never</li>
+      <li>아무리 늦더라도 전혀 안하는 것보다는 낫다.</li>
+    </ul>
+    <ul>
+      <li class="eng">Rome was not build in a day</li>
+      <li>로마는 하루 아침에 이루어 지지 않았다</li>
+    </ul>
+  </section>
+</body>
+</html>

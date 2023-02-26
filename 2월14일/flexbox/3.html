@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>flexbox_3</title>
+<style>
+*{margin:0;padding:0;list-style:none;}
+ul{display: flex; border:1px solid red;height: 500px;}  
+li{width:100px; background-color:aqua;margin:8px;}  
+
+/*  플랙스 항목 배치 순서 바꾸기 */   
+ul:nth-of-type(1)  li:nth-child(1){order:1;flex: 5;align-self: stretch;}
+ul:nth-of-type(1)  li:nth-child(2){order:2;flex: 1;align-self: flex-start;}
+ul:nth-of-type(1)  li:nth-child(3){order:3;flex: 1;align-self: flex-end;}
+ul:nth-of-type(1)  li:nth-child(4){order:1;flex: 1;align-self: center;}
+ul:nth-of-type(1)  li:nth-child(5){order:4;flex: 1;}
+ul:nth-of-type(1)  li:nth-child(6){order:1;flex: 1;align-self: baseline;font-size: 50px;}
+/*  교차축을 기준으로 자식요소인 플렉스 항목을 각각 배치
+	align-self : auto | stretch 기본값 | flex-start | flex-end | center | baseline
+*/
+
+/* 플렉스항목의 크기 조절
+flex:flex-grow flex-shrink flex-basis
+flex-grow 플렉스 항목의 너비를 얼마나 늘릴지 숫자로 지정.
+flex-shrink 플렉스 항목의 너비를 얼마나 줄일지 숫자로 지정. 0이면 축소안됨
+flex-basis 플렉스 항목의 기본 크기를 지정합니다. width 속성처럼 기본 너비 값을 지정할수 있고, 0 이나 auto를 지정 가능.0일 경우 flex-grow, flex-shrink의 인수 값을 함께 사용하고 auto일 경우 플렉스 항목의 너비값을 사용함.
+flex:initial 항목의 width/height 값에 의해 크기가 결정되는데 플렉스 컨테이너의 공간이 부족할 경우, 최소 크기까지 줄인다.   
+flex:auto 항목의 widht/height 값에 의해 크기가 결정되지만 플렉스 컨테이너의 공간에 따라 늘이거나 줄인다.
+*/
+ul:nth-of-type(2) li:nth-child(1){flex:1 1 200px;}
+ul:nth-of-type(2) li:nth-child(2){flex-grow: 1; flex-shrink: 10;flex-basis: 200px;}
+ul:nth-of-type(2) li:nth-child(3){flex-grow: 1; flex-shrink: 1; flex-basis: 200px;}
+ul:nth-of-type(2) li:nth-child(4){flex-grow: 1; flex-shrink: 1; flex-basis: 200px;}
+ul:nth-of-type(2) li:nth-child(5){flex-grow: 1; flex-shrink: 1; flex-basis: 200px;}
+</style>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+</ul> 
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>    
+</body>
+</html>

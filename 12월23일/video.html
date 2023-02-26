@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- html5에소눈 <video>태그로 동영상 삽입
+    속성:src,poster, preload(다 로딩이 되어 재생),autoplay, loop, controls, width, height
+  단, 모바일 기기에서는 자동 실행 안됨
+muted: 비디오를 재생할때 소리는 쓰고 화면만 재생
+비디오를 문서 배경으로 사용하거나 소리가 피룡하지 않을 때 사용
+루프 무한반복 어초 자동재생 컨트롤(controls) 컨트롤 박스 생성 poster="viedio/poster.jpg"(썸네일형식)]
+웹접근성으로 볼때 영상이 처음 시작될때 소리가 나오면 안된 그래서 뮤트로 음소거가되어있다-->
+<video width="380" height="272" muted autoplay controls loop poster="video/poster.jpg">
+  <source src="video/spring.mp4" type="video/mp4" />
+  <source src="video/spring.ogv" type="video/mp4" />
+  <source src="video/spring.webm" type="video/mp4" />
+</video>
+<hr />
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qoXf5Zr3BhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+<!-- 아이프레임은 웹문서안에 별도의 프레임으로 넣는것 -->
+</html>

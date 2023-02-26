@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1{background-color: green;width: 500px;height: 100px;border: 10px double yellow;text-align: center;line-height: 100px;color: #fff;border-radius: 30px  0;}
+    /* 가로정렬은 text-aling이고 line-height를 height값과같게 하면 세로로 위아래 크기가 같아진다. */
+    /*  border-radius: 30px; - (모서리 둥글게)top-left/right, bottom-right/left
+    30px  0;를 하면 순차적으로 반영top-left부터 시계방향*/
+    li{width: 200px;height: 200px;margin: 20px;list-style: none; 
+      background-color: #000;margin: 20px;color: #fff;
+      text-align: center;line-height: 40px;font-weight: bold;}
+
+    .c1{background-color: red;border-radius: 100px;}
+      /* 원은 width,height 값의 1/2로 지정하면 된다
+          예) width: 200px;height: 200px; 이면 border-radius: 100px;로 입력하면 원이 된다.*/
+    .c2{background-color: blue;border-radius: 100px;}
+
+    .c3{height: 100px;background-color: red;border-radius: 100px 100px 0 0;}
+    .c4{height: 100px;background-color: blue;border-radius: 0 0 100px 100px;}
+
+    .c5{height: 100px;width: 100px;background-color: red;border-radius: 100px 0 0 0;}
+    .c6{width: 100px;height: 100px;background-color: blue;border-radius: 0 0 100px 0;}
+    
+  </style>
+</head>
+<body>
+  <h1>css3 : border-radius</h1>
+  <ul>
+    <li class="c1">원 그리기</li>
+    <li class="c2">원 그리기</li>
+    <li class="c3">반원 그리기</li>
+    <li class="c4">반원 그리기</li>
+    <li class="c5">1/4원 그리기</li>
+    <li class="c6">1/4원 그리기</li>
+  </ul>
+</body>
+</html>

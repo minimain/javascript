@@ -1,0 +1,186 @@
+@import url(reset.css);
+/* sub.css */
+/* common */
+body{font-size: 12px;font-family: Dotum,"돋움",sans-serif;color: #666;}
+/* a:link,a:visited{text-decoration: none;color:black;} */
+
+
+/* layout */
+#wrap{width: 980px;border: 1px solid red;margin: 0 auto;}
+  /* #header{} */
+  #container{width:980px;border: 1px solid green;position: relative;}
+  #container::after{content: "";display: block;clear: both;}
+   .snb{float: left;padding: 0 10px;box-sizing: border-box;
+    width: 150px;border: 1px solid blue;}
+  #content{float: right;width: 770px;border: 1px solid yellow;}
+/* #footer{} */
+
+
+
+/*header */
+/* #header>h1{text-indent: -99999px;overflow: hidden;} */
+
+/* container */
+/* snb */
+.snb{position: relative;background: url(../images/today.jpg) no-repeat 50% 20px;}
+.snb>h2{margin-top: 120px;font-size: 22px;font-weight: bold;color: #000;}
+
+.snb>ul>li{border-bottom: 1px solid gray;line-height: 200%;font-weight:bold;}
+.snb>ul>li>a{color: #333;text-decoration: none;}
+.snb>ul>li.on>a{color: red;}
+
+/* 로그인 */
+
+.snb>h3{color: orange;text-align: center;font-size: 18px;font-weight: bold;margin: 20px 0 10px;}
+
+.snb input{width: 100px;height: 15px;margin: 3px 0;}
+.snb input[type="image"]{position: absolute;right: 5px;bottom: 0;width: 20px;height: 20px;} 
+
+
+/* content */
+#content>h2{background: url(../images/title.jpg)no-repeat 0 0;width: 769px;height: 227px;text-indent: -999px;overflow: hidden;margin-bottom: 20px;}
+
+/* 블로그 소개 */
+dl.bloger{width: 770px;}
+dl.bloger:after{content: "";display: block;clear: both;}
+.bloger>dt{float: right;width: 610px;font-size: 120%;padding-bottom: 20px;}
+.bloger>dd:first-of-type{float: left;width: 135px;}
+.bloger>dd:last-of-type{float: right;width: 610px;line-height: 150%;}
+.bloger>dt>strong{color: #fc9;}
+
+/* 질문 답변*/
+/* content랑 같아서 100% 해도됨 */
+.qna{width: 770px;}
+.qna dt{background: url(../images/ico_q.gif)no-repeat 0 0;padding-left: 20px;margin: 15px 0;}
+.qna dd{background: url(../images/ico_a.gif)no-repeat 0 0;padding-left: 20px;line-height: 150%;}
+
+/* 레시피 */
+h3.recipe_title{background: url(../images/recipe.jpg)no-repeat 0 0;width: 114px;height: 25px;margin:10px 0;text-indent: -999px;overflow: hidden;}
+
+div.recipe>dl{padding-bottom: 10px;}
+
+div.recipe{width:770px;padding-bottom: 40px;}
+div.recipe::after{content: "";display: block;clear: both;}
+div.recipe>dl:nth-child(odd){float: left;width: 354px;
+border-right: 2px dashed #99c;}
+div.recipe>dl:nth-child(even){float: right;width: 354px;}
+
+div.recipe>dl>dt{float: right;width: 250px;padding-bottom:5px;font-weight:bold;}
+div.recipe>dl>dd:first-of-type{float: left;width: 96px;}
+div.recipe>dl>dd:last-of-type{float: right;width: 250px;line-height: 150%;}
+
+div.recipe>dl>dd:last-of-type>a{display: block;}
+/* 댓글 남기기 */
+form.reply{width: 770px;border-top: 1px solid gray;padding:20px 0 50px;}
+.reply>fieldset:first-of-type{width: 770px;margin-bottom: 10px;}
+.reply>fieldset:first-of-type:after{content: "";display: block;clear: both;}
+.reply>fieldset:first-of-type>p{float: left;}
+.reply>fieldset:first-of-type>span{float: right;}
+
+
+.reply>fieldset:last-of-type{background: url(../images/bg_reply_box.gif) no-repeat 0 0;width: 761px;height: 86px;
+padding-top: 15px;padding-right: 30px;text-align: right;box-sizing: border-box;}
+
+.reply>fieldset:last-of-type>label{display: inline-block;width: 101px;height: 44px;vertical-align: middle;
+  background: url(../images/txt_reply.gif)no-repeat 0 0;
+text-indent: -9999px;overflow: hidden;}
+.reply>fieldset:last-of-type>textarea{width: 500px;height: 45px;
+vertical-align: middle;margin: 0 10px;}
+.reply>fieldset:last-of-type>input{width: 65px;height: 50px;vertical-align: middle;}
+
+/* 나란히 줄려면 vertical-align:middle을해주면 됨 */
+/* 인라인 요소라서 padding보다는 text-align이 더 좋음 */
+/* label은 인라인요소라 인라인블락을 해줘야함 */
+/* dl(부모)도 float가 되어 있어서 안쪼그라들음 부모에 float가 되면   */
+/* 주의 그냥 dl을 하면 다 적용이 되니 선택을 잘해서 recipe안에 있는 dl, dt를 선택하기 */
+
+/*속성선택자 input[속성="값"]*/
+/* 인풋의 크기를 공통으로 설정하고 인풋에 마진을 준다. */
+/* snb를 기준으로 position준다 */
+
+
+/* .snb>h2{background: url(../images/today.jpg) no-repeat 10px 0,url(../images/sidemenu_todaykitchen.gif)no-repeat 0 100px;width: 136px;height: 131px;
+text-indent: -9999px;overflow: hidden;} */
+
+/* ul.nav>li{line-height: 200%;border-bottom: 2px solid #666;
+padding-left: 10px;}
+ul.nav>li>a{text-decoration: none;color: black;} */
+
+/* 로그인 */
+/* .snb>h3{text-indent: -9999px;overflow: hidden;
+background: url(../images/Login_title.jpg)no-repeat 0 0;width: 150px;height: 26px;}
+legend{text-indent: -999px;overflow: hidden;}
+input[type="text"]{width: 100px;box-shadow: -2px 0px 0 #eee;margin-bottom: 5px;}
+input[type="password"]{width: 100px;box-shadow: -2px 0px 0 #eee;}
+ol>input[type="image"]{float: right;width: 20px;height: 22px;} */
+
+/* content */
+/* #content>h2{background: url(../images/title.jpg);width: 770px;height: 227px;text-indent: -999px;overflow: hidden;margin-bottom:15px;}
+#content>h3{text-indent: -999px;overflow: hidden;} */
+
+
+/* 블로그 소개 */
+
+/* dl.bloger:after{content: "";display: block;clear: both;}
+.bloger>dt{float: right;width: 610px;}
+.bloger>dd:first-of-type{float: left;width: 135px;}
+.bloger>dd:last-of-type{float: right;width: 610px;}
+.bloger>dt>strong{color: orange;} */
+
+/* qna */
+/* dl.qna dt{background: url(../images/ico_q.gif)no-repeat 0 0;padding-left: 20px;padding-bottom: 10px;}
+dl.qna dd{background: url(../images/ico_a.gif)no-repeat 0 0;padding-left: 20px;padding-bottom: 10px;} */
+
+/* 레시피 */
+/* .recipe_title{background: url(../images/recipe.jpg)no-repeat 0 0;width: 114px;height: 25px;margin-bottom: 10px;}
+.recipe>dl>dt{font-weight: bold;} */
+
+/* 
+.recipe{border-bottom: 2px solid #ccc;padding-bottom: 30px;}
+.recipe::after{content: "";display: block;clear: both;}
+
+.recipe>dl:nth-child(odd){float: left;width:350px;border-right: 2px dotted #ccc;padding-right:30px;}
+.recipe>dl:nth-child(even){float: right;width: 350px;}
+
+.recipe>dl:nth-child(odd)>dt{text-indent: 111px;}
+.recipe>dl:nth-child(even)>dt{text-indent: 110px;}
+
+.recipe>dl:nth-child(odd)>dd:first-of-type{float:left;width: 110px;}
+.recipe>dl:nth-child(even)>dd:first-of-type{float:left;width: 110px;}
+
+.recipe>dl>dd>a{display: block;text-align: left;} */
+
+/* 블로그 담기 */
+/* 
+p{background: url(../images/blog.gif)no-repeat 0 0;width: 231px;height: 15px;text-indent: -999px;overflow: hidden;float: left;}
+span{float: right;}
+span>input[type="image"]:first-of-type{background: url(../images/btn1.gif)no;}
+#content>form>fieldset:last-of-type{background: red;background: url(../images/bg_reply_box.gif)no-repeat 0 0;}
+#content>form>fieldset:last-of-type>label{float: left;background: url(../images/txt_reply.gif)no-repeat 20px 15px ;width: 131px;height: 60px;text-indent: -999px ;overflow: hidden;}
+
+#content>form>fieldset>input[type="submit"]{background: url(../images/btn_reply_write.gif)no-repeat 0 0px;width: 61px;height: 90px;border: none;
+text-indent: -9999px;overflow: hidden;margin-left:10px;} */
+
+/* 블로그 소개 */
+/* 오른쪽 (dt)(dd) 이미지 (dd)글 | 왼쪽 정렬 기본 이니 dt에 가로를 길게 해서 이미지 옆으로 | 아무리 float를 해ㅐ도 옆에 안오면 가로값을 지정해줘야한다.*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

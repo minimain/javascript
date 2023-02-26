@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박스모델3단</title>
+  <!-- 총 뺀거는 패딩40 보더5 마진 11  빼서 134를 만듬;; 아니 왜 박스 맨밑에 블루 쪽이 좀 더 얿어 보이냐 이 말이야..ㅜ-->
+  <style>
+    *{padding:0;margin:0;}
+    body{font-size: 30px; color: white;font-weight: bold;}
+    #wrap{width:580px;height: 580px;background-color:yellow; padding: 10px;}
+    #top{width: 530px;height: 136px;background-color: red;padding: 20px;
+    border: 5px solid black;margin-bottom: 11px;}
+    #middle{width: 530px; height: 136px; background-color:green;padding: 20px;
+      border: 5px solid black;margin-bottom: 11px;}
+    #bottom{width: 530px;height: 136px;background-color: blue;padding: 20px;
+      border: 5px solid black;}
+    /* 580 나누기 3을 한 값193.33 - 보더 10 패딩 40 늘어남 여기까지 143.33
+    마진 바텀을 추가하여 22가 늘어남 여기서 내용물 크기에서 빼준다. 22나누기 3 하면 7이고 143-7하면 136  */
+  </style>
+</head>
+<!-- 바깥쪽 여백은 가운데 선들 랩 여백은 바깥쪽 선 -->
+<body>
+  <div id="wrap">
+    <div id="top">Top</div>
+    <div id="middle">Middle</div>
+    <div id="bottom">Bottom</div>
+  </div>
+</body>
+</html>

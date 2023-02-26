@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>놀자곰</title>
+  <style>
+    body{margin: 80px auto;}
+    .nor_total{position: relative;margin: 0 auto;
+      width: 308px;height: 390px;
+     /*background: black;*/}
+    
+    /* head */
+    .nor_total .nor_head{position: absolute;z-index: 1;
+      left:calc(50% - 121px);top: 0%;
+      width: 242px;height:213px;/*background: blue;*/
+     animation: move_face 2s ease-in 0s infinite;}
+     @keyfr ames move_face {
+      25%{top: 10px;}
+      30%{top: 5px;}
+      35%{top: 10px;}
+      40%{top: 5px;}
+
+      50%{top: 0px;}
+
+      75%{top: 10px;}
+      80%{top: 5px;}
+      85%{top: 10px;}
+      90%{top: 5px;}
+
+
+     }
+    /* 귀 */
+    .nor_head .ear{position: absolute;z-index: 2;
+      left:-8px;top:2px;
+      transform: rotate(-26deg);
+      width: 98px;height: 60px;
+      background: #fff;box-sizing: border-box;
+      border-radius: 50px 50px 0 0;
+      border: 6px solid #4e4741;border-bottom:none;}
+
+    .nor_head .ear::after{content: "";position: absolute;left:140px;top:67px;
+      transform: rotate(54deg);
+      width: 98px;height: 60px;background: #fff;
+      border-radius: 50px 50px 0 0;border: 6px solid #4e4741;
+      border-bottom: none;
+      box-sizing: border-box;}
+ 
+    /* 얼굴 */
+    .nor_head .face{position: absolute;left:0;top: 34px;
+      width: 242px;height: 180px;background: #fff;border: 6px solid #4e4741;
+    box-sizing: border-box;border-radius: 80px 80px 95px 95px;
+    overflow: hidden;}
+    
+    /* 눈 */
+    .nor_head .eyes{position: absolute;left: calc(50% - 4px);top: 45px;
+      width: 8px;height: 8px;/*background: #4e4741;*/
+      border-radius: 50%;
+    box-shadow: 40px 0 0 0 #4e4741,-40px 0 0 0 #4e4741;}
+   
+     /* 입 */
+    .nor_head .mouth{position: absolute;left: calc(50% - 20px);top: calc(50% - 10px);
+     width: 40px;height: 20px;background: #ffa68e;transform: translateY(5px) rotate(-90deg);
+     box-sizing: border-box;border-radius:50% 10% 10% 50%/50% 10% 10% 50%;
+     box-shadow: -1px 0 0 3.5px #4e4741;}
+
+    /* 입술( 입꼬리 ) */
+    .nor_head .lip{position:absolute;left: calc(50% - 3px);top: 60px;
+      width:6px;height: 6px;border-radius: 50%;background:#4e4741;
+    box-shadow: -33px 1.6px 0 0 #4e4741,33px 1.6px 0 0 #4e4741;}
+
+    .nor_head .lip::after,.nor_head .lip::before{content: "";position: absolute;
+    width:50px;height:40px;border-radius: 50%;
+    border: 6px solid #4e4741;box-sizing: border-box;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-right-color: transparent;}
+    .nor_head .lip::after{left:-5px;top:-27px;}
+    .nor_head .lip::before{left:-39px;top: -27px;}
+
+    /* 볼 */
+    .nor_head .cheek{position: absolute;left: calc(50% - 43px);top: calc(50% - 43px);
+      width: 86px;height: 86px;/*background: #ffa68e;*/
+    border-radius: 50%;
+  box-shadow: 86px 0 1px 0 #ffd8ce,-86px 0 1px #ffd8ce;}
+    
+
+  /* 몸통 */
+  .nor_body{position:absolute;z-index:0;
+    left: calc(50% - 154xp);bottom: 0%;
+    width: 308px;height: 212px;/* background: red;*/
+   }
+
+
+  /* 중간몸통 */
+  .nor_body .nor_middel{position: absolute;left:calc(50% - 95px);top:0px;
+    width:190px ;height:160px;background:#fff;
+  border: 6px solid #4e4741;box-sizing: border-box;}
+
+  
+  /* 팔 */
+  .nor_body .arm_left{position: absolute;left: 120px;top:-30px;
+    width: 48px;height: 140px;background: #fff;
+    border: 6px solid #4e4741;
+    border-radius: 25px;
+    transform: rotate(55deg);transform-origin:0% 0%;
+  animation: move_arm 1s ease-in 0s infinite;}
+  @keyframes move_arm {
+   25%{transform: rotate(140deg);}
+   45%{transform: rotate(100deg);}
+
+   75%{transform: rotate(140deg);}
+   90%{transform: rotate(100deg);}
+  }
+  .nor_body .arm_right{position: absolute;left: 130px;top: -30px;
+    width: 48px;height: 140px;background: #fff;
+    border: 6px solid #4e4741;
+    border-radius: 25px;transform-origin: 100% 0;
+    transform: rotate(-55deg);
+    animation: moves_arm 1s ease-in 0s infinite;}
+    @keyframes moves_arm {
+   25%{transform: rotate(-150deg);}
+   45%{transform: rotate(-100deg);}
+
+   75%{transform: rotate(-150deg);}
+   90%{transform: rotate(-100deg);}
+  }
+
+  /* 다리 */
+   .nor_body .leg{position: absolute;left: 59px;top:154px;
+    width: 80px;height: 50px;background:#fff;
+    border: 5px solid #4e4741;box-sizing: border-box;
+    border-top: none;border-radius:0 0 15px 15px;}
+
+  .nor_body .leg::after{content: "";position:absolute;
+  width: 80px;height: 50px;background: #fff;
+  border: 5px solid #4e4741;box-sizing: border-box;
+  border-top: none;border-radius: 0 0 15px 15px;
+transform: translate(105px);}
+
+
+
+
+
+  
+  </style>
+<body>
+  <div class="nor_total">
+    <div class="nor_head">
+      <div class="ear"></div>
+      <div class="face">
+        <div class="eyes"></div>
+        <div class="mouth"></div>
+        <div class="lip"></div>
+        <div class="cheek"></div>
+      </div>
+    </div>
+    <div class="nor_body">
+      <div class="arm_left"></div>
+      <div class="arm_right"></div>
+      <div class="nor_middel"></div>
+      <div class="leg"></div>
+    </div>
+  </div>
+</body>
+</html>

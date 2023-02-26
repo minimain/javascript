@@ -1,0 +1,105 @@
+@import url(reset.css);
+/* sub.css */
+/* common */ /*공통으로 지정하는것*/
+body{font-size:12px;font-family: Dotum,"돋움",sans-serif;color: #666;
+  background: #e4e4e4 url(../images/bgbg.gif) repeat-x 0 78px;}
+/* top을 내려줘서 위치 잡기 | 얇은 긴 선이라 x로 잡기 */
+a:link,a:visited{text-decoration: none;color: #666;}
+a:hover,a:active,a:focus{text-decoration: underline;color:#000;}
+strong,th{font-weight: bold;}
+
+/* layout */
+#wrap{width: 950px;margin:0 auto;padding: 10px 10px 50px;border: 1px solid red;}
+     #header{width: 950px;height: 100px;border: 1px solid blue;}
+/* header에는 margin top 안먹힘 wrap에 padding넣어 줘야함
+header에는 모양이 일정함 모든페이지에 그래서 높이를 지정해줘야 한다. */
+     #container{width: 950px;padding: 95px 0;border: 1px solid green;}
+     #container:after{content: "";display: block;clear: both;}
+        .snb{float: left;width: 206px;border: 1px solid red;}
+/* 가로값을 지정해서 나란히 위치| 자식이 floadt하면 부모가 쪼그라들어서 after해주기 */
+        #content{float: right;width: 700px;border: 1px solid red;}
+/* 컨테이너는  */
+     #footer{width: 950px;height: 100px;padding: 15px 0 15px 250px;
+      box-sizing: border-box;
+      background: #fff;border: 1px solid blue;}
+/* footer에도 높이 값 지정 고정 */
+
+      /* reset은 모든 엘리먼트들 하나하나를 선택해 margin padding을 0으로 만들기  */
+
+/* 주석은 필수 다 달기 */
+/* header안에 있는 큰덩어리의 위치를 먼저 잡기 */
+
+/* header */
+/* 로고 */
+h1.logo{float: left;margin-bottom: 30px;}
+h1.logo>a{display: block;width: 172px;height: 49px;background:url(../images/logo.gif) no-repeat 0 0;
+  text-indent: -9999px;overflow: hidden;}
+/* 가로세로 크기를 적용해야 백그라운드 이미지가 눈에 보인다. 그리고a는 인라인이라서 display:block을 해줘야함 */
+
+/* 탑메뉴 */
+dl.topMenu{float: right;margin-top: 10px;}
+dl.topMenu>dd{display: inline;}
+/* 나란히 해주기 위해 display:inline-block 해주기  | 위에서 조금 내려와야 해서 dl 에서 margin-top또는 padding-top을 해주기*/
+
+/* 주메뉴 */
+ul.gnb{clear: both;position: relative;background: yellow;}
+ul.gnb li{float: left;}
+
+ul.gnb>li{padding: 0 30px;}
+ul.gnb>li>a{color: #fff;}
+
+ul.gnb>li>ul{position: absolute;top: 33px;}
+ul.gnb>li>ul>li{padding-right: 30px;}
+/* li가 나란히 있고 전부 나란히 있음 주메뉴float해주기 (규격을 가지고 있어야함) | 하위 ul은 position:absolute로 분리하기 그래야 큰 li가 붙는다. 기준은 gnb로 하기 |position과 float같이 쓰는거 가능 각 기능이 다름 | 위치는 h1에 너무 붙어 있으니 h1에 margin-bottom이나 padding바텀 주기 대부분 위에있는 애를 기준으로 잡는다. | 큰 li의 a 는 하얀색| 간격을 띄어준다. 근데 큰 li와 하위li가 간격이 다름 | 하위는 오른쪽에만 패딩 있음 |float가되어있어서 백그라운드 컬러가 안먹혔음 | 가로는 float 하고 하위 자식은 positon 주기 | conteiner에 여백 주기 위에 레이아웃에서 주기 */
+
+/* container */
+/* snb */
+.snb>h2{width: 206px;height: 88px;
+background: url(../images/side_navi.gif)no-repeat 0 0;
+text-indent: -9999px;overflow: hidden;}
+/* 백그라운드 이미지가 제대로 안보이는건 가로세로 크기가 없어서 임
+이지 선택하면 크기 뜸 */
+.snb>ul>li{background: url(../images/icon4.gif)no-repeat 10px 50%,url(../images/submenu_line.gif)no-repeat 0 100%;
+  line-height: 30px;padding-left: 20px;}
+/* 위아래 간격은 line-height를 넣어주기 백그라운드 이미지 선은 아래에 있어야 해서 bottom으로 | 점 이미지도 세로로 가운데 하고 text-indent나 padding-left로 안으로 들어오게 한다. */
+
+/* content */
+.path{text-align: right;}
+#content>h3{margin: 20px 0;}
+/* 글자 p태그 text-align으로 하기 글자만이니까 | 
+h3 기준으로 위아래 여백이 공통으로 있음  */
+
+/* 웹접근성이란 */
+div.txt{background: url(../images/contents_bg.gif) no-repeat 0 0;
+  padding-left: 220px;}
+div.txt>p{line-height: 150%;padding-bottom: 15px;text-align: justify;}
+/* 문단 두개를div로 묶음 div에 백그라운드 이미지를 넣음 그럼 글자가 이미지 위에 있음 그러면 그 글자들이 안으로 들어갈려면 padding-left를 해줘서 밀어준다. p태그는 양쪽정렬과 line-height간격과 여백을 준다.  */
+
+
+/* 인증사이트 통계 */
+.siteTable{width: 100%;}
+.siteTable th,.siteTable td{border-bottom: 1px solid #666;}
+.siteTable thead th{border-top: 3px solid gray;border-bottom: 2px solid gray;}
+/* caption은 화면에 보이면 안되어서 blind 해줌 | table에 가로가 꽉 채워질려면 content크기에 맞춘다. | 주의 할건 문서 안에 table이 여러개 있으면 어디 있는 td,th인지 특정을 잘 해주기 border는 최대한 th와 td에 넣어주기 th들은 가로로 있고 전체적으로 가로로 있고 리셋을 해서 왼쪽 정렬로 되어 있다. 그러니 center주기 여백도 주기 border안쪽이니 padding으로 넣기 | reset은 건들이지 않는다. 모든 페이지에 적용이 되니 바구면 안ㄴ됨 */
+
+
+/* 진행절차 */
+.apply{width: 100%;overflow: auto;}
+.apply li{float:left;}
+
+/* li가 나란히 있으면 된다. 부모 크기를 고정 시키는거 overflow:auto 5가지나 배움... */
+
+/* footer */
+.etc{margin-bottom: 10px;}
+.etc>li{display: inline;}
+/* 안쪽으로 들어가니 padding | 바깥쪽 여백은 margin |v 패딩이 있는지 보고 위치 지정 |  */
+
+
+
+
+
+
+
+
+
+

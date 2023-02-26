@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>html5 시멘틱 앱</title>
+</head>
+<body>
+  <!-- html5 시멘틱앱[semantic web] : 의미가 더 명확해진다.
+  header, main, footer, nav, section, article, aside -->
+  <div id="wrap">
+    <header>
+      <!--<div class="header_inner"> 를 안쓰는 것이 아니다-->
+      <h1>제목</h1>
+      <h2>부제목</h2>
+      <nav class="gnb"> 
+        <h2>주메뉴</h2>
+        <ul>
+          <li><a href="#">메뉴</a></li>
+          <li><a href="#">메뉴</a></li>
+          <li><a href="#">메뉴</a></li>
+        </ul>
+      </nav>
+      <!-- 내비게이션 (nav) ,글로벌 네비게이션 바 (gnb) -->
+    </header>
+    <main>
+      <nav class="snb">
+        <h2>제목</h2>
+        <ul>
+          <li><a href="#">메뉴</a></li>
+          <li><a href="#">메뉴</a></li>
+          <li><a href="#">메뉴</a></li>
+          <li><a href="#">메뉴</a></li>
+        </ul>
+      </nav>
+
+      <section class="board">
+        <h2>게시판</h2>
+      <section class="notice">
+        <h3>공지사항</h3>
+        <ul>
+          <li><a href="#">글 제목</a></li>
+          <li><a href="#">글 제목</a></li>
+          <li><a href="#">글 제목</a></li>
+        </ul>
+        <p>공지사항 더보기</p>
+      </section>
+      <section class="dataroom">
+        <h3>자료실</h3>
+        <ul>
+          <li><a href="#">글제목</a></li>
+          <li><a href="#">글제목</a></li>
+          <li><a href="#">글제목</a></li>
+        </ul>
+      </section>
+      <article>
+        <h3>글제목</h3>
+        <p>기사글, 블로그글, 게시판 글</p>
+      </article>
+    </main>
+    <aside class="quick_menu">
+      <h3>바로가기</h3>
+      <ul>
+        <li><a href="#">퀵메뉴</a></li>
+        <li><a href="#">퀵메뉴</a></li>
+        <li><a href="#">퀵메뉴</a></li>
+      </ul>
+    </aside>
+    <!-- main=div id="container" , (snb)서브페이지 , 하나의 주제로 묶을수있는것은 어제의 공지사항같은것 (section)-->
+    <!-- 게시판이나 공지사항 같은 주제는 section으로 묶을 수 있는데 
+    주제가 다른데 section으로 묶었다면 div id로 다시 묶어주면 된다. -->
+    <!-- article은 독립적으로 퍼갈수있는 글 (광고로도 사용) -->
+    <!-- 기업사이트를 보면 오른쪽에 광고가 붙는경우가 있다. 본문과는 별도의 내용 (aside) -->
+    <footer></footer>
+  </div>
+   <!-- 어제의 div id를 이용한것을 빼고 위에 처럼 header만 쓰며 의미가 더 명확해짐 -->
+</body>
+</html>

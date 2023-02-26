@@ -1,0 +1,41 @@
+@import url(reset.css);
+
+/* common */
+body{font-size: 12px;font-family: Dotum,"돋움",sans-serif;}
+a{color: black;text-decoration: none;}
+
+/* rayout */
+#wrap{width: 800px;margin: 0 auto;border: 1px solid red;}
+ #header{width: 800px;border: 1px solid blue;}
+ #container{width: 800px;border: 1px solid black;}
+
+/* header */
+#header{background: url(../images/bg_top.gif)no-repeat -200px 0;}
+h1>a{display: block;}
+p{background: url(../images/blet.gif)no-repeat 567px 5px;text-align: right;
+margin-bottom:20px;}
+
+/* container */
+/* content */
+.img1{float: left;background: url(../images/img_01.gif) no-repeat 0 0;width: 320px;height: 233px;margin:0 20px 30px 0;}
+.content{float: right;padding-right: 5px;}
+.content h2{font-size: 18px;color: rgb(246, 111, 111);font-weight: bold;padding-bottom:20px;}
+.content h3{color: red;font-weight: bold;font-size: 15px;padding-bottom: 15px;}
+.content p{text-align: justify;line-height: 150%;}
+
+
+/* table */
+h3{color: red;padding-bottom: 15px;font-size: 15px;font-weight: bold;
+text-indent: 20px;}
+
+table{width: 750px;margin-left: 20px;}
+
+table tr th{border-right:1px solid #ccc;text-align: center;padding: 5px 10px}
+
+table thead th{font-weight: bold;border-top:2px solid red;background:linear-gradient(to bottom,#fff 70%,#eee);}
+
+table tr{border-top: 1px solid #ccc;}
+
+table td{text-indent: 10px;}
+
+

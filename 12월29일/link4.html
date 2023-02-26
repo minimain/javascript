@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>link4</title>
+  <style>
+ol,li{list-style: none;}
+ol li a{text-decoration: none;color: #666;}
+ol li a:hover{color: green;}
+/* ol{background: url(images/sprite.jpg) no-repeat 0 0; line-height: 28px;} */
+ol li{background: url(images/sprite.jpg) no-repeat 0 0; text-indent: 35px;line-height: 28px;}
+/* 글자를 밀고 글자의 간격 */
+ol li.oni1{background-position: 0 0;}
+ol li.oni2{background-position: 0 -28px;}
+ol li.oni3{background-position: 0 -56px;}
+ol li.oni4{background-position: 0 -84px;}
+ol li.oni5{background-position: 0 -112px;}
+/* 리스트를 넣을때 백그라운드이미지로 넣어주는게 더 좋다. 더 정확하고 */
+/* 2가 위로올려면 -28px 하나의 이미지 크기가 28px이라서 
+중복되는 속성은 일단 함께 잡아서 해야한다.공통으로 각각 적용하는건 클래스로 따로 잡는다  */
+    /*실패작 ol,li{list-style: none;}
+    ol li a{color: black;}
+    ol li{background: url(images/sprite.jpg) no-repeat 0 0; text-indent:40px;}
+    display: inline-block; width: 28px; height: 20px;background: url(images/sprite.jpg) no-repeat 3px 2px;}
+    ol li a .ori1{width: 28px; height: 20px; background-position: 3px 2px;}
+    ol li a .ori2{width: 28px; height: 20px; background-position: 3px 31px;}
+    li a{text-decoration: none; color: #000; list-style-position: inside;}
+    li a:hover{color: green;} */
+  </style>
+</head>
+<body>
+  <ol>
+    <li class="oni1"><a href="#">양파를 고른다</a></li>
+    <li class="oni2"><a href="#">양파를 기름에 살짝 튀긴다</a></li>
+    <li class="oni3"><a href="#">마늘 3쪽을 넣는다</a></li>
+    <li class="oni4"><a href="#">3분간 더 요리 한다</a></li>
+    <li class="oni5"><a href="#">맛있게 먹는다</a></li>
+  </ol>
+</body>
+<!-- 복습은 다시 타이핑 고 -->
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float 플로트(위치 잡기)</title>
+  <style>
+    div{width: 200px;height: 200px;color: #000;
+    font-size: 30px;font-weight: bold;
+    }
+    #red{float:right;background-color: red;}
+    #green{float:right;background-color: green;}
+    #blue{float:right;background-color: blue;}
+    /* 레드에 right를 주면 블루와 그린이 자리를 채워주고 레드는 공중부양해서 오른쪽에 붙는다.
+    그린과 블루도 옆에 나란히 붙는다.
+    right를 하게되면 방향이 바뀜
+     */
+     /* 박스를 가로로 위치하고 싶다면 각각의 박스에 모두 적용해야한다. */
+    /* #red{float:left;background-color: red;}
+    #green{float:left;background-color: green;}
+    #blue{float:left;background-color: blue;} */
+/* display:inline (블록레벨을 옆으로 가로로 위치 : 인라인 요소로 변하는 내용물만 잡히고 가로세로 규격이 없어진다.
+display:inline-block (가로로 가면서 가로세로가 규격이 있음)) */
+/* float:left , float:right 
+float는 위아래로 가지 못한다. 원래 있던 자리에서 왼쪽이냐 오른쪽이냐만 설정 가능
+원래 자기 자리에서 공중부양해서 왼쪽으로 붙음 레드 뒤에 그린박스가 있음 근데 내용물인 글자나 이미지는 겹쳐지지 않아서 삐져나옴
+그린도 float:left를 하면 레드 왼쪽에 붙음 그럼 블루는 레드 뒤에 있음 근데 float에 블루 글자가 가려지지 않아 삐져나와 보인다.
+블루도 적용하면 왼쪽 옆으로 붙음*/
+  </style>
+</head>
+<body>
+  <div id="red">red</div>
+  <div id="green">Green</div>
+  <div id="blue">blue</div>
+</body>
+</html>

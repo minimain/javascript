@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body,div,h3,h4,p,ul,li{padding: 0;margin: 0;}
+    body{font-size: 12px;font-family: Dotum,"돋움",sans-serif;}
+    ul,li{list-style: none;}
+    a{text-decoration: none;color: black;}
+    a:hover{text-decoration: underline;color: red;}
+    /* 강원도 */
+    .board_view{width: 430px;margin: 20px auto;border: 1px solid red;}
+    .board_view li{background: url(images/blet_dot.gif) no-repeat 0 50%; padding-left: 5px;line-height: 1.5;}
+
+    h3.title{float: left;}
+    p.subs{float: right;}
+
+    .news{clear: both;width: 430px;padding: 6px 0;background-color: yellow;}
+    .news::after{content: "";display: block;clear: both;}
+    /* 가상요소 after앞에 : 이거 한개든 두개든 상관없음 */
+    .news>p{float: left;width: 87px}
+    .news>ul{float: right;width: 315px;}
+    /* 사진크기 알고 사진크기 설정 | 가로값 지정*/
+
+    .menu_list{width: 430px;background-color: aqua;}
+    .menu_list>.economy{float: left; width: 137px; margin-right: 10px;}
+    .menu_list>.culture{float: left;width: 137px;}
+    .menu_list>.welfare{float: right;width: 137px;} 
+    .menu_list::after{content: "";display: block;clear: both;}
+
+    
+    /* .board_view{width: 430px;margin: 10px auto;}
+    .board_view li{background: url(images/blet_dot.gif) no-repeat 0 50%;line-height: 20px;}
+
+    .board_view>.title{float: left;}
+    .board_view>.subs{float: right;}
+    
+
+    .news{width: 430px;padding: 10px;background-color: yellow;}
+    .news::after{content: "";display: block;clear: both;}
+    .news>p{float: left;width: 120px;}
+    .news>ul{float: right;width: 290px;text-indent: 10px;}
+    
+    .menu_list{width: 430px;background-color: aqua;}
+    .menu_list>.economy{float: left;}
+    .menu_list>.culture{float: left;}
+    .menu_list>.welfare{float: left;} */
+    /* .economy{float: left;width: 140px;}
+    .economy>ul{text-indent: 10px;}
+    .culture {float: left;width: 140px;padding:0 10px;}
+    .culture>ul{text-indent: 10px;}
+    .welfare{float: left;width: 140px;padding-left: 10px;}
+    .welfare>ul{text-indent: 10px;} */
+  </style>
+</head>
+<body>
+  <div class="board_view">
+    <h3 class="title"><img src="images/txt_together.gif" alt="함께해요! 강원도 세상"></h3>
+    <p class="subs"><img src="images/btn_together.gif" alt="강원도세상 구독하기"></p>
+
+  <div class="news">
+    <p>
+      <img src="images/thumimage.jpg" alt="강원도 사람 이미지"><span><a href="#">"강원도의 운명을 바꿉시다",,,</a></span></p>
+    <ul>
+      <li> POST-희망근로.하반기에 공동체 사업으로...</li>
+      <li> 중국 대규모 수학여행단 도내 방문시작</li>
+      <li>제35대 이광재 강원도지사 취임사</li>
+      <li>방방곡곡 강원 콘테스트 UCC부문 우수상</li>
+    </ul>
+  </div> 
+
+  <div class="menu_list">
+    <div class="economy">
+      <h4><img src="images/list1.jpg" alt="산업경제"></h4>
+      <ul>
+        <li>강원마트</li>
+        <li>중소기업지원</li>
+        <li>구인/구직</li>
+        <li>소비자정보/상담</li>
+      </ul>
+    </div>
+      <div class="culture">
+        <h4><img src="images/list2.jpg" alt="문화/관광/환경"></h4>
+      <ul>
+        <li>동트는 강원</li>
+        <li>그린투어리즘</li>
+        <li>축제/행사</li>
+        <li>강원관광모바일존</li>
+      </ul>
+    </div>
+    <div class="welfare">
+      <h4><img src="images/list3.jpg" alt="보건/복지/여성"></h4>
+    <ul>
+      <li>여성정보센터</li>
+      <li>반비다복카드</li>
+      <li>사회복지시설</li>
+      <li>자원봉사</li>
+    </ul>
+     </div>
+  </div>
+</div>
+
+</body>
+</html>

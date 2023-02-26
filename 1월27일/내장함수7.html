@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내장함수</title>
+  <script>
+    /*
+
+
+    내장함수 : 자바스크립트에서 미리 만들어진 함수
+    eval() - 문자열을 자바스트립트 문장으로 변환( 수식은 계산, 문자는 변수로)
+    parseInt() - 숫자를 정수로 반환
+    parseFloat() - 숫자를 실수로 반환
+    isNaN() - Not a Number 의 약자로 숫자가 아닌 문자가 포함되면 true 를 반환  | 앞에 is가 붙으면 true 와 false를 나타냄
+    Number() - 문자를 숫자형으로 반환
+    String() - 숫자를 문자형으로 반환
+    escape() - 문자를 16진수 아스키코드 값으로 반환
+    unescape() - escape()로 변환된 값을 다시 되돌려 반환
+    */
+// 이거 거꾸로 나놈 확인
+    var result1=eval("10+20");
+    document.write(result1 + "<br/>");
+
+    var num = 100;
+    document.write("num" + 10 + "<br/>");
+    document.write (eval("num") + 10 + "<br/>");
+
+    var result2 = isNaN("02-123-4567");
+    document.write(result2 + "<br/>");
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

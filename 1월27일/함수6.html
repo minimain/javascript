@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수6_문제2</title>
+  <script>
+    // 입력된 값을 가져오고 | 계산값을 넣기 함수로
+    // 합계 구하는 것 함수로 만들어서
+    // 세일가 구하는 것 함수로 만들어서
+    // document.getElementById("oPrice").value = 함수호출해서 계산값 저장
+
+    /*
+    상품 1,2,3 input에 입력된 값을 가져온다.
+    합계 버튼 클릭하면 
+    합계구하는 것과 함수로 만들어서
+    document.getElementById("oPrice").value = 함수호출해서 계산값 저장
+    세일가 버튼 클릭하면
+    세일가 구하는것 함수로 만들어서
+    document.getElementById("oPrice").value = 함수호출해서 계산값
+    */
+
+    // var i = 1;
+    // window.onload = function(){
+    //   function price(){  
+    //   i++;
+    //   if(i<4) i=1;
+    //   var pro = document.getElementById("product" + i).value;
+    //   function hab()
+    //   }
+    //   var mypro = document.getElementById("product"+i);
+    //  myArea.innerHTML = ;
+    // }
+
+
+
+
+var p1,p2,p3,totalResult,saleResult ; //  변수 선언
+function product(){ //값 할당 해주는것
+      p1 = parseInt(document.getElementById("product1").value);
+      p2 = parseInt(document.getElementById("product2").value);
+      p3 = parseInt(document.getElementById("product3").value);
+      }
+    
+      function getTotal(a,b,c){
+        totalResult = a + b + c;
+        return totalResult; 
+      }
+      
+      function getSale(d){
+        saleResult = Math.floor(d* 0.7)
+        return saleResult;
+      }
+
+      function total_btn(){
+        product();
+        document.getElementById("total").value = getTotal(p1,p2,p3);
+        return false;
+      }
+
+      function sale_btn(){
+        document.getElementById("sale").value = getSale(totalResult);
+        return false;
+      }
+
+
+  </script>
+</head>
+<body>
+  <h1>백화점 세일 계산기</h1>
+  <p>모든 상품에 대해 30%세일을 하고 있습니다</p>
+  <form action="/" method="post">
+    <legend>세일 계산기</legend>
+    <ul>
+      <li>
+        <label for="product1">상품1</label>
+        <input type="text" id="product1"/>
+      </li>
+      <li>
+        <label for="product2">상품2</label>
+        <input type="text" id="product2"/>
+      </li>
+      <li>
+        <label for="product3">상품3</label>
+        <input type="text" id="product3"/>
+      </li>
+      <li>
+        <button id="totalBtn" onclick="return total_btn();">합계</button>
+        <input type="text" id="total"/>
+      </li>
+      <li>
+        <button id="saleBtn" onclick="return sale_btn();">세일가</button>
+        <input type="text" id="sale"/>
+        <!-- onclick 이 이벤트임 (여기서는직접 씀) -->
+      </li>
+    </ul>
+  </form>
+</body>
+</html>

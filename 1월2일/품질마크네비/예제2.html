@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>품질마크네비</title>
+<style>
+  body,ul,li{padding: 0;margin: 0;}
+  body{font-size: 14px;font-family: Dotum,"돋움",sans-serif;}
+  ul,li{list-style: none;}
+  a{text-decoration: none;color: #666;}
+  /* 자식선택자 : 부모>자식>손자{} */
+  /* 목록 */
+
+  .nav{width:200px;margin-left: 50px;}
+  .nav>li{background: url(images/icon2.jpg) no-repeat 0 8px;text-indent: 15px;border-top: 1px dotted #666;line-height: 200%;font-weight: bold;
+  }
+  .nav>li.con1{border-top: none; background: url(images/icon1.jpg) no-repeat 0 8px;}
+  .nav>li.con1>a{color: #00f;}
+  .nav>li>ul{background: aqua;margin-bottom: 5px;}
+  /* 클래스 ul의 자식은 다 선택 | padding또는 indent 사용 */
+  .nav>li>ul>li{font-weight: normal;}
+  .nav>li>ul>li.con2{background: url(images/dot.jpg) no-repeat 8px 50%;}
+  .nav>li>ul>li.con2>a{color: #00f;}
+  /* >직계자식만 선택가능 */
+/* text-indent는 문단 첫번째만 들어가는것이고 padding-left로 하면 모두 들어감 */
+  /* .nav{width: 150px;height: 400px;margin: 0 auto;}
+  .nav li{padding-left:15px;line-height: 2;}
+  .nav li.con1{border-top:none;background:url(images/icon1.jpg) no-repeat 0 8px;}
+  .nav li.con2{border-top:none;background: url(images/dot.jpg) no-repeat 10px;}
+  .nav li{border-top:1px dotted gray ; background: url(images/icon2.jpg) no-repeat 0 8px;}
+  .nav ul>li{background:none; border: none;} */
+ 
+  
+</style>
+</head>
+<body>
+  <ul class="nav">
+    <li class="con1"><a href="#">품질마크소개</a>
+      <ul>
+        <li class="con2"><a href="#">품질마크 개요</a></li>
+        <li><a href="#">인증 절차</a></li>
+      </ul>
+    </li>
+    <li><a href="#">인증위원회</a></li>
+    <li><a href="#">인증심사기준</a></li>
+    <li><a href="#">품질마크 심사 접수</a>
+      <ul>
+        <li><a href="#">신규검사</a></li>
+        <li><a href="#">갱신심사</a></li>
+      </ul>
+    </li>
+    <li><a href="#">진행상태 확인</a></li>
+    <li><a href="#">인증사이트 현황</a></li>
+    <li><a href="#">인증사이트 통계</a></li>
+  </ul>
+
+ <!-- ul 선택하면 메뉴가 더 나오는것 li에 백그라운드 이미지 링크 다걸고 border이랑 품질만크소개만 백그라운드 이미지로 클래스-->
+  <!-- >자식 선택자
+  ul li{background:} 를 하게되면 전부 선택됨(하위 선택자)
+ul.nav>li 로하면 자식을 선택 -->
+</body>
+</html>

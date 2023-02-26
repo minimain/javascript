@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트객체</title>
+<script>
+  /*
+  이벤트 객체
+  
+  - 이벤트 핸들러가 구동될때 생성되는 객체,
+  클릭 또는 키보드 입력 등의 동작 자체를 의미.
+  
+  특정 이벤트 핸들러를 구동하면, 함수의 매개변수에 이벤트객체가 자동으로 생성됨
+  */
+
+
+
+  document.onclick = function(event){ //이벤트 객체
+    console.log(event.clientX); //화면을 클릭하면 X좌표값이 console에 뜬다.
+  }
+
+
+  /*
+  event객체가 들어오면 밑에 속성을 사용할수있다.
+
+  keydown, keypress 이벤트객체 속성
+
+  altKey 알트키를 눌렀을때 true 값이 반환
+  shiftKey 쉬프트키를 눌렀을때 true 값이 반환
+  ctrlKey 컨트롤키를 눌렀을때 true 값이 반환
+  key 키 이름
+  code 키코드
+  type 이벤트의 종류
+
+  click, mousemove, mouseover, mouseup, mousedown 이벤트 객체 속성
+
+  clientX 현재문서기준 이벤트가 발생한 곳 x 좌표 (스크롤바 너비 계산 x) *화면으로만 보이는 범위
+  clientY 현재문서기준 이벤트가 발생한 곳 y 좌표 (스크롤바 높이 계산 x)
+  screenX 모니터기준 이벤트가 발생한 곳 x 좌표
+  screenY 모닏터기준 이벤트가 발생한 곳 y 좌표
+  pageX 현재문서 기준 이벤트가 발생한곳 x 좌표 (스크롤바 너비 계산 o ) *스크롤로 접힌 부분까지
+  pageY 현재문서 기준 이벤트가 발생한곳 y 좌표 (스크롤바 높이 계산 o )
+  layerX - position:absolute; 인 레이어 안에서의 상대 x 좌표
+  layerY - position:absolute; 인 레이어 안에서의 상대 y 좌표
+  target 이벤트가 발생한 대상 요소
+  button 마우스 버튼(왼쪽/오른쪽/휠) 의 클릭된 상태 체크
+  type 이벤트의 종류
+  
+  */
+// 폼같은경우는네임으로 많이 선택함 예전에는 아이디었다ㅁ녕 지금은 네임으로 만 선택이 가능
+// e = event
+
+
+
+// 마우스 움직이고 클릭 이벤트
+document.onmousemove = function(e){ //이벤트 객체
+   var myForm = document.form1;
+
+   myForm.clt_x.value="clientX : " + e.clientX;
+   myForm.clt_y.value="clientY : " + e.clientY;
+   myForm.src_x.value="screenX : " + e.screenX;
+   myForm.src_y.value="screenY : " + e.screenY;
+   myForm.pg_x.value="pageX : " + e.pageX;
+   myForm.pg_y.value="pageY : " + e.pageY;
+}
+
+// 키보드 클릭 이벤트
+document.onkeydown=function(e){
+  var theKey1 = e.key;
+  var theKey2 = e.shiftKey;
+  console.log(theKey1);
+  console.log(theKey2);
+  if(theKey1 == "H" && theKey2) { //shift+h
+     alert("단축키 완성");
+  }
+}
+ 
+ 
+</script>
+</head>
+<body>
+  <form name="form1" action="#">
+    <p><input type="text" name="clt_x" id="clt_x" /></p>
+    <p><input type="text" name="clt_y" id="clt_y" /></p>
+    <p><input type="text" name="src_x" id="src_x" /></p>
+    <p><input type="text" name="src_y" id="src_y" /></p>
+    <p><input type="text" name="pg_x" id="pg_x" /></p>
+    <p><input type="text" name="pg_y" id="pg_y" /></p>
+
+  </form>
+</body>
+</html>

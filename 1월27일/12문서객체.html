@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문서객체</title>
+  <script>
+    /*
+    h2아래에는id라는 속성노드가 하나더 있는것 | h1안에 있는게 text node이다. 
+    선택대상은 계속 바뀜 | queryselecotor 을 더 많이 쓰고 ()안에 css의 자식을 쓰는게 가능
+    -------------------
+    Dom (Document Object Model) - 문서객체
+    도식화
+    최상위 노드 node - html
+    요소 - 노드 node
+    노드 Node - 요소(Element) 노드 1, 속성노드 2, 텍스트 노드(공백문자포함) 3
+
+    선택자
+    원거리 선택자
+    선택대상.getElementHyId("아이디명");
+    선택대상.getElementsByTagName("태그명"); //배열
+    선택대상.getElementsByClassName("클래스명")
+
+    선택대상.querySelector("") 메서드는 한개의 값만 반환
+    선택대상.querySelecotorAll("") 메서드는 반환 값이 여러 개일 때 모두 반환
+
+    근거리 선택자 - 특정 요소를 기준으로 
+
+    parentNode - 선택한 요소 기준으로 부모 요소 선택
+    childNodes - 선택한 요소 기준으로 자식 요소 선택
+    children - 선택한 요소 기준으로 자식 요소 선택
+    firstChild - 선택한 요소 기준으로 첫번째 자식요소 선택
+    lastChild - 선택한 요소 기준으로 마지막 자식 요소 선택
+    previousSibling - 형제요소중 이전요소를 선택
+    nextSibling - 형제요소중 다음요소를 선택
+
+자식을 선택할때 공백도 포함
+    */
+
+    /*
+    ex5가 지금 하는 자바스립트 유지보수를 위해 배우는 중 | ex6도 배울 예정 리엑트에서 쓰니
+    */
+
+    //list의 부모가 누구냐
+    // list의 자식들이 누구냐 | li만 나오는게 아니라 text도 나옴 엔터(공백문자)까지 보여줌 엔터를 쳐서 공백문자를 포함 | 
+    // children이라고 찾아야 li만 나옴
+    // firstchild도 공백문자라 text로 나옴 | cildren(0) 0 이라고 적어야 li가 나옴
+    // 마지막문자는 length-1를 해야 마지막 인덱스 번호를 구할수 있음
+
+
+
+// ----------------------------------------------------------------
+
+    window.onload = function(){
+      var parentN = document.getElementById("list").parentNode;
+      console.log(parentN); //ul
+
+      var childN = document.getElementById("list").childNodes;
+      console.log(childN); //li지만 공백이라 text
+      // 표준방식 브라우저 - 공백포함 13개
+
+      var childrenN = document.getElementById("list").children;
+      console.log(childrenN); //li 자식
+
+      var firstChildN = document.getElementById("list").firstChild;  //공백문자 // <li>parentNode</li> 이어야하는데 text 공백
+      console.log(firstChildN);
+
+      var childrenF = document.getElementById("list").children[0];
+      console.log(childrenF); //li 공백
+
+      var lastChildN = document.getElementById("list").lastChild; //공백문자 //마지막자식  <li>nextSibling</li>이어야하는데 text공백
+      console.log(lastChildN);
+
+
+      var lastIdx =document.getElementById("list").children.length -1; //자식인데 글자수에서 -1을 하면 마지막은 공백이니 -1을 해줘서 출력 | 마지막을 지정하는것
+      var childrenL = document.getElementById("list").children[lastIdx];  //불러오는것
+      console.log(childrenL);
+// ----------
+
+      var prev = document.getElementById("title").previousSibling; //공백문자
+      if(prev.nodeType == 3) prev = prev.previousSibling; //previousSibling 형제요소중 이전 요소 | 
+      console.log(prev);
+
+      var next =document.getElementById("title2").nextSibling; //공백문자
+      if(next.nodeType == 3) next = next.nextSibling;
+      console.log(next);
+
+
+// --------------------------
+
+      var myObj =document.getElementById("title") //h2
+      myObj.style.color = "#f00";
+
+      var myList = document.getElementsByTagName("ul"); //ul,ul
+      console.log(myList);
+      var myObj2 = myList[0].getElementsByTagName("li")[1]; //두번째 li
+      myObj2.style.border = "solid 1px #f00";
+
+      //id가 list인 ul에서 li를 찾고 그중에서 인덱스 3번째 li에 글씨색을 파란색으로 해라.
+
+      var listZone = document.getElementById("list"); //ul
+      var listObj = listZone.getElementsByTagName("li")[3];
+      listObj.style.color = "blue";
+
+
+    }
+  
+    // h2에 앞에 있는 형제는 h1이다. 공백문자 가 나옴 엔터를 쳐서 text | 노드타입이 3번 |if문이 들어감 preㅍ변수에 들어간 공백문자 앞에 형재를 다시 찍어라
+    // js에서 css를 style 이라고 하고 속성을 적어서적용가능
+    // ul이 두개들어가서 배열 형태로 들어감 | 
+ 
+ 
+
+
+
+  </script>
+</head>
+<body>
+  <div>
+    <h1>선택자</h1>
+    <h2 id="title">원거리 선택자</h2>
+    <ul>
+      <li>getElementById</li>
+      <li>getElementsByTagnName</li>
+    </ul>
+    <h2 id="title2">근거리 선택자</h2>
+    <ul id="list">
+      <li>parentNode</li>
+      <li>childNodes</li>
+      <li>children</li>
+      <li>firstChild</li>
+      <li>previousSibling</li>
+      <li>nextSibling</li>
+    </ul>
+  </div>
+</body>
+</html>

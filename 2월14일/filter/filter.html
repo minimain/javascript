@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>filter</title>
+  <style>
+    figure{width: 650px;margin: 100px auto;border: 1px solid #ccc;padding: 10px;}
+    figure>img{width: 200px;margin: 6px;}
+
+    figure>img:nth-of-type(2){filter: blur(3px);}
+    /* 수치값이 커질수록 blur효과 증가 */
+    figure>img:nth-of-type(3){filter: brightness(0.5);}
+    /* 1보다 작아지면 어두워지고 커지면 밝아짐 |전체적으로 */
+    figure>img:nth-of-type(4){filter: contrast(150%);}
+    /* 100% 작아지면 대비효과가 낮아지고 높아지면 대비증가 | 색상대비 라서 배경과 색상이 구분이 지어짐*/
+    figure>img:nth-of-type(5){filter: grayscale(100%);}
+    /* 100%로 근접할수록 흑백으로 전환 */
+    figure>img:nth-of-type(6){filter:hue-rotate(180deg);}
+    /* 0deg는 원래 이미지 색상 0~360deg까지 변경할수록 색상 변경 | 
+    hue 가 색상임  */
+    figure>img:nth-of-type(7){filter: invert(100%);}
+    /* 100%로 근접할수록 색감이 정 반대로 전환 | 반전 */
+    figure>img:nth-of-type(8){filter: saturate(50%);}
+    /* 0으로 근접할수록 색감의 채도가 낮아짐 */
+    figure>img:nth-of-type(9){filter: sepia(100%);}
+    /* 100%로 근접할수록 갈색톤으로 색감이 변경 */
+
+  </style>
+</head>
+<body>
+  <figure>
+    <img src="rose.jpg" alt="장미">
+    <img src="rose.jpg" alt="장미">
+    <img src="rose.jpg" alt="장미">
+    <img src="rose.jpg" alt="장미">
+    <img src="rose.jpg" alt="장미">
+    <img src="rose.jpg" alt="장미">
+    <img src="rose.jpg" alt="장미">
+    <img src="rose.jpg" alt="장미">
+    <img src="rose.jpg" alt="장미">
+  </figure>
+</body>
+</html>

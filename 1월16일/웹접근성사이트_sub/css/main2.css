@@ -1,0 +1,82 @@
+@import url(reset.css);
+/* sub.css */
+/* common */
+body{font-size:12px;font-family: Dotum,"돋움",sans-serif;color: #666;
+  background: #e4e4e4 url(../images/bgbg.gif) repeat-x 0 78px;}
+a:link,a:visited{text-decoration: underline;color: #000;}
+a:hover,a:active,a:focus{text-decoration: underline;color:#000;}
+strong,th{font-weight: bold;}
+
+/* layout */
+#wrap{width: 950px;margin:0 auto;padding: 10px 10px 50px;border: 1px solid red;}
+     #header{width: 950px;height: 100px;border: 1px solid blue;}
+     #container{width: 950px;padding: 95px 0;border: 1px solid green;}
+     #container:after{content: "";display: block;clear: both;}
+        .snb{float: left;width: 206px;border: 1px solid red;}
+        #content{float: right;width: 700px;border: 1px solid red;}
+     #footer{width: 950px;height: 100px;padding: 15px 0 15px 250px;
+      box-sizing: border-box;
+      background: #fff;border: 1px solid blue;}
+
+
+/* body{background: #eee;}
+#wrap{width: 960px;margin: 10px auto;border: 2px solid red;
+padding: 10px;}
+#header{width: 960px;border: 1px solid blue;}
+#container{border: 1px solid green;}
+.snb{border: 1px solid red;}
+.content2{border: 1px solid red;}
+#footer{background: #fff;}
+a{text-decoration: none;color: black;}
+
+
+#header>h1{float: left;}
+#header>nav.gnb{float: right;}
+
+#header>ul{position: relative;}
+#header>ul{float: left;}
+
+#header::after{content: "";display: block;clear: both;}
+#footer::after{content: "";display: block;clear: both;} */
+
+
+/* body{background: #eee;}
+
+#wrap{width:1000px;margin: 6px auto;}
+#header{position: relative;text-decoration: none;
+background: yellow;}
+.gnb::after{content: "";display: block;clear: both;}
+#header>ul::after{content: "";display: block;clear: both;}
+#header::after{content: "";display: block;clear: both;margin-bottom: 80px;}
+
+
+#header>h1{float: left;margin-bottom: 30px;}
+.gnb>dl>dt{float:left;text-align:right;}
+
+#header li{float: left;font-size: 14px;}
+#header>ul>li>a{display: block;padding: 10px 25px;background: #222;color: #fff;text-decoration: none;}
+#header>ul>li>ul{position: absolute;left: 0;
+  opacity: 0;}
+#header>ul>li:hover>ul{opacity: 1;margin-left: 30px;padding-top: 5px;}
+#header>ul>li>ul>li>a{color: black;text-decoration: none;padding: 3px 10px;}
+
+
+#container{position: relative;background: blue;}
+
+#container>.snb{position: absolute;left: 0;width: 300px;
+  background: red;}
+#container>h2>ul>li{opacity: 0;background: yellow;}
+
+.text2>thead>tr>th{position:absolute;border: 2px solid black;} */
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+@import url(reset.css);
+/* main.css */
+
+/* common */
+body{font-size:12px;font-family:Dotum,"돋움",sans-serif;}
+a{text-decoration:none;}
+a:hover{text-decoration: underline;}
+
+/* layout */
+#wrap{width:820px;margin:0 auto;border:1px solid red;}
+    #header{width:820px;border-bottom:3px solid #00f;}
+    #container{width:820px;padding:10px 0;}
+    #footer{position: relative;width: 820px;border:1px solid #ccc;background:#eee;
+      padding:20px 5px;box-sizing: border-box; }
+
+/* header */
+#header > h1{margin:10px 0;}
+#header > p{font-style: italic;}
+
+/* container */
+#container>h2{font-size: 18px;font-weight: bold;}
+#container > form{border:1px solid #ccc;background:#eee;padding:5px;margin:10px 0 20px;}
+
+.asia_pacific{float: left;width:250px;margin: 0 30px 30px 0; border:1px solid red;}
+.americas{float: left;width:250px;border:1px solid red;}
+.europe{float: right;width:250px;border:1px solid red;}
+.asia{clear: both;border:1px solid red;}
+
+#container h3{font-size: 16px; font-weight: bold;}
+
+#container dl{width: 100%;margin: 10px 0;}
+#container dl:after{content: "";display: block;clear: both;}
+#container dt{float: right;width: 180px;}
+#container dd:first-of-type{float: left;}
+#container dd:last-of-type{float: right;width: 180px;}
+
+#container .asia dt{float: none;width: 180px;}
+#container .asia dd:first-of-type{float: none;}
+
+/* footer */
+#footer li{display: inline;}
+#footer p{position: absolute;right: 5px;top: 20px;}

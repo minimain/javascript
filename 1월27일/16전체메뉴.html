@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전체메뉴</title>
+  <style>
+  *{margin: 0;padding: 0;}
+  ul{list-style-type: none;}
+  div.menu{display: none;width: 687px;height: 283px;padding-top: 15px;background: url(img/bg_menu.gif) no-repeat 0 0;}
+  li{float:left; padding: 10px 35px;}
+  </style>
+  <script>
+    window.onload = function(){
+      //재료를 먼저 가져오기 |하나의 버튼에 두가지 기능 | flag라는 변수 true는 무조건 열려라
+      var allMenuBtn = document.getElementById("button"); //a
+      var theMenu =document.getElementById("menu"); //div
+      var theBtn = document.getElementById("menuBtn"); //버튼ing
+      var flag = true;
+
+      allMenuBtn.onclick=function(){
+        if(flag){//열려라
+          theMenu.style.display="block";
+          theBtn.src = theBtn.src.replace("open.jpg","close.jpg");
+          flag = false; //flag=0;
+        }else{//닫혀라
+          theMenu.style.display="none";
+          theBtn.src = theBtn.src.replace("close.jpg","open.jpg");
+          flag = true; //flage=1;
+        }
+      }
+      // div가 display:block으로 바뀌면 됨
+      // .replace("web","bye") -텍스트 교체 교체만 가능하고 저장은 안됨
+    }
+  </script>
+</head>
+<body>
+  <a href="#" id="button">
+    <img src="img/btn_menu_open.jpg" alt="전체메뉴 보이기/숨기기" id="menuBtn"/>
+  </a>
+  <div id="menu" class="menu">
+    <ul>
+      <li><img src="img/menu_1_on.gif" alt="공사메뉴"/></li>
+      <li><img src="img/menu_2_on.gif" alt="주요사업"/></li>
+      <li><img src="img/menu_3_on.gif" alt="홍보센터"/></li>
+      <li><img src="img/menu_4_on.gif" alt="고객서비스"/></li>
+      <li><img src="img/menu_5_on.gif" alt="경영공시"/></li>
+    </ul>
+  </div>
+</body>
+</html>

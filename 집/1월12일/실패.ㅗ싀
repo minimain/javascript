@@ -1,0 +1,70 @@
+/* 
+  .ryan .ear{position: absolute;z-index: 3;left: calc(50% - 35px);
+    width: 70px;height:64px;background:black;
+    border-radius: 50%;
+    box-shadow: 130px 0 0 0 black,-130px 0 0 0 black;}
+
+  .ryan .ear::after{content: "";position: absolute;z-index:1;left: calc(50% - 35px);width:90px;height:90px;border: 7px solid blue;border-radius: 50%;bo;}
+
+
+  .ryan .face{position: absolute;} */
+
+  /* .face .eyebrows{position: absolute;left: calc(50% - 38px);
+    top: 120px;
+    width: 10px;height: 10px;
+   }
+
+  .face .eyebrows::after,.face .eyebrows::before{position:absolute;
+    left: calc(50% - 38px);
+    top: 120px;
+    width: 76px;height: 10px;
+    box-shadow: 66px 0 0 0 black,-66px 0 0 0 black;} */
+
+
+/* .ryan .ear{position: absolute;left: calc(50% - 45px);
+ top: -14px;width: 90px;height: 90px;border-radius: 50%;
+ background: blue;
+ box-shadow: 130px 0 0 0 #000,-130px 0 0 0 #000;}
+
+ .ryan .ear::after,.ryan .ear::before{content: "";
+position: absolute;left: calc(50% - 35px);top: 0px;width: 70px;height: 70px;background: red;border-radius: 50%;
+box-shadow: 130px 10px 0 0 #d5972a,-130px 10px 0 0 #d5972a;} */
+
+
+
+
+--------------------------------
+
+.nor_head .ear{position: absolute;left:-9px;top:-38px;
+      transform: translateX(-5px) rotate(-26deg);
+      width: 98px;height: 60px;
+      background: #fff;box-sizing: border-box;
+      border-radius: 50px 50px 0 0;
+      border: 6px solid #4e4741;border-bottom:none;
+    }
+
+    .nor_head .ear::after{content: "";position: absolute;left:0px;top:0px;
+      transform: translate(140px,70px) rotate(53deg);
+      width: 98px;height: 60px;background: #fff;
+      border-radius: 50px 50px 0 0;border: 6px solid #4e4741;box-sizing: border-box;} 
+
+
+----------------------------------------
+ .nor_head .lip{position:absolute;left: calc(50% - 25px);top: 30px;
+      width:50px;height: 40px;border-radius: 50%;
+      transform: translate(-14px);
+      border: 6px solid #4e4741;box-sizing: border-box;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-right-color: transparent;}
+    .nor_head .lip::after{content: "";position: absolute;
+    width:50px;height:40px;border-radius: 50%;
+    transform: translate(23px,-6px);
+    border: 6px solid #4e4741;box-sizing: border-box;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-right-color: transparent;}
+
+      
+    /* 딱 맞게가 아닌 border값이 들어가면서 위치가 딱 안맞음 그래서 border값을 left-top에 주기*/
+    /* 95-100귀를 반 잘라서 사용 높이 길게 해서 그리소 회전 시키고 완전한 동그란게 아니니 49% 정도로 하기 */

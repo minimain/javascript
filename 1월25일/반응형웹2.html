@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형웹 : Mostly Fluid</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    #wrap{width: 1000px;margin: 0 auto;}
+    #box_a{width: 100%;height: 400px;background: #f1779e;}
+    #box_b{float: left;width: 50%;height: 400px;background: #fcb354;}
+    #box_c{float: right;width: 50%;height: 400px;background: #24bbaf;}
+
+    @media screen and (max-width:1024px) {/*~ 해상도 1024 pc크기*/
+      #wrap{width: 90%;}
+    }
+    @media screen and (max-width:800px) { /* ~ 해상도800 tabile크기*/
+      #wrap{width: 100%;}
+    }
+    @media screen and (max-width:500px) {/*~ 해상도 500 mobile크기*/
+     #box_b,#box_c{float:none;width: 100%;}
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="box_a"></div>
+    <div id="box_b"></div>
+    <div id="box_c"></div>
+  </div>
+</body>
+</html>

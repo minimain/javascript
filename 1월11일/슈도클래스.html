@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pseudo-class 슈도 클래스</title>
+  <style>
+    li{float: left;margin-right:30px;list-style: none;font-size: 48px;font-family:Arial, Helvetica, sans-serif ;} 
+    /*float에 마진을 안하면 다닥다닥 붙는다*/
+    dl{clear:both;font-size: 50px;}
+    dl dt,dl dd{margin: 0;}
+
+    /* :nth-child() 항목중에서 n 번째 자식을 선택 */
+    li:nth-child(odd){color: red;}
+    /* odd : 홀수 */
+    li:nth-child(even){color: blue;}
+    /* even : 짝수 */
+    li:nth-child(3n){color: yellow;}
+    /* 3n(숫자n) : 3배수 */
+    li:nth-child(5){color: silver;}
+    /* (숫자) : 숫자에 적힌 번째 */
+    li:first-child{background: black;}
+    li:last-child{background: gray;}
+    /* 첫번째 와 마지막  */
+
+    /* :nth-last-child(n) 끝에서 n번째 자식을 선택 */
+    li:nth-last-child(1){color:orange}
+    /* 끝에서 첫번째 자식 선택 */
+
+    /* :empty 빈 항목 선택(텍스트, 공백 없어야함) */
+    li:empty{border: 1px solid red;padding:50px;}
+
+    /* 
+    :nth-of-type(n) 유형이 같은 n번째 선택
+    :nth-last-of-type(n) 끝에서 부터 세어서 유형이 같은 n번째 선택
+    :first-of-type 해당 유형의 첫번째 항목 선택
+    :last-of-type 해당 유형의 마지막 항목 선택
+
+    :only-child 유일한 자기 선택
+    :only-of-type 해당 유형의 유일한 항목 선택
+    */
+   dt:nth-child(3){background: yellow;}
+   dt:nth-of-type(2){color: red;} /*이게 더 직관적 이다*/
+
+   dd:nth-child(8){background: aqua;}
+   dd:nth-of-type(4){color: blue;}
+
+   dt:first-of-type{color: orange;}
+   dt:last-of-type{color: green;}
+
+  </style>
+</head>
+<body>
+  <ul>
+    <li> 1 </li>
+    <li> 2 </li>
+    <li> 3 </li>
+    <li> 4 </li>
+    <li> 5 </li>
+    <li> 6 </li>
+    <li> 7 </li>
+    <li></li>
+    <li> 9 </li>
+  </ul>
+  <dl>
+    <dt>dt</dt>
+    <dd>dd</dd>
+    <dt>dt</dt>
+    <dd>dd</dd>
+    <dt>dt</dt>
+    <dd>dd</dd>
+    <dt>dt</dt>
+    <dd>dd</dd>
+
+  </dl>
+</body>
+</html>

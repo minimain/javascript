@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ryan</title>
+  <style>
+    body{text-align: center; margin: 26px 30px;background: #313654;}
+    .ryan{position: relative;
+      display:inline-block;background: #d5972a;border: 7px solid black;height: 370px;width: 404px;
+     border-radius: 50%;
+     box-sizing: border-box;}
+
+/* 눈 */
+.ryan .ear{position: absolute;background: #d5972a;left:20px;top: -5px;
+  width: 90px;height: 90px;border-radius: 50%;border:7px solid black;}
+.ryan .ear::after{content: "";position: absolute;left: 250px;
+width: 90px;height: 90px;background: #d5972a;border: 7px solid black;border-radius: 50%;}
+
+/* 얼굴 */
+.ryan .face{position: relative;width: 100%;height:350px;background: #d5972a;border-radius: 50%;}
+
+/* 눈썹*/
+.ryan .eyebrows{position: absolute;left: calc(50% - 3px); top:120px;width: 10px;height: 10px;border-radius: 50%;
+box-shadow: -110px 0 0 0 #000,-40px 0 0 0 #000, 40px 0 0 0 #000, 110px 0 0 0 #000;}
+
+.ryan .eyebrows::before,.face .eyebrows::after{content: "";
+position: absolute;left: calc(50% - 35px);top: 0px;width: 70px;height: 10px;background: black;} /*색이 위에*/
+
+.ryan .eyebrows::before{margin-left: -75px;}
+.ryan .eyebrows::after{margin-left: 75px;}
+/* 눈 */
+.ryan .eyes{position: absolute;left: calc(50% - 13px);
+ top: 150px;width: 26px;height: 26px;border-radius: 50%;
+ box-shadow: 66px 0 0 0 #000,-66px 0 0 0 #000;}
+.eyes:hover{height: 2px;}
+/* 코 */
+.ryan .nose{position: absolute;left: calc(50% - 15px);top: 200px;
+width: 30px;height: 30px; background: black;
+border-radius: 50%;
+z-index: 3;}
+
+/* 입 */
+.ryan .mouth{position: absolute;left:140px;top: 210px;
+  width: 64px;height: 64px;border-radius: 50%;
+  background: white;border: 7px solid black;box-sizing: border-box;
+z-index: 2;}
+.ryan .mouth::after{content: "";position: absolute;left:40px;
+top: -7px;
+  width: 64px;height: 64px;border-radius: 50%;
+  background: white;border: 7px solid black;box-sizing: border-box;
+z-index: 1;}
+.ryan .mouth::before{content: "";position: absolute;left:40px;
+top:3px;
+  width: 30px;height: 39px;
+  background: white;box-sizing: border-box;
+z-index: 4;}
+
+
+
+
+ 
+
+
+  </style>
+</head>
+<body>
+  <!-- 라이언 사각형
+  귀는 두개
+페이스가 동그란거
+아이브로우가 두개
+아이즈가 두개
+노즈가 코 
+마우스는 두개원은 겹치는것 겹치는 부분을 사각형 박스를 올려서 중간선을 업생ㅁ
+마우스로 호버했을대 오른쪽눈은 찡긋 그리고 오른쪽 눈썹도 찡긋 왼쪽 눈썩 올라감 -->
+  <div class="ryan">
+  <div class="ear"></div>
+    <div class="face">
+      <div class="eyebrows"></div>
+      <div class="eyes"></div>
+      <div class="nose"></div>
+      <div class="mouth"></div>
+    </div>
+  </div>
+</body>
+</html>

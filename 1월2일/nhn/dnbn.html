@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사업영역</title>
+  <style>
+    body,div,h2,p,table,caption,thead,tfoot,tbody,tr,th,td{padding: 0;margin: 0;}
+    body{font-size: 12px;font-family: Dotum,"돋움",sans-serif;}
+    #content{width: 700px;margin: 20px auto;border: 1px solid red;}
+    #content .txt{margin: 10px 0;}
+    #content .unit{text-align: right;}
+    #content table{width: 100%;border-collapse: collapse;}
+    #content caption{text-indent: -9999px;overflow:hidden;}
+    #content th,#content td{border-bottom:1px solid gray;
+    padding: 7px 15px 7px 0;text-align: right;}
+    #content .line th{border-top: 3px solid gray;
+    border-bottom: 2px solid gray;}
+    #content .title{text-align: left;background-color: #ccc;padding-left: 15px;}
+
+  </style>
+  <!-- p태그는 가로가 기본이 10%이다 p태그안 인라인요소는 text-align정렬하면 된다 
+   #content caption{text-indent: -9999px;overflow:hidden;}공간은 그대로 있고 글자만 사라짐
+ #content table{width: 100%;}100%는 부모크기르 그대로 받겠다. 상속받겠다.
+border-collapse: collapse; 는 끊어진 선을 이어서 보여지게한다. -->
+</head>
+
+<body>
+  <div id="content">
+    <h2>사업영역</h2>
+    <p class="txt">NHN은 안정적인 수익 모델을 발굴하고 이를 성공적으로 시장에 정착시켜 국내 최고의 순익률을 자랑하는 인터넷 기업으로 성장하고 있습니다.</p>
+    <p class="unit">단어 : 억원</p>
+    
+    <table>
+      <caption>사업영역별 매출성장</caption>
+    <thead>
+      <tr class="line">
+        <th scope="col" class="title">사업영역</th>
+        <th scope="col">2001</th>
+        <th scope="col">2002</th>
+        <th scope="col">2003</th>
+        <th scope="col">2004</th>
+        <th scope="col">2005</th>
+        <th scope="col">2006</th>
+        <th scope="col">2007</th>
+        <th scope="col">2008</th>
+        <th scope="col">2009</th>
+      </tr>
+    </thead>
+    <tfoot></tfoot>
+    <tbody>
+      <tr>
+        <th scope="row" class="title">검색</th>
+        <td>23</td>
+        <td>23</td>
+        <td>23</td>
+        <td>23</td>
+        <td>23</td>
+        <td>23</td>
+        <td>23</td>
+        <td>23</td>
+        <td>23</td>
+      </tr>
+      <tr>
+        <th scope="row" class="title">게임</th>
+        <td>23</td>
+        <td>23</td>
+        <td>23</td>
+        <td>23</td>
+        <td>23</td>
+        <td>23</td>
+        <td>23</td>
+        <td>23</td>
+        <td>23</td>
+      </tr>
+      <tr>
+        <th scope="row" class="title">디스플레이 광고</th>
+        <td>23</td>
+        <td>23</td>
+        <td>23</td>
+        <td>23</td>
+        <td>23</td>
+        <td>23</td>
+        <td>23</td>
+        <td>23</td>
+        <td>23</td>
+      </tr>
+      <tr>
+        <th scope="row" class="title">전자상거래</th>
+        <td>10</td>
+        <td>45</td>
+        <td>62</td>
+        <td>109</td>
+        <td>233</td>
+        <td>401</td>
+        <td>23</td>
+        <td>23</td>
+        <td>23</td>
+      </tr>
+     </tbody>
+    </table>
+  </div>
+</body>
+</html>

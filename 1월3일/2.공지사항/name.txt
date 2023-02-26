@@ -1,0 +1,17 @@
+<div class="board_view">
+
+  <div class="notice">
+     <h3>
+     <ul>
+
+  <div class="broadcast">
+
+     <div class="report">
+       <h3>
+       <ul>
+       <p class="more">
+
+     <div class="explain">
+       <h3>
+       <ul>
+       <p class="more">

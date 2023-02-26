@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nav3</title>
+
+<style>
+  body,ul,li{margin: 0;padding: 0;}
+  ul{list-style: none;}
+  body{font-size: 14px;font-weight: bold;font-family: "굴림"; line-height: 40px;}
+
+  nav>ul{position: relative;
+    width: 500px;height: 160px;margin: 30px;background: #39f;border-radius: 10px;}
+
+  nav>ul>li{margin-left: 300px;}
+  nav>ul>li>a{display: block;color: #fff;text-decoration: none;text-shadow: 1px 1px 1px #880000;background: #39f;
+    padding: 0 30px; transition: background 1s ease 0s;}
+  /* nav>ul>li:hover>a{background: #36f;} */
+  nav>ul>li:hover>a,nav>ul>li.on>a{background: #36f;}
+  
+  nav>ul>li:first-child>a{border-radius: 0 10px 0 0;}
+  nav>ul>li:last-child>a{border-radius: 0 0 10px 0;}
+
+  nav>ul>li>ul{display: none;
+    position: absolute;left: 0;top: 0;
+  width: 260px;height: 160px;background: #33f;
+  padding: 0 20px;border-radius: 10px 0 0 10px;}
+  nav>ul>li:hover>ul,nav>ul>li.on>ul{display: block;}
+  /* nav>ul>li:hover>ul{display: block;} */
+
+  nav>ul>li>ul>li>a{color: #fff;text-decoration: none;
+  text-shadow: 1px 1px 1px #880000;}
+
+  /* nav>ul{position:relative;
+    width: 500px; height: 200px; background: #36f;margin: 0 auto;border-radius: 10px;}
+  nav>ul>li{padding:20px;}
+  nav>ul>li>a{display: block;text-decoration: none;position:absolute;right: 0;padding-right: 100px;}
+
+  nav>ul>li>ul>li>a{display: block;position:absolute;left:0;top: 20px;text-decoration: none;} */
+
+</style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="on"><a href="#">HOME</a>
+      <ul>
+        <li><a href="#">HOME</a></li>
+      </ul>
+      </li>
+      <li><a href="#"> 웹 개발 </a>
+        <ul>
+        <li><a href="#"> 웹 디자인</a></li>
+        <li><a href="#"> HTML5 + CSS3 </a></li>
+        <li><a href="#">JQuery</a></li>
+        <li><a href="#">웹 + 모바일</a></li>
+        </ul>
+      </li>
+      <li><a href="#"> 게시판 </a>
+         <ul>
+         <li><a href="#">Q & A</a></li>
+         <li><a href="#">방명록</a></li>
+         </ul>
+      </li>
+      <li><a href="#"> 프로필 </a>
+      <ul>
+        <li><a href="#">프로필</a></li>
+      </ul>
+    </li>
+    </ul>
+  </nav>
+</body>
+</html>

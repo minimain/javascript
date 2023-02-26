@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>태극기/달</title>
+  <style>
+ul{list-style: none;}
+li{width: 200px;height: 200px;text-indent: -9999px;overflow: hidden;}
+
+.Korean{position: relative;border: 1px solid red;}
+.Korean>.c1{height: 100px;background-color: red;
+  border-radius: 100px 100px 0 0;}
+.Korean>.c2{height: 100px;background-color: blue;
+  border-radius:0 0 100px 100px;}
+.Korean>.c3{position: absolute;left: 40px;top: 48px;
+  height: 100px;width: 100px;background-color: red;border-radius: 50px;}
+.Korean>.c4{position: absolute;left: 140px;top: 48px;
+  height: 100px;width: 100px;background-color:blue;border-radius: 50px;}
+
+.moon{position: relative;background-color: black;width: 400px;height: 300px;}
+.moon>.moon1{position: absolute;top: 50px;
+  background-color: yellow;border-radius:100px ;
+}  
+.moon>.moon2{position: absolute;left: 100px;top: 20px;
+  background-color: black;border-radius: 100px;}
+
+/* body,ul,li{padding:0; margin:0}
+ul,li{list-style: none;text-indent: -9999px;overflow: hidden;}
+ul{position: relative;}
+.Korean{width: 200px;height: 200px;margin: 20px;border: 1px solid red;}
+.c1{height: 100px; border-radius: 100px 100px 0 0; background-color: red;}
+.c2{height: 100px;border-radius: 0 0 100px 100px;background-color: blue;}
+.c3{position: absolute;left:0px;top:50px;height: 100px;width: 100px;border-radius: 100px;background-color: red;}
+.c4{position: absolute;right:0px;top:50px;height: 100px;width: 100px;border-radius: 100px;background-color: blue;}
+
+.moon{position: relative; background-color: #000;width: 500px;height: 250px;}
+  .moon1{height: 200px;width: 200px; background-color: yellow; border-radius:100px;}
+  .moon2{height: 200px;width: 200px; background-color: black; border-radius:100px;
+  position: absolute;left: 50px; top: 0;} */
+
+  </style>
+
+</head>
+<body>
+  <!-- 반원 2, 1/2크기 원 2 -->
+<ul class="Korean">
+  <li class="c1">태극기</li>
+  <li class="c2">태극기</li>
+  <li class="c3">태극기</li>
+  <li class="c4">태극기</li>
+</ul>
+<ul class="moon">까만색 박스
+  <li class="moon1">초승달</li>
+  <li class="moon2">초승달</li> 
+</ul>
+<!-- .moon{width: 500px;height: 200px;background-color: black;}
+.mopn1{position:absolute;width: 100px;height: 100px;border-radius: 100px;background-color: yellow;}  -->
+</body>
+
+</html>

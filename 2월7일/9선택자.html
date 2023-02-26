@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선택자</title>
+  <style>
+    #box{width: 200px;height: 200px;background-color: aqua;border: 5px solid #000;transform: rotate(0deg);}
+  </style>
+  <script defer src="js/selector.js"></script>
+</head>
+
+<body>
+  <!-- body에서도 script 가능 -->
+  <h1 id="title">TITLE</h1>
+  <section id="wrap">
+    <article class="box1">TEXT1</article>
+    <article class="box2">TEXT2</article>
+    <article class="box3">TEXT3</article>
+  </section>
+  <script> 
+    const title = document.querySelector("#title");
+    // id title을 선택해서 title이라는 변수에 저장해라 | 끝에 사용
+    console.log(title);
+    // body내부에 하게 되면 html 부터 읽고 올라가야하는걸 내부에 적으면 차례대로 읽히게 됨
+  </script>
+  <ul class="list">
+    <li class="item1">item1</li>
+    <li class="item2">item2</li>
+    <li class="item3">item3</li>
+    <li class="item4">item4</li>
+  </ul>
+  <main class="parent">
+    <section>
+      <article>
+        <ul>
+          <li class="li">list</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  <main></main>
+  
+  <article id="box"></article>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body,div,h3,ul,li,p{padding: 0;margin: 0;}
+    body{font-size: 12px;font-family: Dotum,"돋움",sans-serif;}
+    ul,li{list-style: none;}
+    a{text-decoration: none;color: black;}
+    a:hover{text-decoration: underline;color: red;}
+    /* 공지사항 */
+    .board_view{width: 550px;margin:20px auto;background: yellow;}
+    .board_view li{background: url(images/blet_dot.gif) no-repeat 0 50%;padding-left: 10px;line-height: 20px;}
+
+    .notice{width: 550px;background: aqua;padding-bottom: 20px;}
+    .notice::after{content:"";display: block;clear: both;}
+    .notice>h3{float: left;width: 144px;}
+    .notice>ul{float: right;width: 350px;}
+
+    .broadcast{width: 550px;background: orange;}
+    .broadcast::after{content:"";display: block;clear: both;}
+    .broadcast h3{border-bottom: 1px solid #ddd;padding-bottom: 10px;margin-bottom: 10px;}
+    .broadcast>.report{position:relative;float:left;width: 240px;border:1px solid;}
+    .broadcast>.explain{position:relative;float:right;width: 240px;border: 1px solid;}
+
+    .broadcast .more{position: absolute;right: 0;top: 0;}
+
+
+
+
+    /* .board_view>.notice{width: 540px;height: auto;}
+    .board_view>.notice>h3{float: left;;width:150px;background: url(images/notice.gif) no-repeat 0 0;text-indent: -9999px;overflow: hidden;}
+    .board_view>.notice>ul>li{float: right;width: 330px; line-height: 1.5;text-indent:10px;background: url(images/blet_dot.gif) no-repeat 1px;}
+     
+    .board_view:after{content:"";display:block;clear: both;}
+    .board_view>.broadcast>.report>h3{float:left;width: 240px;margin:auto 0;padding: 5px;border-bottom: 1px solid gray ;}
+    .board_view>.report>ul>li{float:left;width: 240px;}
+    .board_view>.broadcast>.explain>h3{float: right;width: 240px;
+    margin: auto 0;padding: 5px;border-bottom: 1px solid gray;}
+    .board_view>.broadcast>.explain>ul>li{float: right;width: 240px;}  */
+
+    /* .board_view>.broadcast>.report>ul>li{float:left;width: 240px;}
+    .board_view>.explain{float:right; width: 240px;} */
+
+    
+
+  </style>
+</head>
+<body>
+  <div class="board_view">
+    <div class="notice">
+       <h3><img src="images/notice.gif"alt="공지사항 이미지"></h3>
+       <ul>
+        <li><a href="#">[안내] 장애인 도서관 서비스 통신요금 바우처제도 참여...</a></li>
+        <li> <a href="#">[안내] '제5회 부산 장애인 미디어 축제' 화면해설...</a></li>
+        <li><a href="#">[안내] 2020년 보조기기 시연회 안내</a></li>
+        <li> <a href="#">[안내] 제3회 전국 시각장애인 어울림 걷기대회...</a></li>
+        <li><a href="#">[안내] 2020년 장애인 정보통신 보조기기 신청...</a></li>
+       </ul>
+    </div>
+  
+    <div class="broadcast">
+  <!-- 가로크기 240 hover빨간색 밑줄-->
+       <div class="report">
+         <h3><a href="#"><img src="images/title_1.gif" alt="보도자료및성명서"></a></h3>
+         <ul>
+          <li><a href="#">[보도자료] 장애인과 비장애인이...</a><li>
+          <li><a href="#">[성명서] 한국장애인고용공단은 장...</a></li>
+          <li><a href="#"> [성명서] 장애인고용공단 양경자...</a></li>
+          <li><a href="#">[보도자료] 한국시각장애인스포츠연...</a></li>
+          <li><a href="#">[보도자료] 시작장애인 엄마, 자...</a></li>
+         </ul>
+         <p class="more"><a href="#"><img src="images/all.gif" alt="보도자료 및 성명서 전체보기"></a></p>
+       </div>
+  
+       <div class="explain">
+         <h3><a href="#"><img src="images/title_2.gif" alt="화면해설방송"></a></h3>
+         <ul>
+          <li><a href="#"> [편성표] 6월 5주 화면해설방송 안...</a></li>
+          <li><a href="#">[편성표] 6월 4주 화면해설방송 안...</a></li>
+          <li><a href="#"> [편성표] 화면해설방송 안내 6월 14...</a></li>
+          <li><a href="#"> [편성표] 6월 2주 화면해설방송 안...</a></li>
+          <li><a href="#">[편성표] 6월 1주 화면해설방송 안...</a></li>
+         </ul>
+         <p class="more"><a href="#"><img src="images/all.gif" alt="화면해설방송 전체보기"></a></p>
+       </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제어문</title>
+  <script>
+// 조건문 if 만약 ~ 라면
+
+    /* 
+    if(조건식){
+      실행문;
+    }
+    */
+  //  조건문: 안에가 true면 실행문을 실행한다. | false가 되면 실행문이 실행이 되지않는다.
+    var myAge= 25;
+
+    if(myAge >= 20){
+      document.write("당신은 성인입니다." + "<br/>");
+    }
+
+    // 문제: prompt를 이용해서 시험점수를 입력받고, if문 사용 70전 이상이면 "합격" 메세지 출력
+    var score=Number(prompt("시험점수를 입력하세요"));
+    
+    if(score >=70){
+      document.write("합격" + "<br/>");
+    }
+    // 숫자니까 Number()감싸주는거 까먹지말기
+
+// if ~ else문
+    /*if ~ else문
+    if(조건식){
+      실행문1;
+    }else{
+      실행문2;
+    }
+    */
+    // 실행문1:true ,실행문2:false
+    // prompt를 이용해서 나이를 입력받고,
+    // 나이가 20세이상이고, 30세미만일 경우 "통과", 그외는 "비통과"
+
+    var myAge = Number(prompt("당신의 나이는?"));
+
+    if(myAge >=20 && myAge < 30){
+      document.write("통과");
+    }else{
+      document.write("비통과");
+    }
+    // 20~29까지 통과 | ~19,30~ 은 비통과 | &&논리곱으로 하나만 false여도 false로 결과가 나온다. 
+
+//결과값1개는 if문 | 결과값2개는 if~else
+
+
+// 
+/*if ~ else if문
+    if(조건식){
+      실행문1;
+    }else if(조건식2){
+      실행문2;
+    }else if(조건식3){
+      실행문3;
+    }else if(조건식4){
+      실행문4;
+    }else(조건식5){
+      실행문5;
+    }
+실행문이 여러개이면 else if가 늘어나고 끝에는 else로 마무리
+    */
+  //  prompt를 이용해서 시험점수를 입력받고 
+  // 학점90점이상 A학점, 80점이상 B학점, 70점이상 C학점,60점 이상 D학점, 60점 미만 F학점
+
+  var score_t=Number(prompt("학점을 입력해주세요."));
+
+  if(score_t >= 90){
+    document.write("A학점");
+  }else if(score_t >= 80){
+    document.write("B학점");
+  }else if(score_t >=70 ){
+    document.write("C학점");
+  }else if(score_t >= 60){
+    document.write("D학점");
+  }else{
+    document.write("F학점")
+  }
+
+// ?여기서 마지막else에 조건식을 쓰면 이상하게 안나옴,, 계속 ;를 쓰라고 뜸
+
+/*
+switch ~ case문 , 지정한 변수에 저장된 데이터와 정확히 일치하는 경우 case
+
+num = 300;
+
+switch(num){
+  case 100;
+    실행문1;
+    break;
+  case 200;
+    실행문2;
+    break;
+  case 300;
+    실행문3;
+    break;
+  default;
+    실행문4;
+    break;
+}
+
+num의값이 300을 원하고 300을 찾았을때 실행문3이 발동되면서 break로 깨고 나옴 , break를 설정하지 않으면 다음 실행문이 계속 실행된다. | 그리고 num의 값이 만약 500이라면 저기서 500은 없으니 default의 실행문4가 발동된다. |if문은 범위가 넓고 case는 정확한값
+
+*/
+
+
+// prompt로 지역을 입력하세요 , 서울 02, 경기 031, 부산 051, 등록되지 않은 지역입니다.
+
+// ?이거 다시 작성하기 그리고 변형해서 입력해보기
+
+var area = prompt("지역을 입력해주세요");
+switch(area){
+  case "서울":
+  document.write(area + "지역번호 02");
+  // area + "지역번호 02"
+  break;
+  case "경기":
+  document.write("031");
+  break;
+  case "부산":
+  document.write("051");
+  break;
+  default:
+  document.write("등록되지않은 지역입니다");
+  break;
+}
+// document.write를 계속 반복하지 말고 switch가 다 끝나고 들어가게 한다. 
+
+var area = prompt("지역을 입력해주세요");
+switch(area){
+  case "서울":
+   areaNum= 02;
+  // area + "지역번호 02"
+  break;
+  case "경기":
+  areaNum= 031;
+  break;
+  case "부산":
+  areaNum= 051;
+  break;
+  default:
+   alert="등록되지않은 지역입니다";
+  break;
+}
+
+document.write(area + "지역번호" + areaNum + "입니다" + "<br/>")
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

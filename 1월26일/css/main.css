@@ -1,0 +1,166 @@
+@charset "utf-8";
+/* main.css */
+
+/* rest */
+*{margin: 0;padding: 0;}
+ol,ul{list-style: none;}
+a{text-decoration: none;color: #bbb;}
+
+/* 가로세로 스크롤이 없이 (position:fixed) */
+body{position: fixed;width: 100%;height: 100%;background: #111;}
+
+/* 배경동영상 */
+/* figurar도 화면에 가득 차야함 | 1600부터 줄어들지 않음 (최소크기)*/
+figure{position: fixed;left: 0;top: 0;width:100%;height:100%;opacity: 0.9;}
+figure video{width: 100%; min-width: 1600px;} /**/
+
+/* 로고 */
+h1{position: fixed;z-index: 10;left: 40px;top: 40px;}
+h1 img{width: 280px;}
+
+/* z-index 어디에 먹히는지 */
+
+/* sns 버튼 모음 */
+.sns{position: fixed;right: 50px;top: 60px;}
+.sns li{float: left;margin-right: 30px;font-size: 25px;opacity: 0.5;transform: scale(1);
+transition: all 0.5s ease 0s;}
+.sns li a{color: #b9fb05;}
+
+.sns li:hover{opacity: 1;transform: scale(1.4);}
+
+/* nav box */
+/* 사선 모양 */
+nav{position: fixed;left: -420px;top: 0;width:700px;height:100%;
+  background: linear-gradient(-45deg,#e6fc55,#b9fb05,#97e031);
+transform: skewX(-40deg);}
+/* left: 사각형의 왼쪽이 0으로 시작 (나가야해서 - ) | 사각형 크기 잡기 | 높이는 body크기 | 가로로 비트는것 -40은 왼쪽으로 나가는 비틀기 | 형광부분  */
+
+nav > ul{border: 1px solid red;}
+/* */
+
+/* 주메뉴 */
+/* nav를 기준 */
+ul.gnb{position: absolute;right: 0;top: 150px;width: 220px;}
+/* ul의 클래스라서 붙여서 사용 | 떼어냄 | gnb의 크기 잡음 | nav부모(형광) 이 비틀어져서 얘도 비틀어져서 나옴 | 위치와 border의 크기 잡음 ㅇ여기서 높이는 안에 들은 LI의 크기만큼만 늘어남*/
+
+ul.gnb > li{position: relative;}
+/* ?? */
+
+
+ul.gnb > li >a{display: block;width: 220px;height: 50px;
+  color: #222;font-family: 'play', sans-serif;font-size: 18px;font-weight: bold;text-align: right;
+  padding-right: 40px;box-sizing: border-box;line-height: 50px;}
+/* a block 해주기 | width gnb 크기로 잡고 높이도 잡아줌 안잡으면 li가 하나로 합쳐짐 
+여기서 border높이 50이 설정됨*/
+
+ul.gnb > li:hover > a{background: #111;color: #fff;}
+
+  /* 각각의 li를 기준으로 하위ul이 나옴 분리해주기 
+  그리고 li에 position:relative 기준잡기*/
+ul.gnb > li > ul{opacity: 0;position: absolute;left: 0;top: 0;
+transition: all 0.4s ease 0s;}
+ul.gnb > li:hover > ul{opacity: 0.8;left: 205px;}
+
+ul.gnb > li > ul >li > a{display: block;width: 150px;height: 40px;
+  background: #222;color: #fff;
+border-bottom: 1px solid #b9fb05;margin-bottom: 3px;padding-left: 50px;box-sizing: border-box;line-height: 40px;font-weight: bold;font-size: 16px;font-family: arial;}
+
+ul.gnb >li:first-child > ul{opacity: 0.8;left: 205px;top: -10px;}
+
+/* em은 inline요소라서 모양 안잡힘 그로니 block하기 */
+/* !important : 최우선순위 1000점 | 속성값에 지정 | 앞에 순서 상관없이*/
+ul.gnb em{display: inline-block;transform: skewX(40deg) !important;}
+
+
+
+/* 웹폰트 텍스트박스 */
+section.txtBox{position:fixed;top: 200px;right: 70px;width: 340px;height: 280px;}
+
+p.title{position: absolute;right: 0;top: 0;font-family: 'Monoton',cursive;font-size: 160px;color: #b9fb05;
+letter-spacing: -1px;}
+p.title em{font-family: 'play',sans-serif;font-size: 50px;color: #fff;}
+
+p.txt{position: absolute;right: 0;top: 200px;font-family: 'play',sans-serif;font-size: 34px;color: #bbb;
+letter-spacing: -2px;}
+p.txt b{margin-left: 20px;color: #b9fb05;font-weight: bold;font-family: arial;}
+
+
+/* 하단 컨텐츠박스 */
+section.side{position: fixed;right: -800px;bottom: 0;
+  width: 800px;height: 100%;
+  background: #111;opacity: 0.5;
+transform: skewX(-40deg);
+transition: all 0.5s ease 0s;}
+section.side:hover{right: -500px;opacity: 0.8;}
+
+section.side > div.cont{position: absolute;left: 150px;bottom: 0;
+  width: 400px;height: 100%;
+  background: #000;
+transition: all 1s ease 0s;} /*늦게 도착하는 transition 시간 차이*/
+section.side:hover > div.cont{left: 50px;}
+
+div.cont > p{position: absolute;left:50px;bottom: 50px;width: 300px;height: 100px;}
+div.cont > p:first-of-type{bottom: 270px;transform: translateX(200px);
+transition: all 0.4s ease 0s;}
+div.cont > p:nth-of-type(2){bottom: 160px;transform: translateX(200px);
+  transition: all 0.8s ease 0s;}
+div.cont > p:last-of-type{bottom: 50px;transform: translateX(200px);
+  transition: all 1.2s ease 0s;}
+section.side:hover > div.cont >p{transform: translateX(0);}
+
+div.cont > p > em{display: inline-block;color: #a0bd50;font-size: 16px;line-height: 1.7;font-family: arial;font-weight: bold;
+transform: skewX(40deg) !important;}
+
+div.cont > p > a > img{width: 300px;height: 70px;opacity: 0.3;transition: all 0.5s ease 0s;}
+div.cont > p > a > img:hover{opacity: 1;}
+/* positon left,right로 내보내는 방법 | transition으로 내보내는 방법 */
+
+/* <<<<<<자동롤링 버튼 */
+/* hover하지 않아도 자동으로 움직임 애니메이션 */
+div.btnCont{position: absolute;left: 100px;bottom: 40px;width: 150px;height: 50px;color: #b9fb05;
+transform: skewX(40deg);}
+section.side:hover > div.btnCont{left:700px;}
+
+/* <<<<<< */
+/* position:absolute 하면 하나로 겹쳐지 있음 */
+div.btnCont span{font-size: 60px;position: absolute;right:0 ;bottom: 0;opacity: 1;}
+
+div.btnCont span:first-of-type{animation: ani 1.5s linear 0s infinite;}
+div.btnCont span:nth-child(2){animation: ani 1.5s linear 0.5s infinite;}
+div.btnCont span:last-of-type{animation: ani 1.5s linear 1.0s infinite;}
+
+/* 딜레이시간이 다른것, 먼저 나오고  */
+@keyframes ani {
+  0%{right: 0;opacity: 1;transform: scale(1);}
+  100%{right: 100px;opacity: 0;transform: scale(1.5);}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* section.side{position: fixed;right: -600px;bottom: -40%;
+  width:800px;height: 100%;transform: skewX(-40deg);
+background: black;opacity: 0.5;}
+section.side > div.cont{position:absolute;right: 300px;bottom: 20px;
+  width:400px;height: 100%;
+background: gray;}
+
+section.side:hover{transform: skew(-40deg) translateX(-100px);} */
+
+/* section.side .cont img{position: absolute;width: 298px;height: 80px;transform: scale(1);} */
+
+
+
+
+

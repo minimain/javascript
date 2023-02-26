@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수2</title>
+  <script>
+/*
+하나의 함수만 호출하는데 전달하는 인자값이 하나? 매개변수 하나만 있으면 됨 | 배열중에 랜덤으로 하나가 나오게 alert창으로 | 
+
+문제 2. 당신은 자바스크립트를 너무 좋아하십니까?
+네~ :"정말 멋집니다요!", "지금처럼 열심히~", "Good입니다" 중
+아니오: "그만 놀아요ㅠㅠ", "분발하세요>.<", "재미없어요ㅋㅋㅋ"중
+랜덤으로 하나가 알림창에 출력
+*/
+var ys=["정말 멋집니다요!", "지금처럼 열심히~", "Good입니다"];
+var nob=["그만 놀아요ㅠㅠ", "분발하세요>.<", "재미없어요ㅋㅋㅋ"];
+
+function iLoveJS(on){
+  if(on == 'yes'){
+    var selc=Math.floor(Math.random()*3+0);
+    alert(ys[selc]);
+  }else{
+    var noo = Math.floor(Math.random()*3+0);
+    alert(nob[noo]);
+  }  
+  return false;
+}
+
+// 선생님은 Math의 변수 이름을 두개를 같게 함 왜..? return false; 잊지말기 함수끝
+
+  </script>
+</head>
+<body>
+  <h1>당신은 자바스크립트를 좋아하십니까?</h1>
+  <button onclick="iLoveJS('yes');">..네..</button>
+  <button onclick="iLoveJS('no');">.아니오.</button>
+</body>
+</html>

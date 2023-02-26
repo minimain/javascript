@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@font-face 웹폰트</title>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+   @font-face {
+    font-family: roboto;
+    src: url(Roboto/Roboto-Regular.ttf);
+   }
+   @font-face {
+    font-family: NoToSansKR;
+    src: url(Noto_Sans_KR/NotoSansKR-Regular.otf);
+   }
+   @font-face {
+    font-family: merry;
+    src: url(merry_christmas/MerryChristmasFlake.ttf);
+   }
+   @font-face {
+    font-family: kuromi;
+    src: url(Kuromidingbats.ttf);
+   }
+
+   /*  @font-face {
+    font-family: NoToSansKR;
+    src: url(Noto_Sans_KR/NotoSansKR-Thin.otf);
+    글꼴을 적용시키는 웹폰트인데 font-family 옆에 noto sans korean은 적용시킬 이름이다. 밑에 font-family에 넣으면 적용가능
+    |  */
+   .text1{font-family: roboto;}
+   .text1_1{font-family: 'Indie Flower', cursive;}
+   .text3{font-family: 'Dancing Script', cursive;}
+   .text3_1{font-family: kuromi;font-size: 100px;}
+   .text4_1{font-family: NoToSansKR;}
+   .text4{font-family: 'Nanum Gothic', sans-serif;}
+   .text5_1{font-family: 'Indie Flower', cursive;}
+   .text2{font-family: merry;}
+   
+  
+   /* 구글 폰트는 구글에 있는 폰트를 끌어다 쓰는것 */
+  </style>
+</head>
+<body>
+  <!-- 각 클라이언트가 폰트가 없어도 웹폰트가 자동으로 다운로드 되어 사용가능 @font-face 
+    ftp에 폰트를 업로드를 해줘야 적용 가능 (구글에 있는건)
+  Ronoto는 안드로이드 기본 폰트
+Noto Sans Korean은 웹 기본 폰트-->
+  <div class="marmal_text">ABCDEF</div>
+  <div class="text1">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+  <div class="text1_1">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+  <div class="text2">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+  <div class="text3">abcdefghijklmnopqrstuvwxyz</div>
+  <div class="text3_1">abcdefghijklmnopqrstuvwxyz</div>
+  <div class="text4">나눔고딕이 적용됩니다.</div>
+  <div class="text4_1">노토난스 적용 됩니다</div>
+  <div class="text5">나눔고딕이 아닙니다. 제주한라산 입니다</div>
+  <div class="text5_1">우리말 좋은말 사용해요</div>
+  <div class="text6">Merry Christmas</div>
+  <div class="text7">Merry Christmas</div>
+</body>
+</html>

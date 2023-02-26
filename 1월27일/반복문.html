@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반복문</title>
+  <script>
+    /*
+    while문 - 특정 조건을 만족하는 동안 실행문을 반복적으로 수행
+
+    var i=초기값;
+    while(조건식){
+      실행문;
+      증감식;
+    }
+
+처음에 일단 변수 하나를 만들어서 초기값을 지정한다. 참이면 실행문이 실행되고 증감식이 실행된다. (증감식은 반드시 있어야한다.) 그리고 반복 조건이 맞는동안은 계속해서 실행이되고 거짓이 되면 멈춘다.
+    */
+// 1부터 9까지 오름차순
+    var i=1;
+    while(i<10){
+      document.write(i + "<br/>");
+      i++;
+    }
+
+// 10부터 1까지 내림차순으로 2의 배수만 출력
+    var h=10;
+    while(h>0){
+      if(h%2==0){
+      document.write(h + "<br/>");}
+      h--;
+    }
+
+    // h를 2로 나눈 값이 나머지 값이 0이랑 같으면 
+    // 10에서 2를 나누면 5로 나뉘고 나머지 0 이니 10이 찍히고 
+  //  8에서 2로 나누면 4로 나뉘고 나머지가 0 이니 8이 찍힘
+  // 나머지가 0이 아니면 출력이 안됨
+
+
+
+  // 1부터 100까지 오름차순으로 3의 배수만 출력 3~99
+  var j=1;
+  while(j<101){
+    if(j%3 == 0){
+      document.write(j + "<br/>")
+    }
+      j++;
+  }
+
+
+
+  /*
+  for문
+  for(var k=초기값 ; 조건식 ; 증감식){
+    실행문;
+  }
+
+  반복문 | while문과 비슷 | 괄호 안에서 다 해결가능
+  */
+//  1,2,3,4,5,6,7,8,9,10
+
+for(var k=1;k<=10;k++){
+  document.write(k + "<br/>");
+}
+// k는 1이고 k는 10보다 작다 k가 증감식으로 가서 ++ 그리고 화면에 출력 |조건이 안맞으면 for문 탈출
+
+
+
+// 10부터 1까지 내림차순으로 2의 배수만 출력
+for(var g=10;g>0;g--){
+  if(g%2==0){
+  document.write(g + "<br/>");
+  }
+}
+  // 저저 크거나 같거나 하는거 잘 보자...
+// for문은 주로 밑에처럼 반복
+/*
+h6즐거운 금요일!!
+h5즐거운 금요일!!
+h4즐거운 금요일!!
+h3즐거운 금요일!!
+h2즐거운 금요일!!
+h1즐거운 금요일!!
+*/
+
+for(var h=6;h>0;h--){
+  document.write("h" + h + "즐거운 금요일!!" + "<br/>");
+}
+
+// 초기값
+
+/*<h1>h1 즐거운 금요일!!<h1>
+  <h2>h2 즐거운 금요일!!<h2>
+  <h3>h3 즐거운 금요일!!<h3>
+  <h4>h4 즐거운 금요일!!<h4>
+  <h5>h5 즐거운 금요일!!<h5>
+  <h6>h6 즐거운 금요일!!<h6>
+  */
+
+  for(var i=1;i<6;i++){
+    document.write("<h"+ i + ">h" + i + "즐거운 금요일!!</h" + i + ">");
+  }
+  // 태그로 들어간다 (화면에 출력이) 문자열이라 출력이 되는건감..
+
+
+  // "<img src='images2/quick01_0.png' alt='0' />
+  // quick01_0.png ~quick01_19.png
+
+  for(var img=0;img<20;img++){
+     document.write("<img src='images2/quick01_" + img + ".png' alt='" +img + "' />");
+  }
+
+  // 밖에 큰따옴표로 했다면 안에는 작은 따옴표를 해주어야한다.
+  // 밖과 안이 따옴표가 같다면 따옴표의 범위가 작아진다 (섞임)
+  // 띄어쓰기 주의
+
+  // 구구단
+
+  /*
+  2단
+  2x1=2
+  2x2=4
+  2x3=6
+  2x4=8
+  2x5=10
+  2x6=12
+  2x7=14
+  ...
+
+  ----------
+  3단
+  3x1=3
+  
+  
+  
+  */
+
+  for(var an=0;an<10;an++){
+    document.write("2x" + an + "=" + an*2 + "<br/>")
+    }
+
+// 중첩 for문
+  for(var k=2;k<10;k++){//2단~9단
+    document.write("<h1>" + k +"단</h1>");
+      for(var j=1;j<10;j++){//1~9 곱하기
+        document.write(k +"x" + j +"=" + k*j + "<br/>")
+      }
+  }
+
+  // k단이 입력이되고 밑으로 내려고 j값이 돌아간다. 그럼 j가 끝나면 k로 다시 올라간다. 이것을 계속 반복한다.k가 끝날때 까지
+
+  // break문 - 해당 반복문을 종료
+  for(var i=1;i<11;i++){
+    document.write(i + "<br/>");
+    if(i==5) break;
+  }
+// ? 이거 왜 1부터 시작안하지 원래 그런거였나,,,
+  //실행문이 하나만 있을경우 한줄 } 생략 가능
+
+  // continue문 - 반복문이 continue문을 만나면 더이상 실행문을 수행하지 않고 증감식으로 돌아가서 실행문 반복한다.
+  // 증감식으로 계속 가는것
+  for(var i=1;i<11;i++){
+    if(i%2==1) continue;
+    document.write(i + "<br/>");
+  }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

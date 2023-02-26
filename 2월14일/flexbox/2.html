@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>flexbox_2</title>
+<style>
+*{margin:0;padding:0;list-style:none;}    
+ul{display: flex;flex-direction: row;flex-wrap:wrap;flex-flow:column wrap;align-content:space-around;border:1px solid red;height: 500px;}
+/*  플랙스항목을 한줄 또는 여러 줄로 배치
+	flex-wrap:nowrap 기본값, wrap, wrap-reverse */
+
+/*  플랙스 배치방향(flex-direction)과 여러줄 배치(flex-wrap)를 한꺼번에 지정
+	flex-flow:row nowrap 기본값, row wrap, column wrap, column nowrap */
+
+/*  플랙스 항목이 여러줄로 표시될때 교차죽 기준의 배치 방법 지정
+	align-content:flex-start 기본값, flex-end, center,space-between, space-around */
+
+li{width:100px;height:100px;background-color:aqua;margin:8px;} 
+</style>
+</head>
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+  </ul> 
+</body>
+</html>

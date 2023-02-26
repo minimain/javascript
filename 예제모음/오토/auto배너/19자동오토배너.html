@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자동 auto 배너</title>
+  <style>
+    *{padding: 0;margin: 0;}
+    ul{list-style-type: none;}
+    img{border: none;vertical-align: top;}
+    .galleryZone{width: 400px;margin: 0 auto;background: #000;}
+    .galleryZone ul{width: 100%;padding: 5px 0;}
+    .galleryZone ul li{float: left;width: 100px;text-align: center;}
+    .galleryZone ul::after{content: "";display: block;clear: both;}
+
+  </style>
+  <script src="javascript/autoBanner.js"></script>
+</head>
+<body>
+  <div id="galleryZone" class="galleryZone">
+    <p>
+      <a href="#" id="aGallery">
+        <img src="img_1.jpg" alt="큰이미지" id="gallery"/>
+      </a>
+    </p>
+    <ul id="galleryList">
+      <li><a href="img_1.jpg"><img src="img_s1_over.jpg" alt="그림1"/></a></li>
+      <li><a href="img_2.jpg"><img src="img_s2_out.jpg" alt="그림2"/></a></li>
+      <li><a href="img_3.jpg"><img src="img_s3_out.jpg" alt="그림3"/></a></li>
+      <li><a href="img_4.jpg"><img src="img_s4_out.jpg" alt="그림4"/></a></li>
+    </ul>
+  </div>
+</body>
+</html>

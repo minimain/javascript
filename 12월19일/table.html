@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>table표 - 웹접근성</title>
+  <style>
+    th,td{border: 1px solid black;}
+  </style>
+</head>
+<body>
+  <!-- 스크린 리더 : 시각장애인들을 위한 읽어주는 것 (마크업한 그대로 읽어준다.) 
+  티헤드를 듣고 합계를 듣고 상세를 들려준다. (마크업순은 티헤드-티풋-티바디) 읽어주는것도 티해드 티풋 티바디로 읽어줌
+tr이 한줄이다
+th제목셀
+td내용셀
+table로 시작하면table로 끝나야함
+caption:제목 넣어야함
+scope는 제목셀(thead)에만 넣는것이다
+-->
+<!-- 웹접근성을 준수한 table -->
+  <table summary="5개 투자회사별 매매수량, 매도수량에 대한 통계">
+    <caption>코스닥선물 투자자별 매매동향</caption> <!--제목 넣어야함-->
+    <thead>
+      <tr>
+        <th rowspan="2" scope="col">구분</th> <!--2줄이 합치진-->
+        <th colspan="3" scope="col">매매수량</th> <!--칸이 3개가 합쳐진것-->
+        <th colspan="3" scope="col">매도수량</th>
+        <th rowspan="2" scope="col">합계</th>
+        <th rowspan="2" scope="col">순매수</th>
+      </tr>
+      <tr>
+        <th scope="col">신규</th><!--세로에 해당되는 제목(세로열)-->
+        <th scope="col">환매</th>
+        <th scope="col">소개</th>
+        <th scope="col">신규</th>
+        <th scope="col">환매</th>
+        <th scope="col">소개</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <th scope="row">합계</th> <!--가로에 대한 제목-->
+        <td>47</td>
+        <td>90</td>
+        <td>137</td>
+        <td>6</td>
+        <td>42</td>
+        <td>48</td>
+        <td>250</td>
+        <td>24</td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr>
+        <th scope="row">선물회사</th>
+        <td>47</td>
+        <td>6</td>
+        <td>53</td>
+        <td>6</td>
+        <td>42</td>
+        <td>48</td>
+        <td>101</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <th scop="row">증권회사</th>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <th scop="row">은행</th>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <th scop="row">투자신탁</th>
+        <td>0</td>
+        <td>84</td>
+        <td>84</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>149</td>
+        <td>19</td>
+      </tr>
+      <tr>
+        <th scop="row">보험회사</th>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

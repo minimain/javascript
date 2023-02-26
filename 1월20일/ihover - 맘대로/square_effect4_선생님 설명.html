@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>김미진_square_effect_4</title>
+<style>
+/* square */
+.square,.square *{box-sizing: border-box;}
+.square a {text-decoration: none;}
+.square {position: relative;transition: all 0.35s ease-in-out;}
+
+/* 이미지 */
+.square {position: relative;width: 316px;height: 216px;border: 8px solid #fff;box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);}
+
+/* 텍스트 공통*/
+.square { position: relative;/*overflow: hidden;*/margin: 500px;}
+.square .txt {position: absolute;top: 0;bottom: 0;left: 0;right: 0;text-align: center;}
+
+.square.colored .txt {background: rgba(12, 34, 52, 0.6);}
+.square .txt {background: #111111;height: 0;/*visibility: hidden;*/width: 361px;transform: rotate(-33.5deg) translate(-112px, 166px);transform-origin: 0% 100%;transition: all 0.35s ease-in-out 0.35s;}
+/* 가운데 글이 안으로 접어 들어가는건 height: 0;을 설정해서 그런 효과가 나온것이다. */
+
+.square .txt h3 {text-transform: uppercase;
+color: #fff;text-align: center;font-size: 17px;padding: 10px;margin-top: 5px;border-bottom: 1px solid rgba(255, 255, 255, 0.2);opacity: 0;transition: all 0.35s ease-in-out 0.35s;}
+.square .txt p {font-style: italic;font-size: 12px;color: #bbb;padding: 20px 20px 20px;text-align: center;opacity: 0;transition: all 0.35s ease-in-out 0.35s;}
+
+  /* mask */
+.square .mask1,.square .mask2 {position: absolute;background: #333333;background: rgba(0, 0, 0, 0.6);height: 361px;width: 361px;transition: all 0.35s ease-in-out 0s;}
+
+.square .mask1{background-color: rgba(255, 0, 0, 0.2)}
+.square .mask2{background-color:rgba(0, 0, 255, 0.2);}
+.square .mask1 {left: auto;right: 0;top: 0;transform: rotate(56.5deg) translateX(-180px); transform-origin: 100% 0%;border-top: 1px solid red;}
+.square .mask2 {top: auto;bottom: 0;left: 0;transform: rotate(56.5deg) translateX(180px); transform-origin: 0% 100%;border-bottom: 1px solid blue;}
+.square.colored .mask1,.square.colored .mask2 {background: rgba(26, 74, 114, 0.6);}
+
+/* 호버 */
+.square a:hover .mask1 {transform: rotate(56.5deg) translateX(1px);}
+.square a:hover .mask2 {transform: rotate(56.5deg) translateX(-1px);}
+.square a:hover .txt {width: 300px;height: 120px;visibility: visible;top: 40px;transform: rotate(0deg) translate(0, 0);}
+.square a:hover .txt h3,.square a:hover .txt p {opacity: 1;} 
+
+</style>
+</head>
+<body>
+<!-- square -->
+<div class="square">
+    <a href="#">
+        <div class="img">
+            <img src="images/assets/rect/9.jpg" alt="img">
+        </div>
+
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+
+        <div class="txt">
+            <h3>Heading here</h3>
+            <p>Description goes here</p>
+        </div>
+    </a>
+</div>
+
+<!-- square colored -->
+<!-- <div class="square colored">
+    <a href="#">
+        <div class="img">
+            <img src="images/assets/rect/2.jpg" alt="img">
+        </div>
+
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+
+        <div class="txt">
+            <h3>Heading here</h3>
+            <p>Description goes here</p>
+        </div>
+    </a>
+</div> -->
+</body>
+</html>

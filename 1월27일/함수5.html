@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수5_문제</title>
+  <script>
+    // prompt로 수량,단가를 입력 (2개 만들고)
+    // 함수만들어서 수량x단가 계산하고 (함수 1개 만들고)
+    // Area 안에 수량,단가,함수계산값이 나오게 만들기
+
+    // body에 있는것을 다읽고 자바스크립트를 시작한다는 의미
+    /*실패작
+    window.onload = function(){
+     var k = prompt("수량을 입력해주세요.");    
+     var i = prompt("단가를 입력해주세요.");
+      
+     function hab(){
+       e = k*i ;
+       
+       return false;
+     }
+     var myArea = document.getElementById("Area");
+     myArea.innerHTML = "수량:" + k + ",단가:" + i + e + "원";
+    }*/
+
+    window.onload = function(){
+      var su = Number(prompt("수량"));
+      var dan = Number(prompt("단가"));
+
+      function kumaek(q,c){
+        var kum = q * c;
+        return kum;
+      }
+
+      var result = document.getElementById("Area");
+      result.innerHTML = "수량 : " + su + " 단가 : " + dan + " 금액 : " + kumaek(su,dan) + "원";
+    }
+// 여기서 q.c가 전달하는..? | 전달하기 위한 매개변수가 q랑 c 
+
+
+  </script>
+</head>
+<body>
+  <div id="Area">
+    <!-- 수량:   , 단가:  , 금액: 함수호출()  원 --></div>
+</body>
+</html>

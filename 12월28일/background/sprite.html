@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sprite</title>
+  <style>
+    h1 a{display: block; width: 442px;height: 105px;
+      background: url(images/sp_main_947f65.png) no-repeat 0 -316px;
+      text-indent: -9999px;overflow:hidden;}
+    ul li a{text-decoration: none;color: black;font-size: 35px;}
+    ul li a span{display: inline-block; width: 35px;height: 35px;
+      background: url(images/sp_main_947f65.png) no-repeat -841px -493px;}
+    ul li.air01 a span{background-position: -841px -493px;}
+    ul li.air02 a span{background-position: -841px -532px;}
+    ul li.air03 a span{background-position: -841px -573px;}
+    ul li.air04 a span{background-position: -841px -452px;}
+
+
+      /* 인라인 요소인 a를 블록레벨 요소로 변환을 해줘야함 
+      이미지를 여러가지를 하나의 파일로 만들어야 용량?이 적어서 하나의 파일에 여러가지의 이미지를 넣어 그중에서 위치를 설정해서 필요한 이미지만 빼서 사용한다. 
+      overflow:hidden 언떤 영역을 넘치면 없어지는것을 의미
+       a, span은 인라인요소 (의미없이 묶어줌)
+       blok은 누가 옆에 없는데 inline-block은 옆에 누가 올수있음
+      옆으로 딱 붙는데 규격이 있는것 블록레벨 요소처럼 가로세로가 유지 되는것
+      */
+  </style>
+</head>
+<body>
+  <h1><a href="#">NAVER</a></h1>
+  <h2>미세먼지</h2>
+  <ul>
+    <li class="air01">
+      <a href="#">
+        미세<span></span><strong>좋음</strong>
+      </a>
+    </li>
+    <li class="air02"><a href="#">미세<span></span><strong>보통</strong></a></li>
+    <li class="air03"><a href="#">미세<span></span><strong>나쁨</strong></a></li>
+    <li class="air04"><a href="#">미세<span></span><strong>매우나쁨</strong></a></li>
+  </ul>
+</body>
+</html>

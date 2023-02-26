@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>걸어다니는 사람</title>
+  <style>
+    .boy{width: 155px;height: 176px;background-image: url(img/right.png);animation: ani 0.6s steps(3,start) infinite;}
+    /* start와 end가 있고 steps에는 3을 넣어줘야함 왜냐 이미지가 3개로 나눠져 있으니 */
+    /* 이미지 세개 중에 하나만 나오게 가로값 지정 */
+    @keyframes ani{
+      0%{background-position:  0 0;}
+      100%{background-position: -465px 0;}
+    }
+    .walk{position:relative;left: 0;animation: ani2 10s linear infinite;}
+    @keyframes ani2{
+      0%{left: 0px;}
+      100%{left: 1000px;}
+    }
+
+    /* monster */
+    .monster{width: 190px;height: 240px;background-image: url(img/monster.png);animation: ani3 0.6s steps(10,start) infinite;}
+    @keyframes ani3{
+      0%{background-position: 0 0;}
+      100%{background-position: -1900px 0;}
+    }
+    .move{position: relative;top:0;animation: ani4 5s linear infinite alternate;}
+    @keyframes ani4{
+      0%{top:0}
+      100%{top:500px}
+    }
+  </style>
+</head>
+<body>
+  <div class="walk">
+    <div class="boy"></div>
+  </div>
+  <hr/>
+  <div class="move">
+    <div class="monster"></div>
+  </div>
+
+</body>
+</html>

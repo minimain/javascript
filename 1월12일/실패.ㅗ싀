@@ -1,0 +1,31 @@
+/* 
+  .ryan .ear{position: absolute;z-index: 3;left: calc(50% - 35px);
+    width: 70px;height:64px;background:black;
+    border-radius: 50%;
+    box-shadow: 130px 0 0 0 black,-130px 0 0 0 black;}
+
+  .ryan .ear::after{content: "";position: absolute;z-index:1;left: calc(50% - 35px);width:90px;height:90px;border: 7px solid blue;border-radius: 50%;bo;}
+
+
+  .ryan .face{position: absolute;} */
+
+  /* .face .eyebrows{position: absolute;left: calc(50% - 38px);
+    top: 120px;
+    width: 10px;height: 10px;
+   }
+
+  .face .eyebrows::after,.face .eyebrows::before{position:absolute;
+    left: calc(50% - 38px);
+    top: 120px;
+    width: 76px;height: 10px;
+    box-shadow: 66px 0 0 0 black,-66px 0 0 0 black;} */
+
+
+/* .ryan .ear{position: absolute;left: calc(50% - 45px);
+ top: -14px;width: 90px;height: 90px;border-radius: 50%;
+ background: blue;
+ box-shadow: 130px 0 0 0 #000,-130px 0 0 0 #000;}
+
+ .ryan .ear::after,.ryan .ear::before{content: "";
+position: absolute;left: calc(50% - 35px);top: 0px;width: 70px;height: 70px;background: red;border-radius: 50%;
+box-shadow: 130px 10px 0 0 #d5972a,-130px 10px 0 0 #d5972a;} */
